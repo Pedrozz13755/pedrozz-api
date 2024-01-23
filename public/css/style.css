@@ -1,0 +1,333 @@
+/* Cores do site */
+@import url('https://fonts.googleapis.com/css?family=Karla:400,700&display=swap');
+
+:root {
+    --bgColor: #ffffff; /* Cor de fundo do site */
+    --accentColor: #000000; /* Cor de destaque/acento do site */
+    --font: 'Karla', sans-serif;
+    --fontColor: white;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+
+body {
+    background-image: url('https://media3.giphy.com/media/SSWHtGBHHJjvZwL7Jx/giphy.gif?cid=ecf05e47n1x4k2gevx418qcs70wdd8pw11oooc6lti3o49br&ep=v1_gifs_search&rid=giphy.gif&ct=g');
+    background-size: cover;
+    background-position: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #ffffff;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+#userPhoto {
+    width: 96px;
+    height: 96px;
+    display: block;
+    margin: 35px auto 20px;
+    border-radius: 50%;
+}
+
+h4 {
+    color: white;
+    font-family: var(--font);
+}
+
+#userName {
+    color: #000000;
+    font-size: 3rem;
+    font-weight: 60;
+    line-height: 1.25;
+    display: block;
+    font-family: var(--font);
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+}
+
+#links {
+    max-width: 675px;
+    width: auto;
+    display: block;
+    margin: 27px auto;
+}
+
+section {
+  padding: 40px;
+  text-align: center;
+  background-color: rgba(240, 280, 240, 0.05); /* Fundo branco com 80% de opacidade */
+  margin: 20px 0;
+  border-radius: 10px;
+}
+
+.link {
+    display: block;
+    background-color: var(--accentColor);
+    color: var(--fontColor);
+    font-family: var(--font);
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 17px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: all .25s cubic-bezier(.08, .59, .29, .99);
+    border: solid var(--accentColor) 2px;
+}
+
+.link:hover {
+    background-color: var(--bgColor);
+    color: var(--accentColor);
+}
+
+.txt i {
+text-align: center;
+
+margin-top: 25px;
+font-size: 25px;
+margin-left: 25px;
+right: 1px;
+
+}
+
+.tutotxt {
+background-color: var(--color-dark3);
+border-radius: 7px;  
+margin: 24px;
+box-shadow: 0 0 7px white;
+
+}
+
+.tutotxtt{
+
+margin: 7px;
+text-align: center;
+}
+
+.amigo{
+margin-top: 90%;
+}
+.menuzin {
+
+padding: 20px 30px;
+}
+.menuzin summary{
+
+}
+.menuzin a{
+text-decoration: none;
+
+}
+
+/* Adiciona estilo para tornar a imagem redonda */
+.round-image {
+border-radius: 0%;
+width: 150px; /* Ajuste o tamanho da imagem conforme necessário */
+height: 150px; /* Ajuste o tamanho da imagem conforme necessário */
+}
+.social-btn {
+  display: inline-block;
+  margin: 10px;
+}
+
+
+.social-btn button {
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+}
+
+.social-btn img {
+border-radius: 50%;
+  width: 52px; /* Ajuste o tamanho da imagem conforme necessário */
+  height: 52px; /* Ajuste o tamanho da imagem conforme necessário */
+  margin-right: 10px;
+}
+
+.center-image {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.center-image img {
+  border-radius: 100%;
+  width: 200px; /* Ajuste o tamanho da imagem conforme necessário */
+  height: 200px; /* Ajuste o tamanho da imagem conforme necessário */
+}
+
+footer {
+  text-align: center;
+  padding: 18px;
+  background-color: #2c21210;
+  color: #fff;
+}
+
+.copyright {
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+/* Adicione ao seu estilo CSS existente */
+.menu-btn, .close-btn, .item button {
+background-color: #333;
+color: #fff;
+padding: 10px;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+font-size: 16px;
+margin: 5px;
+transition: background-color 0.3s, color 0.3s;
+}
+
+                          header {
+                              background-color: #333;
+                              color: #fff;
+                              padding: 10px;
+                              text-align: center;
+                          }
+
+                          .side-bar {
+                              position: fixed;
+                              left: -250px;
+                              width: 250px;
+                              height: 100%;
+                              background-color: #111;
+                              padding-top: 50px;
+                              transition: 0.5s;
+                              overflow-y: scroll;
+                          }
+
+                          .menu-btn {
+                              position: fixed;
+                              left: 20px;
+                              top: 20px;
+                              cursor: pointer;
+                              font-size: 24px;
+                              z-index: 1; /* Certifique-se de que o botão fique acima da barra lateral */
+                          }
+
+                          .menu-btn i {
+                              color: #fff;
+                          }
+
+                          .txt {
+                              color: #fff;
+                              font-size: 20px;
+                              text-align: center;
+                              margin-top: 20px;
+                          }
+
+                          .close-btn {
+                              position: absolute;
+                              top: 15px;
+                              left: 230px;
+                              cursor: pointer;
+                              font-size: 30px;
+                          }
+
+                          .close-btn i {
+                              color: #fff;
+                          }
+
+                          .menu {
+                              padding: 20px;
+                          }
+
+                          .item {
+                              padding: 15px;
+                              border-bottom: 1px solid #888;
+                          }
+
+                          .item a {
+                              text-decoration: none;
+                              color: #fff;
+                              display: flex;
+                              align-items: center;
+                          }
+
+                          .sub-menu,
+                          .sub-sub-menu {
+                              display: none;
+                              padding-left: 20px;
+                          }
+
+                          .sub-item,
+                          .sub-sub-item {
+                              color: #fff;
+                              text-decoration: none;
+                              display: block;
+                              padding: 5px 0;
+                          }
+
+                          .sub-btn,
+                          .sub-sub-btn {
+                              cursor: pointer;
+                              display: flex;
+                              align-items: center;
+                          }
+
+                          .sub-btn i,
+                          .sub-sub-btn i {
+                              margin-left: auto;
+                          }
+
+                          .sub-btn:hover .sub-menu {
+                              display: block;
+                          }
+
+                          .sub-menu .sub-sub-btn:hover .sub-sub-menu {
+                              display: block;
+                          }
+
+#colorForm {
+  text-align: center;
+  margin: 20px;
+}
+
+#colorForm label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+#colorForm input {
+  padding: 5px;
+} 
+
+#toggle-audio-btn,
+        #login-btn {
+            cursor: pointer;
+            padding: 10px;
+            background-color: #41c1ec;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            margin: 5px;
+}
+
+.parceiro-imagem {
+    width: 20px; /* Ajuste o tamanho conforme necessário */
+    border-radius: 50%; /* Torna a imagem redonda */
+    margin-right: 5px; /* Adiciona um espaço à direita da imagem */
+}

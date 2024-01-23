@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="/imagens/suporte.jpg" type="image/x-icon" />
+    <title>Suporte</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background: url('/fundo.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+            height: 100vh; /* Garante que o conteúdo ocupe toda a altura da tela */
+        }
+
+      header {
+        padding: 20px;
+        text-align: center;
+        background-color: rgba(248, 248, 248, 0.4); /* Fundo branco com 80% de opacidade */
+        color: #333; /* Cor do texto */
+      }
+
+      section {
+        padding: 40px;
+        text-align: center;
+        background-color: rgba(248, 248, 248, 0.05); /* Fundo branco com 80% de opacidade */
+        margin: 20px 0;
+        border-radius: 10px;
+      }
+
+
+      .copyright {
+          font-size: 14px;
+          margin-top: 10px;
+      }
+
+  /* Adicione ao seu estilo CSS existente */
+  .menu-btn, .close-btn, .item button {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 5px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+       /* Adiciona estilo para tornar a imagem redonda */
+        .round-image {
+            border-radius: 0%;
+            width: 150px; /* Ajuste o tamanho da imagem conforme necessário */
+            height: 150px; /* Ajuste o tamanho da imagem conforme necessário */
+        }
+            .social-btn {
+                display: inline-block;
+                margin: 10px;
+            }
+
+
+            .social-btn button {
+                background-color: transparent;
+                color: #fff;
+                border: 1px solid #fff;
+                padding: 10px 20px;
+                border-radius: 5px;
+                cursor: pointer;
+                font-size: 16px;
+                display: flex;
+                align-items: center;
+            }
+
+            .social-btn img {
+              border-radius: 50%;
+                width: 52px; /* Ajuste o tamanho da imagem conforme necessário */
+                height: 52px; /* Ajuste o tamanho da imagem conforme necessário */
+                margin-right: 10px;
+            }
+
+
+                       body {
+                                  background-image: url('/fundo.jpg');
+                                  background-size: cover;
+                                  background-position: center;
+                                  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                                  margin: 0;
+                                  padding: 0;
+                                  color: #fff;
+                              }
+
+                              header {
+                                  background-color: #333;
+                                  color: #fff;
+                                  padding: 10px;
+                                  text-align: center;
+                              }
+
+                              .side-bar {
+                                  position: fixed;
+                                  left: -250px;
+                                  width: 250px;
+                                  height: 100%;
+                                  background-color: #111;
+                                  padding-top: 50px;
+                                  transition: 0.5s;
+                                  overflow-y: scroll;
+                              }
+
+                              .menu-btn {
+                                  position: fixed;
+                                  left: 20px;
+                                  top: 20px;
+                                  cursor: pointer;
+                                  font-size: 24px;
+                                  z-index: 1; /* Certifique-se de que o botão fique acima da barra lateral */
+                              }
+
+                              .menu-btn i {
+                                  color: #fff;
+                              }
+
+                              .txt {
+                                  color: #fff;
+                                  font-size: 20px;
+                                  text-align: center;
+                                  margin-top: 20px;
+                              }
+
+                              .close-btn {
+                                  position: absolute;
+                                  top: 15px;
+                                  left: 230px;
+                                  cursor: pointer;
+                                  font-size: 30px;
+                              }
+
+                              .close-btn i {
+                                  color: #fff;
+                              }
+
+                              .menu {
+                                  padding: 20px;
+                              }
+
+                              .item {
+                                  padding: 15px;
+                                  border-bottom: 1px solid #888;
+                              }
+
+                              .item a {
+                                  text-decoration: none;
+                                  color: #fff;
+                                  display: flex;
+                                  align-items: center;
+                              }
+
+                              .sub-menu,
+                              .sub-sub-menu {
+                                  display: none;
+                                  padding-left: 20px;
+                              }
+
+                              .sub-item,
+                              .sub-sub-item {
+                                  color: #fff;
+                                  text-decoration: none;
+                                  display: block;
+                                  padding: 5px 0;
+                              }
+
+                              .sub-btn,
+                              .sub-sub-btn {
+                                  cursor: pointer;
+                                  display: flex;
+                                  align-items: center;
+                              }
+
+                              .sub-btn i,
+                              .sub-sub-btn i {
+                                  margin-left: auto;
+                              }
+
+                              .sub-btn:hover .sub-menu {
+                                  display: block;
+                              }
+
+                              .sub-menu .sub-sub-btn:hover .sub-sub-menu {
+                                  display: block;
+                              }
+                          </style>
+                      </head>
+
+                      <body>
+
+                          <header>
+                              <nav>
+                                  <div class="menu-btn" onclick="toggleSideBar()">
+                                      <i class="fas fa-bars"></i>
+                                  </div>
+                              </nav>
+                          </header>
+
+                          <div class="side-bar">
+                              <div class="close-btn" onclick="toggleSideBar()">
+                                  <i class="fas fa-times"></i>
+                              </div>
+                              <div class="txt">
+                                  <a class="fa fa-cog fa-spin fa-3x fa-fw"></a>
+                                  <p>SUPORTE</p>
+                              </div>
+                              <br>
+                              <hr>
+                              <div class="menu">
+
+                                <div class="social-btn">
+                                <button onclick="redirecionarParaWhatsApp()">
+                                    <img src="IMAGENS/zapicon.jpg">
+                                    whatsapp 
+                                </button>
+                          </div>
+                                <div class="social-btn">
+                                    <button onclick="redirecionarPara('')">
+                                        <img src="/insta.jpg">
+                                      Instagram 
+                                    </button>
+                                </div>
+                              </div>
+                          </div>
+
+                          <script>
+                              function toggleSideBar() {
+                                  const sideBar = document.querySelector('.side-bar');
+                                  sideBar.style.left = sideBar.style.left === '0px' ? '-250px' : '0';
+                              }
+
+                              function carregarPagina(pagina) {
+                                  window.open(pagina, '_blank');
+                              }
+
+
+                              function redirecionarParaSite2() {
+                                  window.location.href = "https://telegra.ph/file/5db59f6ece6ad775ee228.jpg";
+                              }
+                          </script>
+                    </div>
+                    </div>
+                                                     <section>
+                        <head>
+                                <h1>SUPORTE</h1>
+
+                          </head>
+                                                        </section>
+                        <section>
+    <div class="main-content">
+        <h2>Central de Suporte</h2>
+        <p>Bem-vindo à nossa central de suporte. Selecione uma opção no menu à esquerda para obter assistência.</p>
+        <br></br>
+ <h3> ainda em desenvolvimento</h3>
+    </div>
+                           </section>
+                            <script>
+                                function redirecionarPara(url) {
+                                    window.location.href = url;
+                                }
+
+                                function redirecionarParaWhatsApp() {
+                                    var numeroWhatsApp = "556199317165";
+                                    var mensagem = "ola pedrozz estou com uma duvida";
+
+                                    window.location.href = "https://wa.me/" + numeroWhatsApp + "?text=" + encodeURIComponent(mensagem);
+                                }
+
+                            </script>
+                        <footer>
+                          <address>
+                            <div class="copyrigth">
+                              Criador do site: <a href="https://wa.me/+5561999317165?text=aoba,%20queria%20saber%20mais%20informações%20do%20site">pedrozz
+                                --<a href="https://telegra.ph/file/d595458af87f2d1e2a8ec.jpg">não clica</a>
+                            </div>
+                          </address>
+                        </footer>
+</body>
+</html>

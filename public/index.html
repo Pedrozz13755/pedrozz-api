@@ -1,0 +1,191 @@
+          <!DOCTYPE html>
+          <html lang="en">
+
+          <head>
+              <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+              <meta name="viewport" content="width=device-width, initial-scale=1">
+              <title>Pedrozz API</title>
+              <link rel="stylesheet" href="/css/style.css">
+              <link rel="icon" href="https://telegra.ph/file/2ff582485546fb946994b.jpg" type="image/jpg">
+              <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+             
+          </head>
+
+          <body>
+              <header>
+                  <nav>
+                      <div class="menu-btn" onclick="toggleSideBar()">
+                          <i class="fas fa-bars"></i>
+                      </div>
+                  </nav>
+              </header>
+
+              <div class="side-bar">
+                  <div class="close-btn" onclick="toggleSideBar()">
+                      <i class="fas fa-times"></i>
+                  </div>
+                  <div class="txt">
+                      <i class="fa fa-cog fa-spin fa-3x fa-fw"></i>
+                      <p>PEDROZZ-API</p>
+                  </div>
+                  <br>
+                  <hr>
+                  <div class="menu">
+                      <div id="colorForm">
+                          <label for="textColor">Cor do Texto:</label>
+                          <input type="color" id="textColor" onchange="changeColor('textColor')">
+                      </div>
+                        <script>
+                          function changeColor(type) {
+                              const color = document.getElementById(type).value;
+                              document.body.style[type === 'backgroundColor' ? 'backgroundColor' : 'color'] = color;
+                          }
+                        </script>
+                    <audio id="backgroundMusic" loop autoplay>
+                        <source src="imagens/calmo.mp3" type="audio/mp3">
+                        Seu navegador não suporta a tag de áudio.
+                    </audio>
+
+                    <script>
+                        // Função para ajustar o volume da música
+                        function ajustarVolume() {
+                            var volume = document.getElementById("volumeInput").value;
+                            document.getElementById("backgroundMusic").volume = volume;
+                        }
+
+                        // Adiciona um ouvinte de eventos para aguardar o carregamento da página
+                        window.addEventListener("load", function () {
+                            // Adiciona um ouvinte de eventos para aguardar o carregamento da música
+                            document.getElementById("backgroundMusic").addEventListener("canplaythrough", function () {
+                                // Exibe um controle deslizante de volume
+                                document.body.innerHTML += '<input type="range" id="volumeInput" min="0" max="1" step="0.1" value="1" oninput="ajustarVolume()">';
+
+                                // Atualiza o volume inicial
+                                ajustarVolume();
+                            });
+                        });
+                    </script>
+
+                        <div id="links">
+                        <a class="link" href="canvas/changemymind?texto=PEDROZZ O BRABO&apikey=SUAKEY">Canvas ChangeMyMind</a>
+                        </div>
+                        <div id="links">
+                        <a class="link" href="loli?apikey=SUAKEY">Loli</a>
+                        </div>
+                        <div id="links">
+                        <a class="link" href="shota?apikey=SUAKEY">Shota</a>
+                        </div>
+                        <div id="links">
+                        <a class="link" href="nsfwloli?apikey=SUAKEY">NSFW loli</a>
+                        </div>
+                        <div id="links">
+                        <a class="link" href="nsfw/hetai?apikey=SUAKEY">HEtai</a>
+                        </div>
+                        <div id="links">
+                        <a class="link" href="download/play?&nome=pedrozz mods&apikey=SUAKEY">Play</a>
+                        </div>
+                        <div id="links">
+                        <a class="link" href="download/playv?&nome=pedrozz mods&apikey=SUAKEY">Play vídeo</a>
+                        </div>
+                        <div id="links">
+                        <a class="link" href="download/ytmp3?&link=https://youtu.be/PYta8TrHx8M?si=hsFTQj0Xq_fqcf1g&apikey=SUAKEY">Ytmp3</a>
+                        </div>
+                        <div class="links">
+                        <a class="link" href="download/ytmp4?&link=https://youtu.be/PYta8TrHx8M?si=hsFTQj0Xq_fqcf1g&apikey=SUAKEY">Ytmp4</a>
+                        </div>
+                    <div class="tutotxt">
+                      <div class="menuzin">
+                          <h4>Parcerias</h4><br>
+                          <details>
+                              <summary>Parceiros</summary>
+                    <ul>
+                    <li><img src="/imagens/default.jpg" class="parceiro-imagem" alt="Parceiro 1"><a href="#">Sem</a></li>
+                                  <li><img src="/imagens/criador.jpg" class="parceiro-imagem" alt="criador"><a href="https://www.youtube.com/@Pedrozzmods">Criador</a></li>
+                                  <li><img src="/imagens/default.jpg" class="parceiro-imagem" alt="Parceiro 3"><a href="#">Sem</a></li>
+                              </ul>
+                          </details>
+                      </div>
+                    </div>
+<br></br>
+                    <br></br>
+                    <br></br>
+                        </div>
+                        </div>
+           
+                        <div class="center-image">
+                        <a href="https://telegra.ph/file/5adba795b9a6348c2f381.jpg" alt="pedrozz: criador">
+                        <img class="round-image" src="https://telegra.ph/file/71f0b7f75b12b61178d8a.jpg" alt="laura a braba">
+                        </a>
+                        </div>
+                        <a href="https://api.whatsapp.com/send?phone=556199317165&text=key%20de%20teste%20da%20API" id="userName">by Pedrozz</a>
+
+                        <section>
+                        <h2>⟬ PEDROZZ⟭</h2>
+                        <p>╔━━━━━━━━━━━━━━━━━━━━━╗</p>
+                        <p>O QUE VOCE PROCURA ESTA</p>
+                        <p>NA BARRA LATERAL AO LADO</p>
+                        <p>╚━━━━━━━━━━━━━━━━━━━━━╝</p>
+                        </section
+                       <section>
+                         <h3>API AINDA ESTÁ EM DESENVOLVIMENTO</h3>
+                       </section>
+                        <div class="tutotxt">
+                          <br>
+                          <h3 class="tutotxtt">Informações básicas</h3><br><br>
+                            <br><br>
+                          <p class="tutotxtt">O que e um chat bot</p>
+                          <div class="aaaa">
+                          <br>
+                          <p>O chatbot é um programa que funciona como um robô automatizado no WhatsApp Business, ou seja, é possível ter um bot para o aplicativo. Esse software tem inúmeras funções e, dentro deste aplicativo popular, apresenta utilitários incríveis para a conversação e o gerenciamento de problemas com consumidores.</p>
+                          <br>
+                          <hr>
+                          <br>
+                          <h4 class="tutotxtt">Para que servem?</h4>
+                          <br>
+                          <p>O que é um Bot para WhatsApp? Um bot para WhatsAppoferece aos clientes uma experiência conversacional automatizada em tempo real diretamente no aplicativo, usando a API do WhatsApp para Negócios.</p>
+                          <br>
+                          <hr>
+                          <br>
+                          <h4 class="tutotxtt">Como funciona o bot?</h4>
+                          <br>
+                          <p>
+                          Um 'bot' – abreviatura de robô – é um programa de software que executa tarefas automatizadas, repetitivas e pré-definidas. Os bots normalmente imitam ou substituem o comportamento do usuário humano. Por serem automatizados, operam muito mais rápido do que os usuários humanos.
+                          </p>
+                          <br>
+                          <hr>
+                          <br>
+                          <h4 class="tutotxtt">O que é um bot de atendimento?</h4>
+                          <br>
+                          <p>Os bots de atendimento se tornaram cada vez mais comuns no dia a dia das empresas, e tem a intenção de melhorar a qualidade nos canais de mensageria, automatizando atendimentos e otimizando o tempo de resposta para os clientes que entram em contato com uma marca.</p>
+
+                          <br>
+                          </div>
+                          </div>
+            <footer class="footer">
+            <div class="d-sm-flex justify-content-center justify-content-sm-between">
+            <p><span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright © 2024 Pedrozz Mods</span></p>
+            <p><span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center"> Meu Canal: <a href="https://youtube.com/@Pedrozzmods?si=jiSnHTInW9EVrgXB`" target="_blank">CLICK</a> RUMO AOS 50 INSCRITOS</span></p>
+            </div>
+             </footer>
+            <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js">
+            </script>
+            
+           
+            <script src="/script/jquery.min.js"></script>
+                        <script src="/script/index.js"></script>
+
+              <script>
+                  function toggleSideBar() {
+                      const sideBar = document.querySelector('.side-bar');
+                      sideBar.style.left = sideBar.style.left === '0px' ? '-250px' : '0';
+                  }
+
+                  function carregarPagina(pagina) {
+                      window.open(pagina, '_blank');
+                  }
+              </script>
+
+              
+          </body>
+
+          </html>
