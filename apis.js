@@ -1,6 +1,3 @@
-//MINI BASE DE APIS
-//EXEMPLOS...
-//@SAYO
 
 sayo = process.cwd()
 
@@ -18,7 +15,7 @@ const {
   ytSearch
 } = require("./lib/youtube");
 
-var criador = ['pedroz']; // Nome do criador
+var criador = ['pedrozz']; // Nome do criador
 var key = 'pedrozz13' //apikey das apis
 
 resposta = { //MSG DE ERRO NO SERVIDOR
