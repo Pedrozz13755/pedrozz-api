@@ -204,6 +204,22 @@ res.sendFile(error)})})
 router.post('/post/body', async (req, res) => {
   res.send(req.body)
 })
+router.all('/cum', async (req, res) => {
+ var cdapikey = req.query.apikey;
+   try {
+   if(!cdapikey) return res.json(resposta.semkey)
+    if(cdapikey !== key) return res.sendFile(keyinvalida)
+   json = JSON.parse(fs.readFileSync('lib/cum.json').toString())
+   random = json[Math.floor(Math.random() * json.length)]
+   res.type('png')
+   res.send(await getBuffer(random))
+   } catch (e) {
+   res.send(resposta.error)
+   }
+   })
+router.post('/post/body', async (req, res) => {
+  res.send(req.body)
+})
    router.all('/nsfwloli', async (req, res) => {
    var cdapikey = req.query.apikey;
    try {
