@@ -217,6 +217,58 @@ router.all('/cum', async (req, res) => {
    res.send(resposta.error)
    }
    })
+  router.all('/neko', async (req, res) => {
+ var cdapikey = req.query.apikey;
+   try {
+   if(!cdapikey) return res.json(resposta.semkey)
+    if(cdapikey !== key) return res.sendFile(keyinvalida)
+   json = JSON.parse(fs.readFileSync('lib/neko.json').toString())
+   random = json[Math.floor(Math.random() * json.length)]
+   res.type('png')
+   res.send(await getBuffer(random))
+   } catch (e) {
+   res.send(resposta.error)
+   }
+   })
+  router.all('/ero', async (req, res) => {
+ var cdapikey = req.query.apikey;
+   try {
+   if(!cdapikey) return res.json(resposta.semkey)
+    if(cdapikey !== key) return res.sendFile(keyinvalida)
+   json = JSON.parse(fs.readFileSync('lib/ero.json').toString())
+   random = json[Math.floor(Math.random() * json.length)]
+   res.type('png')
+   res.send(await getBuffer(random))
+   } catch (e) {
+   res.send(resposta.error)
+   }
+   })
+  router.all('/neko2', async (req, res) => {
+ var cdapikey = req.query.apikey;
+   try {
+   if(!cdapikey) return res.json(resposta.semkey)
+    if(cdapikey !== key) return res.sendFile(keyinvalida)
+   json = JSON.parse(fs.readFileSync('lib/neko2.json').toString())
+   random = json[Math.floor(Math.random() * json.length)]
+   res.type('png')
+   res.send(await getBuffer(random))
+   } catch (e) {
+   res.send(resposta.error)
+   }
+   })
+   router.all('/zettai', async (req, res) => {
+ var cdapikey = req.query.apikey;
+   try {
+   if(!cdapikey) return res.json(resposta.semkey)
+    if(cdapikey !== key) return res.sendFile(keyinvalida)
+   json = JSON.parse(fs.readFileSync('lib/zettai.json').toString())
+   random = json[Math.floor(Math.random() * json.length)]
+   res.type('png')
+   res.send(await getBuffer(random))
+   } catch (e) {
+   res.send(resposta.error)
+   }
+   })
 router.post('/post/body', async (req, res) => {
   res.send(req.body)
 })
