@@ -282,6 +282,97 @@ router.all('/cum', async (req, res) => {
    res.send(resposta.error)
    }
    })
+  router.all('/satanic', async (req, res) => {
+ var cdapikey = req.query.apikey;
+   try {
+   if(!cdapikey) return res.json(resposta.semkey)
+    if(cdapikey !== key) return res.sendFile(keyinvalida)
+   json = JSON.parse(fs.readFileSync('lib/satanic.json').toString())
+   random = json[Math.floor(Math.random() * json.length)]
+   res.type('png')
+   res.send(await getBuffer(random))
+   } catch (e) {
+   res.send(resposta.error)
+   }
+   })  
+  router.all('/ass', async (req, res) => {
+ var cdapikey = req.query.apikey;
+   try {
+   if(!cdapikey) return res.json(resposta.semkey)
+    if(cdapikey !== key) return res.sendFile(keyinvalida)
+   json = JSON.parse(fs.readFileSync('lib/ass.json').toString())
+   random = json[Math.floor(Math.random() * json.length)]
+   res.type('png')
+   res.send(await getBuffer(random))
+   } catch (e) {
+   res.send(resposta.error)
+   }
+   }) 
+   router.all('/foto18', async (req, res) => {
+ var cdapikey = req.query.apikey;
+   try {
+   if(!cdapikey) return res.json(resposta.semkey)
+    if(cdapikey !== key) return res.sendFile(keyinvalida)
+   json = JSON.parse(fs.readFileSync('lib/foto18.json').toString())
+   random = json[Math.floor(Math.random() * json.length)]
+   res.type('png')
+   res.send(await getBuffer(random))
+   } catch (e) {
+   res.send(resposta.error)
+   }
+   })
+   router.all('/bonek', async (req, res) => {
+ var cdapikey = req.query.apikey;
+   try {
+   if(!cdapikey) return res.json(resposta.semkey)
+    if(cdapikey !== key) return res.sendFile(keyinvalida)
+   json = JSON.parse(fs.readFileSync('lib/bonek.json').toString())
+   random = json[Math.floor(Math.random() * json.length)]
+   res.type('png')
+   res.send(await getBuffer(random))
+   } catch (e) {
+   res.send(resposta.error)
+   }
+   })
+   router.all('/travazap', async (req, res) => {
+ var cdapikey = req.query.apikey;
+   try {
+   if(!cdapikey) return res.json(resposta.semkey)
+    if(cdapikey !== key) return res.sendFile(keyinvalida)
+   json = JSON.parse(fs.readFileSync('lib/travazap.json').toString())
+   random = json[Math.floor(Math.random() * json.length)]
+   res.type('png')
+   res.send(await getBuffer(random))
+   } catch (e) {
+   res.send(resposta.error)
+   }
+   })
+   router.all('/aesthetic', async (req, res) => {
+ var cdapikey = req.query.apikey;
+   try {
+   if(!cdapikey) return res.json(resposta.semkey)
+    if(cdapikey !== key) return res.sendFile(keyinvalida)
+   json = JSON.parse(fs.readFileSync('lib/aesthetic.json').toString())
+   random = json[Math.floor(Math.random() * json.length)]
+   res.type('png')
+   res.send(await getBuffer(random))
+   } catch (e) {
+   res.send(resposta.error)
+   }
+   })
+   router.all('/GameWallp', async (req, res) => {
+ var cdapikey = req.query.apikey;
+   try {
+   if(!cdapikey) return res.json(resposta.semkey)
+    if(cdapikey !== key) return res.sendFile(keyinvalida)
+   json = JSON.parse(fs.readFileSync('lib/GameWallp.json').toString())
+   random = json[Math.floor(Math.random() * json.length)]
+   res.type('png')
+   res.send(await getBuffer(random))
+   } catch (e) {
+   res.send(resposta.error)
+   }
+   })
 router.post('/post/body', async (req, res) => {
   res.send(req.body)
 })
