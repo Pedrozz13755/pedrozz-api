@@ -188,7 +188,13 @@ resultado: akk
 })}).catch(e => {
 res.sendFile(error)})})
 
- router.all('/shota', async (req, res) => {
+   
+   router.post('/post/body', async (req, res) => {
+  res.send(req.body)
+})
+
+//////////////// +18 \\\\\\\\\\\\\\\\\\\\
+router.all('/shota', async (req, res) => {
  var cdapikey = req.query.apikey;
    try {
    if(!cdapikey) return res.json(resposta.semkey)
@@ -269,33 +275,7 @@ router.all('/cum', async (req, res) => {
    res.send(resposta.error)
    }
    })
-   router.all('/wallpapernime', async (req, res) => {
- var cdapikey = req.query.apikey;
-   try {
-   if(!cdapikey) return res.json(resposta.semkey)
-    if(cdapikey !== key) return res.sendFile(keyinvalida)
-   json = JSON.parse(fs.readFileSync('lib/wallpapernime.json').toString())
-   random = json[Math.floor(Math.random() * json.length)]
-   res.type('png')
-   res.send(await getBuffer(random))
-   } catch (e) {
-   res.send(resposta.error)
-   }
-   })
-  router.all('/satanic', async (req, res) => {
- var cdapikey = req.query.apikey;
-   try {
-   if(!cdapikey) return res.json(resposta.semkey)
-    if(cdapikey !== key) return res.sendFile(keyinvalida)
-   json = JSON.parse(fs.readFileSync('lib/satanic.json').toString())
-   random = json[Math.floor(Math.random() * json.length)]
-   res.type('png')
-   res.send(await getBuffer(random))
-   } catch (e) {
-   res.send(resposta.error)
-   }
-   })  
-  router.all('/ass', async (req, res) => {
+router.all('/ass', async (req, res) => {
  var cdapikey = req.query.apikey;
    try {
    if(!cdapikey) return res.json(resposta.semkey)
@@ -321,6 +301,156 @@ router.all('/cum', async (req, res) => {
    res.send(resposta.error)
    }
    })
+router.all('/ahegao', async (req, res) => {
+ var cdapikey = req.query.apikey;
+   try {
+   if(!cdapikey) return res.json(resposta.semkey)
+    if(cdapikey !== key) return res.sendFile(keyinvalida)
+   json = JSON.parse(fs.readFileSync('lib/ahegao.json').toString())
+   random = json[Math.floor(Math.random() * json.length)]
+   res.type('png')
+   res.send(await getBuffer(random))
+   } catch (e) {
+   res.send(resposta.error)
+   }
+   })
+   router.post('/post/body', async (req, res) => {
+  res.send(req.body)
+})
+router.all('/masturbation', async (req, res) => {
+ var cdapikey = req.query.apikey;
+   try {
+   if(!cdapikey) return res.json(resposta.semkey)
+    if(cdapikey !== key) return res.sendFile(keyinvalida)
+   json = JSON.parse(fs.readFileSync('lib/masturbation.json').toString())
+   random = json[Math.floor(Math.random() * json.length)]
+   res.type('png')
+   res.send(await getBuffer(random))
+   } catch (e) {
+   res.send(resposta.error)
+   }
+   })
+   router.post('/post/body', async (req, res) => {
+  res.send(req.body)
+})
+router.all('/orgy', async (req, res) => {
+ var cdapikey = req.query.apikey;
+   try {
+   if(!cdapikey) return res.json(resposta.semkey)
+    if(cdapikey !== key) return res.sendFile(keyinvalida)
+   json = JSON.parse(fs.readFileSync('lib/orgy.json').toString())
+   random = json[Math.floor(Math.random() * json.length)]
+   res.type('png')
+   res.send(await getBuffer(random))
+   } catch (e) {
+   res.send(resposta.error)
+   }
+   })
+   router.post('/post/body', async (req, res) => {
+  res.send(req.body)
+})
+router.all('/pussy', async (req, res) => {
+ var cdapikey = req.query.apikey;
+   try {
+   if(!cdapikey) return res.json(resposta.semkey)
+    if(cdapikey !== key) return res.sendFile(keyinvalida)
+   json = JSON.parse(fs.readFileSync('lib/pussy.json').toString())
+   random = json[Math.floor(Math.random() * json.length)]
+   res.type('png')
+   res.send(await getBuffer(random))
+   } catch (e) {
+   res.send(resposta.error)
+   }
+   })
+   router.post('/post/body', async (req, res) => {
+  res.send(req.body)
+})
+router.all('/tentacles', async (req, res) => {
+ var cdapikey = req.query.apikey;
+   try {
+   if(!cdapikey) return res.json(resposta.semkey)
+    if(cdapikey !== key) return res.sendFile(keyinvalida)
+   json = JSON.parse(fs.readFileSync('lib/tentacles.json').toString())
+   random = json[Math.floor(Math.random() * json.length)]
+   res.type('png')
+   res.send(await getBuffer(random))
+   } catch (e) {
+   res.send(resposta.error)
+   }
+   })
+   router.all('/manga', async (req, res) => {
+ var cdapikey = req.query.apikey;
+   try {
+   if(!cdapikey) return res.json(resposta.semkey)
+    if(cdapikey !== key) return res.sendFile(keyinvalida)
+   json = JSON.parse(fs.readFileSync('lib/manga.json').toString())
+   random = json[Math.floor(Math.random() * json.length)]
+   res.type('png')
+   res.send(await getBuffer(random))
+   } catch (e) {
+   res.send(resposta.error)
+   }
+   })
+   router.post('/post/body', async (req, res) => {
+  res.send(req.body)
+})
+router.all('/waifu', async (req, res) => {
+ var cdapikey = req.query.apikey;
+   try {
+   if(!cdapikey) return res.json(resposta.semkey)
+    if(cdapikey !== key) return res.sendFile(keyinvalida)
+   json = JSON.parse(fs.readFileSync('lib/waifu.json').toString())
+   random = json[Math.floor(Math.random() * json.length)]
+   res.type('png')
+   res.send(await getBuffer(random))
+   } catch (e) {
+   res.send(resposta.error)
+   }
+   })
+   router.post('/post/body', async (req, res) => {
+  res.send(req.body)
+})
+router.all('/waifu2', async (req, res) => {
+ var cdapikey = req.query.apikey;
+   try {
+   if(!cdapikey) return res.json(resposta.semkey)
+    if(cdapikey !== key) return res.sendFile(keyinvalida)
+   json = JSON.parse(fs.readFileSync('lib/waifu2.json').toString())
+   random = json[Math.floor(Math.random() * json.length)]
+   res.type('png')
+   res.send(await getBuffer(random))
+   } catch (e) {
+   res.send(resposta.error)
+   }
+   })
+//////////////////fim +18\\\\\\\\\\\\\\\\
+//////////////wallpaper\\\\\\\\\\\\\\\\\\
+router.all('/wallpapernime', async (req, res) => {
+ var cdapikey = req.query.apikey;
+   try {
+   if(!cdapikey) return res.json(resposta.semkey)
+    if(cdapikey !== key) return res.sendFile(keyinvalida)
+   json = JSON.parse(fs.readFileSync('lib/wallpapernime.json').toString())
+   random = json[Math.floor(Math.random() * json.length)]
+   res.type('png')
+   res.send(await getBuffer(random))
+   } catch (e) {
+   res.send(resposta.error)
+   }
+   })
+  router.all('/satanic', async (req, res) => {
+ var cdapikey = req.query.apikey;
+   try {
+   if(!cdapikey) return res.json(resposta.semkey)
+    if(cdapikey !== key) return res.sendFile(keyinvalida)
+   json = JSON.parse(fs.readFileSync('lib/satanic.json').toString())
+   random = json[Math.floor(Math.random() * json.length)]
+   res.type('png')
+   res.send(await getBuffer(random))
+   } catch (e) {
+   res.send(resposta.error)
+   }
+   })  
    router.all('/bonek', async (req, res) => {
  var cdapikey = req.query.apikey;
    try {
@@ -373,6 +503,321 @@ router.all('/cum', async (req, res) => {
    res.send(resposta.error)
    }
    })
+router.all('/wallhp2', async (req, res) => {
+ var cdapikey = req.query.apikey;
+   try {
+   if(!cdapikey) return res.json(resposta.semkey)
+    if(cdapikey !== key) return res.sendFile(keyinvalida)
+   json = JSON.parse(fs.readFileSync('lib/wallhp2.json').toString())
+   random = json[Math.floor(Math.random() * json.length)]
+   res.type('png')
+   res.send(await getBuffer(random))
+   } catch (e) {
+   res.send(resposta.error)
+   }
+   })   
+//////////////fim wallpaper\\\\\\\\\\\\\\\\\\
+////////////// Animes \\\\\\\\\\\\\\\\\\   
+router.all('/cosplay', async (req, res) => {
+ var cdapikey = req.query.apikey;
+   try {
+   if(!cdapikey) return res.json(resposta.semkey)
+    if(cdapikey !== key) return res.sendFile(keyinvalida)
+   json = JSON.parse(fs.readFileSync('lib/cosplay.json').toString())
+   random = json[Math.floor(Math.random() * json.length)]
+   res.type('png')
+   res.send(await getBuffer(random))
+   } catch (e) {
+   res.send(resposta.error)
+   }
+   })   
+router.all('/cosplayloli', async (req, res) => {
+ var cdapikey = req.query.apikey;
+   try {
+   if(!cdapikey) return res.json(resposta.semkey)
+    if(cdapikey !== key) return res.sendFile(keyinvalida)
+   json = JSON.parse(fs.readFileSync('lib/cosplayloli.json').toString())
+   random = json[Math.floor(Math.random() * json.length)]
+   res.type('png')
+   res.send(await getBuffer(random))
+   } catch (e) {
+   res.send(resposta.error)
+   }
+   }) 
+   router.all('/cosplaysagiri', async (req, res) => {
+ var cdapikey = req.query.apikey;
+   try {
+   if(!cdapikey) return res.json(resposta.semkey)
+    if(cdapikey !== key) return res.sendFile(keyinvalida)
+   json = JSON.parse(fs.readFileSync('lib/cosplaysagiri.json').toString())
+   random = json[Math.floor(Math.random() * json.length)]
+   res.type('png')
+   res.send(await getBuffer(random))
+   } catch (e) {
+   res.send(resposta.error)
+   }
+   })   
+   router.all('/akira', async (req, res) => {
+ var cdapikey = req.query.apikey;
+   try {
+   if(!cdapikey) return res.json(resposta.semkey)
+    if(cdapikey !== key) return res.sendFile(keyinvalida)
+   json = JSON.parse(fs.readFileSync('lib/akira.json').toString())
+   random = json[Math.floor(Math.random() * json.length)]
+   res.type('png')
+   res.send(await getBuffer(random))
+   } catch (e) {
+   res.send(resposta.error)
+   }
+   })     
+    router.all('/boruto', async (req, res) => {
+ var cdapikey = req.query.apikey;
+   try {
+   if(!cdapikey) return res.json(resposta.semkey)
+    if(cdapikey !== key) return res.sendFile(keyinvalida)
+   json = JSON.parse(fs.readFileSync('lib/boruto.json').toString())
+   random = json[Math.floor(Math.random() * json.length)]
+   res.type('png')
+   res.send(await getBuffer(random))
+   } catch (e) {
+   res.send(resposta.error)
+   }
+   })      
+   router.all('/deidara', async (req, res) => {
+ var cdapikey = req.query.apikey;
+   try {
+   if(!cdapikey) return res.json(resposta.semkey)
+    if(cdapikey !== key) return res.sendFile(keyinvalida)
+   json = JSON.parse(fs.readFileSync('lib/deidara.json').toString())
+   random = json[Math.floor(Math.random() * json.length)]
+   res.type('png')
+   res.send(await getBuffer(random))
+   } catch (e) {
+   res.send(resposta.error)
+   }
+   })          
+   router.all('/elaina', async (req, res) => {
+ var cdapikey = req.query.apikey;
+   try {
+   if(!cdapikey) return res.json(resposta.semkey)
+    if(cdapikey !== key) return res.sendFile(keyinvalida)
+   json = JSON.parse(fs.readFileSync('lib/elaina.json').toString())
+   random = json[Math.floor(Math.random() * json.length)]
+   res.type('png')
+   res.send(await getBuffer(random))
+   } catch (e) {
+   res.send(resposta.error)
+   }
+   })              
+   router.all('/emilia', async (req, res) => {
+ var cdapikey = req.query.apikey;
+   try {
+   if(!cdapikey) return res.json(resposta.semkey)
+    if(cdapikey !== key) return res.sendFile(keyinvalida)
+   json = JSON.parse(fs.readFileSync('lib/emilia.json').toString())
+   random = json[Math.floor(Math.random() * json.length)]
+   res.type('png')
+   res.send(await getBuffer(random))
+   } catch (e) {
+   res.send(resposta.error)
+   }
+   })    
+   router.all('/erza', async (req, res) => {
+ var cdapikey = req.query.apikey;
+   try {
+   if(!cdapikey) return res.json(resposta.semkey)
+    if(cdapikey !== key) return res.sendFile(keyinvalida)
+   json = JSON.parse(fs.readFileSync('lib/erza.json').toString())
+   random = json[Math.floor(Math.random() * json.length)]
+   res.type('png')
+   res.send(await getBuffer(random))
+   } catch (e) {
+   res.send(resposta.error)
+   }
+   })    
+   router.all('/hinata', async (req, res) => {
+ var cdapikey = req.query.apikey;
+   try {
+   if(!cdapikey) return res.json(resposta.semkey)
+    if(cdapikey !== key) return res.sendFile(keyinvalida)
+   json = JSON.parse(fs.readFileSync('lib/hinata.json').toString())
+   random = json[Math.floor(Math.random() * json.length)]
+   res.type('png')
+   res.send(await getBuffer(random))
+   } catch (e) {
+   res.send(resposta.error)
+   }
+   })   
+   router.all('/itachi', async (req, res) => {
+ var cdapikey = req.query.apikey;
+   try {
+   if(!cdapikey) return res.json(resposta.semkey)
+    if(cdapikey !== key) return res.sendFile(keyinvalida)
+   json = JSON.parse(fs.readFileSync('lib/itachi.json').toString())
+   random = json[Math.floor(Math.random() * json.length)]
+   res.type('png')
+   res.send(await getBuffer(random))
+   } catch (e) {
+   res.send(resposta.error)
+   }
+   })
+   router.all('/itori', async (req, res) => {
+ var cdapikey = req.query.apikey;
+   try {
+   if(!cdapikey) return res.json(resposta.semkey)
+    if(cdapikey !== key) return res.sendFile(keyinvalida)
+   json = JSON.parse(fs.readFileSync('lib/itori.json').toString())
+   random = json[Math.floor(Math.random() * json.length)]
+   res.type('png')
+   res.send(await getBuffer(random))
+   } catch (e) {
+   res.send(resposta.error)
+   }
+   })    
+   router.all('/madara', async (req, res) => {
+ var cdapikey = req.query.apikey;
+   try {
+   if(!cdapikey) return res.json(resposta.semkey)
+    if(cdapikey !== key) return res.sendFile(keyinvalida)
+   json = JSON.parse(fs.readFileSync('lib/madara.json').toString())
+   random = json[Math.floor(Math.random() * json.length)]
+   res.type('png')
+   res.send(await getBuffer(random))
+   } catch (e) {
+   res.send(resposta.error)
+   }
+   })    
+    router.all('/mikasa', async (req, res) => {
+ var cdapikey = req.query.apikey;
+   try {
+   if(!cdapikey) return res.json(resposta.semkey)
+    if(cdapikey !== key) return res.sendFile(keyinvalida)
+   json = JSON.parse(fs.readFileSync('lib/mikasa.json').toString())
+   random = json[Math.floor(Math.random() * json.length)]
+   res.type('png')
+   res.send(await getBuffer(random))
+   } catch (e) {
+   res.send(resposta.error)
+   }
+   })    
+    router.all('/minato', async (req, res) => {
+ var cdapikey = req.query.apikey;
+   try {
+   if(!cdapikey) return res.json(resposta.semkey)
+    if(cdapikey !== key) return res.sendFile(keyinvalida)
+   json = JSON.parse(fs.readFileSync('lib/minato.json').toString())
+   random = json[Math.floor(Math.random() * json.length)]
+   res.type('png')
+   res.send(await getBuffer(random))
+   } catch (e) {
+   res.send(resposta.error)
+   }
+   })    
+    router.all('/nezuko', async (req, res) => {
+ var cdapikey = req.query.apikey;
+   try {
+   if(!cdapikey) return res.json(resposta.semkey)
+    if(cdapikey !== key) return res.sendFile(keyinvalida)
+   json = JSON.parse(fs.readFileSync('lib/nezuko.json').toString())
+   random = json[Math.floor(Math.random() * json.length)]
+   res.type('png')
+   res.send(await getBuffer(random))
+   } catch (e) {
+   res.send(resposta.error)
+   }
+   })    
+   router.all('/onepiece', async (req, res) => {
+ var cdapikey = req.query.apikey;
+   try {
+   if(!cdapikey) return res.json(resposta.semkey)
+    if(cdapikey !== key) return res.sendFile(keyinvalida)
+   json = JSON.parse(fs.readFileSync('lib/onepiece.json').toString())
+   random = json[Math.floor(Math.random() * json.length)]
+   res.type('png')
+   res.send(await getBuffer(random))
+   } catch (e) {
+   res.send(resposta.error)
+   }
+   }) 
+   router.all('/pokemon', async (req, res) => {
+ var cdapikey = req.query.apikey;
+   try {
+   if(!cdapikey) return res.json(resposta.semkey)
+    if(cdapikey !== key) return res.sendFile(keyinvalida)
+   json = JSON.parse(fs.readFileSync('lib/pokemon.json').toString())
+   random = json[Math.floor(Math.random() * json.length)]
+   res.type('png')
+   res.send(await getBuffer(random))
+   } catch (e) {
+   res.send(resposta.error)
+   }
+   }) 
+    router.all('/rize', async (req, res) => {
+ var cdapikey = req.query.apikey;
+   try {
+   if(!cdapikey) return res.json(resposta.semkey)
+    if(cdapikey !== key) return res.sendFile(keyinvalida)
+   json = JSON.parse(fs.readFileSync('lib/rize.json').toString())
+   random = json[Math.floor(Math.random() * json.length)]
+   res.type('png')
+   res.send(await getBuffer(random))
+   } catch (e) {
+   res.send(resposta.error)
+   }
+   })     
+   router.all('/roze', async (req, res) => {
+ var cdapikey = req.query.apikey;
+   try {
+   if(!cdapikey) return res.json(resposta.semkey)
+    if(cdapikey !== key) return res.sendFile(keyinvalida)
+   json = JSON.parse(fs.readFileSync('lib/roze.json').toString())
+   random = json[Math.floor(Math.random() * json.length)]
+   res.type('png')
+   res.send(await getBuffer(random))
+   } catch (e) {
+   res.send(resposta.error)
+   }
+   })           
+    router.all('/sakura', async (req, res) => {
+ var cdapikey = req.query.apikey;
+   try {
+   if(!cdapikey) return res.json(resposta.semkey)
+    if(cdapikey !== key) return res.sendFile(keyinvalida)
+   json = JSON.parse(fs.readFileSync('lib/sakura.json').toString())
+   random = json[Math.floor(Math.random() * json.length)]
+   res.type('png')
+   res.send(await getBuffer(random))
+   } catch (e) {
+   res.send(resposta.error)
+   }
+   })               
+   router.all('/sasuke', async (req, res) => {
+ var cdapikey = req.query.apikey;
+   try {
+   if(!cdapikey) return res.json(resposta.semkey)
+    if(cdapikey !== key) return res.sendFile(keyinvalida)
+   json = JSON.parse(fs.readFileSync('lib/sasuke.json').toString())
+   random = json[Math.floor(Math.random() * json.length)]
+   res.type('png')
+   res.send(await getBuffer(random))
+   } catch (e) {
+   res.send(resposta.error)
+   }
+   })                     
+   router.all('/tsunade', async (req, res) => {
+ var cdapikey = req.query.apikey;
+   try {
+   if(!cdapikey) return res.json(resposta.semkey)
+    if(cdapikey !== key) return res.sendFile(keyinvalida)
+   json = JSON.parse(fs.readFileSync('lib/tsunade.json').toString())
+   random = json[Math.floor(Math.random() * json.length)]
+   res.type('png')
+   res.send(await getBuffer(random))
+   } catch (e) {
+   res.send(resposta.error)
+   }
+   })                                   
+//////////// fim Animes \\\\\\\\\\\\\\  
 router.post('/post/body', async (req, res) => {
   res.send(req.body)
 })
