@@ -41,104 +41,71 @@
                               document.body.style[type === 'backgroundColor' ? 'backgroundColor' : 'color'] = color;
                           }
                         </script>
-                    <audio id="backgroundMusic" loop autoplay>
-                        <source src="/imagens/calmo.mp3" type="audio/mp3">
-                        Seu navegador não suporta a tag de áudio.
-                    </audio>
-
-                    <script>
-                        // Função para ajustar o volume da música
-                        function ajustarVolume() {
-                            var volume = document.getElementById("volumeInput").value;
-                            document.getElementById("backgroundMusic").volume = volume;
-                        }
-
-                        // Adiciona um ouvinte de eventos para aguardar o carregamento da página
-                        window.addEventListener("load", function () {
-                            // Adiciona um ouvinte de eventos para aguardar o carregamento da música
-                            document.getElementById("backgroundMusic").addEventListener("canplaythrough", function () {
-                                // Exibe um controle deslizante de volume
-                                document.body.innerHTML += '<input type="range" id="volumeInput" min="0" max="1" step="0.1" value="1" oninput="ajustarVolume()">';
-
-                                // Atualiza o volume inicial
-                                ajustarVolume();
-                            });
-                        });
-                    </script>
-                        <div id="links">
-                        <a class="link" href="download/play?&nome=M4rkim&apikey=SUAKEY">Play</a>
-                        </div>
-                        <div id="links">
-                        <a class="link" href="download/playv?&nome=M4rkim&apikey=SUAKEY">Play vídeo</a>
-                        </div>
-                        <div id="links">
-                        <a class="link" href="download/ytmp3?&link=https://youtu.be/U8i2_6gG110?si=C75VDrmSvDVjzSs2&apikey=SUAKEY">Ytmp3</a>
-                        </div>
-                        <div class="links">
-                        <a class="link" href="download/ytmp4?&link=https://youtu.be/U8i2_6gG110?si=C75VDrmSvDVjzSs2&apikey=SUAKEY">Ytmp4</a>
-                        </div>
-                        <div id="links">
-                        <a class="link" href="canvas/changemymind?texto=PEDROZZ O BRABO&apikey=SUAKEY">Canvas ChangeMyMind</a>
-                        </div>
-                        <div id="links"> 
-                        <a class="link" href="canvas/clyde?texto=PEDROZZ O BRABO&apikey=SUAKEY">Canvas clyde</a>      
-                        </div>
-                        <div>
-                        <a class="link" href="canvas/trigger?url=https://telegra.ph/file/71f0b7f75b12b61178d8a.jpg&apikey=SUAKEY">Canvas Trigger</a>
-                        </div>   
-                        <div id="links">
-                        <a class="link" href="loli?apikey=SUAKEY">LOLI</a>
-                        </div>
-                        <div id="links">
-                        <a class="link" href="shota?apikey=SUAKEY">SHOTA</a>
-                        </div>
-                         <div id="links">
-                        <a class="link" href="cum?apikey=SUAKEY">CUM</a>
-                         </div>   
-                         <div id="links">
-                         <a class="link" href="ero?apikey=SUAKEY">ERO</a>
-                         </div>   
-                        <div id="links">
-                        <a class="link" href="neko?apikey=SUAKEY">NEKO</a>
-                        </div>   
-                        <div id="links">
-                        <a class="link" href="neko2?apikey=SUAKEY">NEKO2</a>
-                         </div> 
-                         <div id="links">
-                        <a class="link" href="zettai?apikey=SUAKEY">ZETTAI</a>
-                         </div> 
-                          <div id="links">
-                         <a class="link" href="ass?apikey=SUAKEY">ASS</a>
-                         </div>
-                            <div id="links">
-                         <a class="link" href="foto18?apikey=SUAKEY">FOTO+18</a>
-                            </div>
-                        <div id="links">
-                        <a class="link" href="nsfwloli?apikey=SUAKEY">NSFW loli</a>
-                        </div>
-                        <div id="links">
-                        <a class="link" href="nsfw/hetai?apikey=SUAKEY">HEtai</a>
-                        </div>
-                        <div id="links">
-                        <a class="link" href="nsfw/hetai?apikey=SUAKEY">HEtai</a>
-                        </div>
-                        <div id="links">
-                         <a class="link" href="wallpapernime?apikey=SUAKEY">WALLPAPER-ANIME</a>
-                         </div>      
-                         <div id="links">
-                         <a class="link" href="GameWallp?apikey=SUAKEY">WALLPAPER-GAME</a>
-                         </div>     
-                        <div id="links">
-                         <a class="link" href="satanic?apikey=SUAKEY">WALLPAPER-SATANIC</a>
-                         </div>     
-                         <div id="links">
-                         <a class="link" href="travazap?apikey=SUAKEY">TRAVAZAP(IMG)</a>
-                         </div>     
-                         <div id="links">
-                         <a class="link" href="bonek?apikey=SUAKEY">BONECOS</a>
-                         </div>
-                            
-                    <div class="tutotxt">
+<nav>
+        <ul>
+            <li>
+                <a onclick="toggleSubMenu('collapseDownloads')">Downloads</a>
+                <div id="collapseDownloads" class="collapse-inner">
+                    <h6 class="collapse-header">download</h6>
+                    <a href="download/play?&nome=M4rkim&apikey=SUAKEY">Play</a>
+                    <a href="download/playv?&nome=M4rkim&apikey=SUAKEY">Play vídeo</a>
+                    <a href="download/ytmp3?&link=https://youtu.be/U8i2_6gG110?si=C75VDrmSvDVjzSs2&apikey=SUAKEY">Ytmp3</a>
+                    <a href="download/ytmp4?&link=https://youtu.be/U8i2_6gG110?si=C75VDrmSvDVjzSs2&apikey=SUAKEY">Ytmp4</a>
+                </div>
+            </li>
+<br></br>
+            <li>
+                <a onclick="toggleSubMenu('collapseCanvas')">Canvas</a>
+                <div id="collapseCanvas" class="collapse-inner">
+                    <h6 class="collapse-header">canvas</h6>
+                    <a href="canvas/changemymind?texto=PEDROZZ O BRABO&apikey=SUAKEY">Canvas ChangeMyMind</a>
+                    <a href="canvas/clyde?texto=PEDROZZ O BRABO&apikey=SUAKEY">Canvas clyde</a>
+                    <a href="canvas/trigger?url=https://telegra.ph/file/71f0b7f75b12b61178d8a.jpg&apikey=SUAKEY">Canvas Trigger</a>
+                </div>
+            </li>
+<br></br>
+            <li>
+                <a onclick="toggleSubMenu('collapsePlus18')">+18</a>
+                <div id="collapsePlus18" class="collapse-inner">
+                    <h6 class="collapse-header">+18</h6>
+                    <a href="loli?apikey=SUAKEY">Loli</a>
+                    <a href="shota?apikey=SUAKEY">Shota</a>
+                    <a href="cum?apikey=SUAKEY">Cum</a>
+                    <a href="ero?apikey=SUAKEY">Ero</a>
+                    <a href="neko?apikey=SUAKEY">Neko</a>
+                    <a href="neko2?apikey=SUAKEY">Neko2</a>
+                    <a href="zettai?apikey=SUAKEY">Zettai</a>
+                    <a href="foto18?apikey=SUAKEY">Foto+18</a>
+                    <a href="ass?apikey=SUAKEY">Ass</a>
+                    <a href="nsfwloli?apikey=SUAKEY">Nsfw Loli</a>
+                    <a herf="hentai?apikey=SUAKEY">Hentai</a>
+                </div>
+            </li>
+<br></br>
+          
+            <li>
+                <a onclick="toggleSubMenu('collapseWallpapers')">Wallpapers</a>
+                <div id="collapseWallpapers" class="collapse-inner">
+                    <h6 class="collapse-header">Wallpaper</h6>
+                    <a href="wallpapernime?apikey=SUAKEY">Wallpaper-Anime</a>
+                    <a href="GameWallp?apikey=SUAKEY">Wallpaper-Game</a>
+                    <a href="satanic?apikey=SUAKEY">Wallpaper-Satanic</a>
+                    <a href="travazap?apikey=SUAKEY">TravaZap(IMG)</a>
+                    <a href="bonek?apikey=SUAKEY">Bonecos</a>
+                </div>
+            </li>
+<br></br>
+            <li>
+                <a onclick="toggleSubMenu('collapseSupport')">Suporte</a>
+                <div id="collapseSupport" class="collapse-inner">
+                    <h6 class="collapse-header">by Pedrozz</h6>
+                    <a href="https://api.whatsapp.com/send?phone=556199317165&text=key%20de%20teste%20da%20API">Adm</a>
+                    <a href="https://www.youtube.com/@Pedrozz_Mods">Canal</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+  <div class="tutotxt">
                       <div class="menuzin">
                           <h4>Parcerias</h4><br>
                           <details>
@@ -163,32 +130,34 @@
                               <li><img src="/imagens/default.jpg" class="parceiro-imagem" alt="criador"><a href="https://www.mediafire.com/file/nsfoxodgio02o4t/base-gasparzinho.zip/file">Gasparzinho-base</a></li>
                                   <li><img src="/imagens/default.jpg" class="parceiro-imagem" alt="Parceiro 3"><a href="https://www.mediafire.com/file/qyy8q1ov2tfk6z6/%25F0%259D%2591%258A%25F0%259D%2590%25B4.%25F0%259D%2590%25B7%25F0%259D%2590%25B4%25F0%259D%2591%2585%25F0%259D%2590%25BE_%25F0%259D%2591%258F%25F0%259D%2591%25A6_%25F0%259D%2591%259D%25F0%259D%2591%2592%25F0%259D%2591%2591%25F0%259D%2591%259F%25F0%259D%2591%259C%25F0%259D%2591%25A7%25F0%259D%2591%25A7.apk/file">Wa Dark(imune)</a></li>
                               </ul>
-                          </details>
-                      </div>
-                    </div>
-
+                        </details>
+                   </div>
+               </div>
+            <br></br>
+                    <br></br>
 <br></br>
-                    <br></br>
-                    <br></br>
-                        </div>
-                        </div>
-           
+<br></br>
+
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+  
+           </div>
+                    </div>
                         <div class="center-image">
-                        <a href="https://telegra.ph/file/5adba795b9a6348c2f381.jpg" alt="pedrozz: criador">
-                        <img class="round-image" src="https://telegra.ph/file/71f0b7f75b12b61178d8a.jpg" alt="laura a braba">
+                        <a href="https://telegra.ph/file/71f0b7f75b12b61178d8a.jpg" alt="pedrozz: criador">
+                        <img class="round-image" src="https://telegra.ph/file/71f0b7f75b12b61178d8a.jpg" alt="by Pedrozz">
                         </a>
                         </div>
-                        <a href="https://api.whatsapp.com/send?phone=556199317165&text=key%20de%20teste%20da%20API" id="userName">by Pedrozz</a>
+                        <a href="https://api.whatsapp.com/send?phone=556199317165&text=key%20de%20teste%20da%20API" id="userName">by Pedrozz Mods</a>
 
                         <section>
-                        <h2>⟬ PEDROZZ⟭</h2>
+                        <h2>⟬ PEDROZZ-MODS⟭</h2>
                         <p>╔━━━━━━━━━━━━━━━━━━━━━╗</p>
                         <p>O QUE VOCE PROCURA ESTA</p>
                         <p>NA BARRA LATERAL AO LADO</p>
                         <p>╚━━━━━━━━━━━━━━━━━━━━━╝</p>
                         </section
                        <section>
-                         <h3>API AINDA ESTÁ EM DESENVOLVIMENTO</h3>
                        </section>
                         <div class="tutotxt">
                           <br>
@@ -225,7 +194,7 @@
             <footer class="footer">
             <div class="d-sm-flex justify-content-center justify-content-sm-between">
             <p><span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright © 2024 Pedrozz Mods</span></p>
-            <p><span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center"> Meu Canal: <a href="https://www.youtube.com/@Pedrozz_Mods`" target="_blank">CLICK</a> RUMO AOS 50 INSCRITOS</span></p>
+            <p><span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center"> Meu Canal: <a href="https://www.youtube.com/@Pedrozz_Mods" target="_blank">CLICK</a> RUMO AOS 50 INSCRITOS</span></p>
             </div>
              </footer>
             <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js">
@@ -245,9 +214,30 @@
                       window.open(pagina, '_blank');
                   }
               </script>
+           <script>
+    function toggleSubMenu(id) {
+        var submenu = document.getElementById(id);
+        var submenus = document.querySelectorAll('.collapse-inner');
 
+        // Oculta todos os submenus
+        submenus.forEach(function (item) {
+            if (item.id !== id) {
+                item.style.display = 'none';
+            }
+        });
+
+        // Alterna a visibilidade do submenu clicado
+        if (submenu.style.display === 'block') {
+            submenu.style.display = 'none';
+        } else {
+            submenu.style.display = 'block';
+        }
+    }
+      </script>
+            
               
           </body>
 
           </html>
-
+          
+          
