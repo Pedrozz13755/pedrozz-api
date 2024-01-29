@@ -8,7 +8,7 @@
             --color-dark5: #343434;
             --color-purple: #b040ff;
 }
-*{
+* {
   margin:0;
   padding:0;
   box-sizing: border-box;
@@ -19,14 +19,7 @@
     border-radius: 50%; /* Torna a imagem redonda */
     margin-right: 5px; /* Adiciona um espaço à direita da imagem */
 }
-section {
-  padding: 40px;
-  text-align: center;
-  background-color: rgba(240, 280, 240, 0.05); /* Fundo branco com 80% de opacidade */
-  margin: 20px 0;
-  border-radius: 10px;
-  color: black;
-}
+
 body{
   font-family: Arial, Helvetica, sans-serif;
   background: #310404 url(https://wallpaperaccess.com/full/8351171.gif) no-repeat center center fixed;
@@ -34,8 +27,6 @@ body{
 -moz-background-size: cover;
 -o-background-size: cover;
 background-size: cover;
-font-family: 'Barlow', sans-serif;
-font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 color: white;
 }
 
@@ -51,6 +42,14 @@ color: white;
   100% {
     background-position: 0% 50%;
   }
+}
+section {
+  padding: 40px;
+  text-align: center;
+  background-color: rgba(240, 280, 240, 0.05); /* Fundo branco com 80% de opacidade */
+  margin: 20px 0;
+  border-radius: 10px;
+  
 }
 
 .side-bar{
@@ -495,4 +494,4 @@ text-align: center;
   border-radius: 100%;
   width: 200px; /* Ajuste o tamanho da imagem conforme necessário */
   height: 200px; /* Ajuste o tamanho da imagem conforme necessário */
- }
+   }
