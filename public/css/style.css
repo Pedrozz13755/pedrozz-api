@@ -19,7 +19,14 @@
     border-radius: 50%; /* Torna a imagem redonda */
     margin-right: 5px; /* Adiciona um espaço à direita da imagem */
 }
-
+section {
+  padding: 40px;
+  text-align: center;
+  background-color: rgba(240, 280, 240, 0.05); /* Fundo branco com 80% de opacidade */
+  margin: 20px 0;
+  border-radius: 10px;
+  color: black;
+}
 body{
   font-family: Arial, Helvetica, sans-serif;
   background: #310404 url(https://wallpaperaccess.com/full/8351171.gif) no-repeat center center fixed;
@@ -488,4 +495,4 @@ text-align: center;
   border-radius: 100%;
   width: 200px; /* Ajuste o tamanho da imagem conforme necessário */
   height: 200px; /* Ajuste o tamanho da imagem conforme necessário */
-                   }
+ }
