@@ -189,9 +189,7 @@ resultado: akk
 res.sendFile(error)})})
 
    
-   router.post('/post/body', async (req, res) => {
-  res.send(req.body)
-})
+   
 
 //////////////// +18 \\\\\\\\\\\\\\\\\\\\
 router.all('/shota', async (req, res) => {
@@ -207,9 +205,7 @@ router.all('/shota', async (req, res) => {
    res.send(resposta.error)
    }
    })
-router.post('/post/body', async (req, res) => {
-  res.send(req.body)
-})
+
 router.all('/cum', async (req, res) => {
  var cdapikey = req.query.apikey;
    try {
@@ -314,9 +310,7 @@ router.all('/ahegao', async (req, res) => {
    res.send(resposta.error)
    }
    })
-   router.post('/post/body', async (req, res) => {
-  res.send(req.body)
-})
+   
 router.all('/masturbation', async (req, res) => {
  var cdapikey = req.query.apikey;
    try {
@@ -330,9 +324,7 @@ router.all('/masturbation', async (req, res) => {
    res.send(resposta.error)
    }
    })
-   router.post('/post/body', async (req, res) => {
-  res.send(req.body)
-})
+   
 router.all('/orgy', async (req, res) => {
  var cdapikey = req.query.apikey;
    try {
@@ -346,9 +338,7 @@ router.all('/orgy', async (req, res) => {
    res.send(resposta.error)
    }
    })
-   router.post('/post/body', async (req, res) => {
-  res.send(req.body)
-})
+   
 router.all('/pussy', async (req, res) => {
  var cdapikey = req.query.apikey;
    try {
@@ -362,9 +352,7 @@ router.all('/pussy', async (req, res) => {
    res.send(resposta.error)
    }
    })
-   router.post('/post/body', async (req, res) => {
-  res.send(req.body)
-})
+   
 router.all('/tentacles', async (req, res) => {
  var cdapikey = req.query.apikey;
    try {
@@ -391,9 +379,7 @@ router.all('/tentacles', async (req, res) => {
    res.send(resposta.error)
    }
    })
-   router.post('/post/body', async (req, res) => {
-  res.send(req.body)
-})
+   
 router.all('/waifu', async (req, res) => {
  var cdapikey = req.query.apikey;
    try {
@@ -407,15 +393,26 @@ router.all('/waifu', async (req, res) => {
    res.send(resposta.error)
    }
    })
-   router.post('/post/body', async (req, res) => {
-  res.send(req.body)
-})
+   
 router.all('/waifu2', async (req, res) => {
  var cdapikey = req.query.apikey;
    try {
    if(!cdapikey) return res.json(resposta.semkey)
     if(cdapikey !== key) return res.sendFile(keyinvalida)
    json = JSON.parse(fs.readFileSync('lib/waifu2.json').toString())
+   random = json[Math.floor(Math.random() * json.length)]
+   res.type('png')
+   res.send(await getBuffer(random))
+   } catch (e) {
+   res.send(resposta.error)
+   }
+   })
+   router.all('/nsfwloli', async (req, res) => {
+   var cdapikey = req.query.apikey;
+   try {
+   if(!cdapikey) return res.json(resposta.semkey)
+    if(cdapikey !== key) return res.sendFile(keyinvalida)
+   json = JSON.parse(fs.readFileSync('lib/nsfwlolis.json').toString())
    random = json[Math.floor(Math.random() * json.length)]
    res.type('png')
    res.send(await getBuffer(random))
@@ -791,6 +788,19 @@ router.all('/cosplayloli', async (req, res) => {
    res.send(resposta.error)
    }
    })               
+      router.all('/sagiri', async (req, res) => {
+ var cdapikey = req.query.apikey;
+   try {
+   if(!cdapikey) return res.json(resposta.semkey)
+    if(cdapikey !== key) return res.sendFile(keyinvalida)
+   json = JSON.parse(fs.readFileSync('lib/sagiri.json').toString())
+   random = json[Math.floor(Math.random() * json.length)]
+   res.type('png')
+   res.send(await getBuffer(random))
+   } catch (e) {
+   res.send(resposta.error)
+   }
+   })               
    router.all('/sasuke', async (req, res) => {
  var cdapikey = req.query.apikey;
    try {
@@ -821,23 +831,11 @@ router.all('/cosplayloli', async (req, res) => {
 router.post('/post/body', async (req, res) => {
   res.send(req.body)
 })
-   router.all('/nsfwloli', async (req, res) => {
-   var cdapikey = req.query.apikey;
-   try {
-   if(!cdapikey) return res.json(resposta.semkey)
-    if(cdapikey !== key) return res.sendFile(keyinvalida)
-   json = JSON.parse(fs.readFileSync('lib/nsfwlolis.json').toString())
-   random = json[Math.floor(Math.random() * json.length)]
-   res.type('png')
-   res.send(await getBuffer(random))
-   } catch (e) {
-   res.send(resposta.error)
-   }
-   })
+   
    router.all('*', async (req, res) => {
    res.status(404).json({
             status:404,
-            error: 'A página que você está procurando não foi encontrada',
+            error: 'Esta página não esta presente na Rest Api',
             endpoint: req.path
         })
 })
