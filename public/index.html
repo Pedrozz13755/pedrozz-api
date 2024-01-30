@@ -1,282 +1,380 @@
-          <!DOCTYPE html>
-          <html lang="en">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" charset="UTF-8" ></script>
+  <link rel="stylesheet" href="style.css">
+ <meta name='viewport' content='width=device-width, initial-scale=1'>
+<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+<link rel="shortcut icon" href="https://telegra.ph/file/df3c2ebe1d9b6417c2a05.jpg" type="image/x-icon" />
+  <title>Pedrozz Mods</title>
 
-          <head>
-              <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-              <meta name="viewport" content="width=device-width, initial-scale=1">
-              <title>Pedrozz API</title>
-              <link rel="stylesheet" href="/css/style.css">
-              <link rel="icon" href="https://telegra.ph/file/2ff582485546fb946994b.jpg" type="image/jpg">
-              <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-             
-          </head>
+<script>
+document.getElementById("btn-laranja").addEventListener("click", function(){
+  document.querySelector("body").setAttribute("class","laranja");
+})
 
-          <body>
-              <header>
-                  <nav>
-                      <div class="menu-btn" onclick="toggleSideBar()">
-                          <i class="fas fa-bars"></i>
-                      </div>
-                  </nav>
-              </header>
+document.getElementById("btn-vermelho").addEventListener("click", function(){
+  document.querySelector("body").setAttribute("class","vermelho");
+})
 
-              <div class="side-bar">
-                  <div class="close-btn" onclick="toggleSideBar()">
-                      <i class="fas fa-times"></i>
-                  </div>
-                  <div class="txt">
-                      <i class="fa fa-cog fa-spin fa-3x fa-fw"></i>
-                      <p>PEDROZZ-API</p>
-                  </div>
-                  <br>
-                  <hr>
-                  <div class="menu">
-                      <div id="colorForm">
-                          <label for="textColor">Cor do Texto:</label>
-                          <input type="color" id="textColor" onchange="changeColor('textColor')">
-                      </div>
-                        <script>
-                          function changeColor(type) {
-                              const color = document.getElementById(type).value;
-                              document.body.style[type === 'backgroundColor' ? 'backgroundColor' : 'color'] = color;
-                          }
-                        </script>
-<nav>
-        <ul>
-            <li>
-                <a onclick="toggleSubMenu('collapseDownloads')">Downloads</a>
-                <div id="collapseDownloads" class="collapse-inner">
-                    <h6 class="collapse-header">download</h6>
-                    <a href="download/play?&nome=M4rkim&apikey=pedrozz13">Play</a>
-                    <a href="download/playv?&nome=M4rkim&apikey=pedrozz13">Play vídeo</a>
-                    <a href="download/ytmp3?&link=https://youtu.be/U8i2_6gG110?si=C75VDrmSvDVjzSs2&apikey=pedrozz13">Ytmp3</a>
-                    <a href="download/ytmp4?&link=https://youtu.be/U8i2_6gG110?si=C75VDrmSvDVjzSs2&apikey=pedrozz13">Ytmp4</a>
-                </div>
-            </li>
-<br></br>
-            <li>
-                <a onclick="toggleSubMenu('collapseCanvas')">Canvas</a>
-                <div id="collapseCanvas" class="collapse-inner">
-                    <h6 class="collapse-header">canvas</h6>
-                    <a href="canvas/changemymind?texto=PEDROZZ O BRABO&apikey=pedrozz13">Canvas ChangeMyMind</a>
-                    <a href="canvas/clyde?texto=PEDROZZ O BRABO&apikey=pedrozz13">Canvas clyde</a>
-                    <a href="canvas/trigger?url=https://telegra.ph/file/71f0b7f75b12b61178d8a.jpg&apikey=pedrozz13">Canvas Trigger</a>
-                </div>
-            </li>
-<br></br>
-            <li>
-                <a onclick="toggleSubMenu('collapsePlus18')">+18</a>
-                <div id="collapsePlus18" class="collapse-inner">
-                    <h6 class="collapse-header">+18</h6>
-                    <a href="loli?apikey=pedrozz13">Loli</a>
-                    <a href="shota?apikey=pedrozz13">Shota</a>
-                    <a href="cum?apikey=pedrozz13">Cum</a>
-                    <a href="ero?apikey=pedrozz13">Ero</a>
-                    <a href="neko?apikey=pedrozz13">Neko</a>
-                    <a href="neko2?apikey=pedrozz13">Neko2</a>
-                    <a href="zettai?apikey=pedrozz13">Zettai</a>
-                    <a href="foto18?apikey=pedrozz13">Foto+18</a>
-                    <a href="ass?apikey=pedrozz13">Ass</a>
-                    <a href="nsfwloli?apikey=pedrozz13">Nsfw Loli</a>
-                    <a href="hentai?apikey=pedrozz13">Hentai</a>
-                    <a herf="waifu?apikey=pedrozz13">Waifu</a>
-                    <a href="waifu2?apikey=pedrozz13">Waifu2</a>
-                    <a href="pussy?apikey=pedrozz13">Pussy</a>
-                    <a href="orgy?apikey=pedrozz13">Orgy</a>
-                    <a href="tentacles?apikey=pedrozz13">Tentacles</a>
-                    <a href="manga?apikey=pedrozz13">Manga</a>
-                </div>
-            </li>
-<br></br>
-          
-            <li>
-                <a onclick="toggleSubMenu('collapseWallpapers')">Wallpapers</a>
-                <div id="collapseWallpapers" class="collapse-inner">
-                    <h6 class="collapse-header">Wallpaper</h6>
-                    <a href="wallpapernime?apikey=pedrozz13">Wallpaper-Anime</a>
-                    <a href="GameWallp?apikey=pedrozz13">Wallpaper-Game</a>
-                    <a href="satanic?apikey=pedrozz13">Wallpaper-Satanic</a>
-                    <a href="wallhp2?apikey=pedrozz13">Wallpeper2</a>
-                    <a href="travazap?apikey=pedrozz13">TravaZap(IMG)</a>
-                    <a href="bonek?apikey=pedrozz13">Bonecos</a>
-                </div>
-            </li>
-<br></br>
-<li>
-                <a onclick="toggleSubMenu('collapseAnime')">Animes</a>
-                <div id="collapseAnime" class="collapse-inner">
-                    <h6 class="collapse-header">Relacionados a anime</h6>
-                    <a href="cosplay?apikey=pedrozz13">Cosplay</a>
-                    <a href="coaplayloli?apikey=pedrozz13">Cosplay-loli</a>
-                    <a href="cosplaysagiri?apikey=pedrozz13">Cosplay-sagiri</a>
-                    <a href="boruto?apikey=pedrozz13">Boruto</a>
-                    <a href="elaina?apikey=pedrozz13">Elaina</a>
-                    <a href="emilia?apikey=pedrozz13">Emilia</a>
-                    <a href="erza?apikey=pedrozz13">Erza</a>
-                    <a href="hinata?apikey=pedrozz13">Hinata</a>
-                    <a href="itachi?apikey=pedrozz13">Itachi</a>
-                    <a href="itori?apikey=pedrozz13">Itori</a>
-                    <a href="madara?apikey=pedrozz13">Madara</a>
-                    <a href="mikasa?apikey=pedrozz13">Mikasa</a>
-                    <a href="minato?apikey=pedrozz13">Minato</a>
-                    <a href="nezuko?apikey=pedrozz13">Nezuko</a> 
-                    <a href="onepiece?apikey=pedrozz13">OnePiece</a>
-                    <a href="pokemon?apikey=pedrozz13">Pokemon</a>
-                    <a href="rize?apikey=pedrozz13">Rize</a>
-                    <a href="rose?apikey=pedrozz13">Rose</a>
-                    <a href="sagiri?apikey=pedrozz13">Sagiri</a>
-                    <a href="sakura?apikey=pedrozz13">Sakura</a>
-                    <a href="sasuke?apikey=pedrozz13">Sasuke</a>
-                    <a href="deidara?apikey=pedrozz13">Deidara</a>
-                </div>
-            </li>
-            <br></br>
-            <li>
-                <a onclick="toggleSubMenu('collapseSupport')">Suporte</a>
-                <div id="collapseSupport" class="collapse-inner">
-                    <h6 class="collapse-header">by Pedrozz</h6>
-                    <a href="https://api.whatsapp.com/send?phone=556199317165&text=key%20de%20teste%20da%20API">Adm</a>
-                    <a href="https://www.youtube.com/@Pedrozz_Mods">Canal</a>
-                </div>
-            </li>
-        </ul>
-    </nav>
-  <div class="tutotxt">
-                      <div class="menuzin">
-                          <h4>Parcerias</h4><br>
-                          <details>
-                              <summary>Parceiros</summary>
-                    <ul>
-                    <li><img src="/imagens/default.jpg" class="parceiro-imagem" alt="Parceiro 1"><a href="https://wa.me/556199317165?text=A%20APIKEY%20ee%20pedrozz13">KEY</a></li>
-                                  <li><img src="/imagens/criador.jpg" class="parceiro-imagem" alt="criador"><a href="https://www.youtube.com/@Pedrozz_Mods">Criador</a></li>
-                                  <li><img src="/imagens/default.jpg" class="parceiro-imagem" alt="Parceiro 3"><a href="#">Sem</a></li>
-                              </ul>
-                          </details>
-                      </div>
-                    </div>
+document.getElementById("btn-purpura").addEventListener("click", function(){
+  document.querySelector("body").setAttribute("class","purpura");
+  document.querySelector("div").setAttribute("class","purpura");
+})
+</script>
+</head>
+<body>
 
-                    <div class="tutotxt">
-                      <div class="menuzin">
-                          <h4>BOTS by Pedrozz</h4><br>
-                          <details>
-                              <summary>bots</summary>
-                    <ul>
-                    <li><img src="/imagens/default.jpg" class="parceiro-imagem" alt="Parceiro 1"><a href="https://www.mediafire.com/file/vipd6uhe8k03jm4/laura_privat.zip/file">laura privat</a></li>
-                                  <li><img src="/imagens/default.jpg" class="parceiro-imagem" alt="criador"><a href="https://www.mediafire.com/file/jcq97y6aax7376k/akame_bot.zip/file">Akame bot</a></li>
-                              <li><img src="/imagens/default.jpg" class="parceiro-imagem" alt="criador"><a href="https://www.mediafire.com/file/nsfoxodgio02o4t/base-gasparzinho.zip/file">Gasparzinho-base</a></li>
-                                  <li><img src="/imagens/default.jpg" class="parceiro-imagem" alt="Parceiro 3"><a href="https://www.mediafire.com/file/qyy8q1ov2tfk6z6/%25F0%259D%2591%258A%25F0%259D%2590%25B4.%25F0%259D%2590%25B7%25F0%259D%2590%25B4%25F0%259D%2591%2585%25F0%259D%2590%25BE_%25F0%259D%2591%258F%25F0%259D%2591%25A6_%25F0%259D%2591%259D%25F0%259D%2591%2592%25F0%259D%2591%2591%25F0%259D%2591%259F%25F0%259D%2591%259C%25F0%259D%2591%25A7%25F0%259D%2591%25A7.apk/file">Wa Dark(imune)</a></li>
-                              </ul>
-                        </details>
-                   </div>
-               </div>
-            <br></br>
-                    <br></br>
-<br></br>
-<br></br>
 
-  </script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
-  
-           </div>
-                    </div>
-                        <div class="center-image">
-                        <a2 href="https://telegra.ph/file/71f0b7f75b12b61178d8a.jpg" alt="pedrozz: criador">
-                        <img class="round-image" src="https://telegra.ph/file/71f0b7f75b12b61178d8a.jpg" alt="by Pedrozz">
-                        </a2>
-                        </div>
-                        <a2 href="https://api.whatsapp.com/send?phone=556199317165&text=key%20de%20teste%20da%20API" id="userName">by Pedrozz Mods</a2>
+    <header>
+      <nav>
+        
+        <div class="menu-btn">
+          <i class="fas fa-bars"></i>
+        
+        </div>
 
-                        <section>
-                        <h2>⟬Api desenvolvida por PEDROZZ-MODS❤️⟭</h2>
-                        <p>╔━━━━━━━━━━━━━━━━━━━━━╗</p>
-                        <p>O QUE VOCE PROCURA ESTA</p>
-                        <p>NA BARRA LATERAL AO LADO</p>
-                        <p>ApiKey por enquanto free</p>
-                        <p>╚━━━━━━━━━━━━━━━━━━━━━╝</p>
-                        </section
-                       <section>
-                       </section>
-                        <div class="tutotxt">
-                          <br>
-                          <h3 class="tutotxtt">Informações básicas</h3><br><br>
-                            <br><br>
-                          <p class="tutotxtt">O que e um chat bot</p>
-                          <div class="aaaa">
-                          <br>
-                          <p>O chatbot é um programa que funciona como um robô automatizado no WhatsApp Business, ou seja, é possível ter um bot para o aplicativo. Esse software tem inúmeras funções e, dentro deste aplicativo popular, apresenta utilitários incríveis para a conversação e o gerenciamento de problemas com consumidores.</p>
-                          <br>
-                          <hr>
-                          <br>
-                          <h4 class="tutotxtt">Para que servem?</h4>
-                          <br>
-                          <p>O que é um Bot para WhatsApp? Um bot para WhatsAppoferece aos clientes uma experiência conversacional automatizada em tempo real diretamente no aplicativo, usando a API do WhatsApp para Negócios.</p>
-                          <br>
-                          <hr>
-                          <br>
-                          <h4 class="tutotxtt">Como funciona o bot?</h4>
-                          <br>
-                          <p>
-                          Um 'bot' – abreviatura de robô – é um programa de software que executa tarefas automatizadas, repetitivas e pré-definidas. Os bots normalmente imitam ou substituem o comportamento do usuário humano. Por serem automatizados, operam muito mais rápido do que os usuários humanos.
-                          </p>
-                          <br>
-                          <hr>
-                          <br>
-                          <h4 class="tutotxtt">O que é um bot de atendimento?</h4>
-                          <br>
-                          <p>Os bots de atendimento se tornaram cada vez mais comuns no dia a dia das empresas, e tem a intenção de melhorar a qualidade nos canais de mensageria, automatizando atendimentos e otimizando o tempo de resposta para os clientes que entram em contato com uma marca.</p>
+        
+        </div>
 
-                          <br>
-                          </div>
-                          </div>
-            <footer class="footer">
-            <div class="d-sm-flex justify-content-center justify-content-sm-between">
-            <p><span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright © 2024 Pedrozz Mods</span></p>
-            
+
+        <div class="fe">
+      <a href="/perfil?username=<%= user.username %>&key=<%= user.key %>&password=<%= user.password %>">
+          <img src="<%= user.ft%>">
+     </a>
+        </div>
+        <div class="side-bar">
+          <div class="close-btn">
+            <i class="fas fa-times"></i>
+          </div>
+            <div class="txt">
+<i class="fa fa-cog fa-spin fa-3x fa-fw"></i><i>PEDROZZ - API</i>
             </div>
-             </footer>
-            <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js">
-            </script>
-            
-           
-            <script src="/script/jquery.min.js"></script>
-                        <script src="/script/index.js"></script>
+<br>
+<hr>
+       <div class="menu">
 
-              <script>
-                  function toggleSideBar() {
-                      const sideBar = document.querySelector('.side-bar');
-                      sideBar.style.left = sideBar.style.left === '0px' ? '-250px' : '0';
-                  }
+            <div class="item">
+<a class="sub-btn"><i class='far fa-check-circle'></i>DOWNLOADER<i class="fas fa-angle-right dropdown"></i></a>
+<div class="sub-menu">
 
-                  function carregarPagina(pagina) {
-                      window.open(pagina, '_blank');
-                  }
-              </script>
-           <script>
-    function toggleSubMenu(id) {
-        var submenu = document.getElementById(id);
-        var submenus = document.querySelectorAll('.collapse-inner');
+<a class="sub-item" target="_blank" href="download/play?&nome=M4rkim gasparzinho &apikey=pedrozz13"
+    target="_blank">PLAY</a>
+    
+<a class="sub-item" target="_blank" href="download/playv?&nome=M4rkim rep&apikey=pedrozz13"
+    target="_blank">PLAY VÍDEO</a>    
+    
+<a class="sub-item" target="_blank" href="download/ytmp3?&link=https://youtu.be/U8i2_6gG110?si=C75VDrmSvDVjzSs2&apikey=pedrozz13"
+    target="_blank">YTMP3</a>    
+    
+<a class="sub-item" target="_blank" href="download/ytmp4?&link=https://youtu.be/U8i2_6gG110?si=C75VDrmSvDVjzSs2&apikey=pedrozz13"
+    target="_blank">YTMP4</a>        
+    
+<a class="dropdown-item" target="_blank" href="travazap?apikey=pedrozz13" target="_blank">FOTO PARA PERFIL</a>
 
-        // Oculta todos os submenus
-        submenus.forEach(function (item) {
-            if (item.id !== id) {
-                item.style.display = 'none';
-            }
+            </div>
+            </div>
+<br></br>          
+
+            <div class="item">
+<a class="sub-btn"><i class='far fa-check-circle'></i>CANVAS<i class="fas fa-angle-right dropdown"></i></a>
+<div class="sub-menu">
+
+  <a href="canvas/changemymind?texto=PEDROZZ O BRABO&apikey=pedrozz13">Canvas ChangeMyMind</a>
+  
+  <a href="canvas/clyde?texto=PEDROZZ O BRABO&apikey=pedrozz13">Canvas clyde</a>
+  
+  <a href="canvas/trigger?url=https://telegra.ph/file/71f0b7f75b12b61178d8a.jpg&apikey=pedrozz13">Canvas Trigger</a>
+
+            </div>
+            </div>
+<br></br>
+            <div class="item">
+<a class="sub-btn"><i class='far fa-check-circle'></i>WALLPAPER<i class="fas fa-angle-right dropdown"></i></a>
+<div class="sub-menu">
+
+<a class="sub-item" target="_blank" href="wallpapernime?apikey=pedrozz13"
+    target="_blank">WALLPAPER-ANIME</a>
+    
+<a class="sub-item" target="_blank" href="GameWallp?apikey=pedrozz13"
+    target="_blank">WALLPAPER-GAME</a>    
+    
+<a class="sub-item" target="_blank" href="satanic?apikey=pedrozz13"
+    target="_blank">WALLPAPER-SATANIC</a>    
+    
+<a class="sub-item" target="_blank" href="bonek?apikey=pedrozz13"
+    target="_blank">CHUCK</a>            
+            </div>
+            </div>
+<br></br>
+            <div class="item">
+<a class="sub-btn"><i class='far fa-check-circle'></i>ANIMES<i class="fas fa-angle-right dropdown"></i></a>
+<div class="sub-menu">
+
+<a class="dropdown-item" target="_blank" href="cosplay?apikey=pedrozz13" target="_blank">Cosplay</a>
+
+<a class="dropdown-item" target="_blank" href="coaplayloli?apikey=pedrozz13" target="_blank">Cosplay-loli</a>
+
+<a class="dropdown-item" target="_blank" href="cosplaysagiri?apikey=pedrozz13" target="_blank">Cosplay-sagiri</a>
+
+<a class="dropdown-item" target="_blank" href="boruto?apikey=pedrozz13" target="_blank">Boruto</a>
+
+<a class="dropdown-item" target="_blank" href="elaina?apikey=pedrozz13" target="_blank">Elaina</a>
+
+<a class="dropdown-item" target="_blank" href="emilia?apikey=pedrozz13" target="_blank">Emilia</a>
+
+<a class="dropdown-item" target="_blank" href="erza?apikey=pedrozz13" target="_blank">Erza</a>
+
+<a class="dropdown-item" target="_blank" href="hinata?apikey=pedrozz13" target="_blank">Hinata</a>
+
+<a class="dropdown-item" target="_blank" href="itachi?apikey=pedrozz13" target="_blank">Itachi</a>
+
+<a class="dropdown-item" target="_blank" href="itori?apikey=pedrozz13" target="_blank">Itori</a>
+
+<a class="dropdown-item" target="_blank" href="madara?apikey=pedrozz13" target="_blank">Madara</a>
+
+<a class="dropdown-item" target="_blank" href="mikasa?apikey=pedrozz13" target="_blank">Mikasa</a>
+
+<a class="dropdown-item" target="_blank" href="minato?apikey=pedrozz13" target="_blank">Minato</a>
+
+<a class="dropdown-item" target="_blank" href="nezuko?apikey=pedrozz13" target="_blank">Nezuko</a> 
+
+<a class="dropdown-item" target="_blank" href="onepiece?apikey=pedrozz13" target="_blank">OnePiece</a>
+
+<a class="dropdown-item" target="_blank" href="pokemon?apikey=pedrozz13" target="_blank">Pokemon</a>
+
+<a class="dropdown-item" target="_blank" href="rize?apikey=pedrozz13" target="_blank">Rize</a>
+
+<a class="dropdown-item" target="_blank" href="rose?apikey=pedrozz13" target="_blank">Rose</a>
+
+<a class="dropdown-item" target="_blank" href="sagiri?apikey=pedrozz13" target="_blank">Sagiri</a>
+
+<a class="dropdown-item" target="_blank" href="sakura?apikey=pedrozz13" target="_blank">Sakura</a>
+
+<a class="dropdown-item" target="_blank" href="sasuke?apikey=pedrozz13" target="_blank">Sasuke</a>
+
+<a class="dropdown-item" target="_blank" href="deidara?apikey=pedrozz13" target="_blank">Deidara</a>
+
+</div>
+</div>
+<br></br>
+            <div class="item">
+<a class="sub-btn"><i class='far fa-check-circle'></i>+18<i class="fas fa-angle-right dropdown"></i></a>
+<div class="sub-menu">
+<a href="loli?apikey=pedrozz13">Loli</a>
+
+<a href="shota?apikey=pedrozz13">Nsfw Shota</a>
+
+<a href="cum?apikey=pedrozz13">Nsfw Cum</a>
+
+<a href="ero?apikey=pedrozz13">Nsfw Ero</a>
+
+<a href="neko?apikey=pedrozz13">Nsfw Neko</a>
+
+<a href="neko2?apikey=pedrozz13">Nsfw Neko2</a>
+
+<a href="zettai?apikey=pedrozz13">Nsfw Zettai</a>
+
+<a href="foto18?apikey=pedrozz13">Nsfw Foto+18</a>
+
+<a href="ass?apikey=pedrozz13">Nsfw Ass</a>
+
+<a href="nsfwloli?apikey=pedrozz13">Nsfw Loli</a>
+
+<a herf="hentai?apikey=pedrozz13">Nsfw Hentai</a>
+
+<a herf="waifu?apikey=pedrozz13">Nsfw Waifu</a>
+
+<a herf="waifu2?apikey=pedrozz13">Nsfw Waifu2</a>
+
+<a herf="pussy?apikey=pedrozz13">Nsfw Pussy</a>
+
+<a herf="orgy?apikey=pedrozz13">Nsfw Orgy</a>
+
+<a herf="tentacles?apikey=pedrozz13">Nsfw Tentacles</a>
+
+<a herf="manga?apikey=pedrozz13">Nsfw Manga</a>
+
+<a herf="ahegao?qpikey=pedrozz14">Nsfw Ahegao</a>
+            </div>
+            </div>
+<br></br>              
+         <div class="tutotxt">
+          <div class="menuzin">
+        <h4>BOTS by Pedrozz</h4><br>
+                    <details>
+         <summary>bots</summary>
+                    <ul>
+
+<li><img src="/imagens/default.jpg" class="parceiro-imagem" alt="Parceiro 1"><a href="https://www.mediafire.com/file/vipd6uhe8k03jm4/laura_privat.zip/file">laura privat</a></li>
+
+<li><img src="/imagens/default.jpg" class="parceiro-imagem" alt="criador"><a href="https://www.mediafire.com/file/jcq97y6aax7376k/akame_bot.zip/file">Akame bot</a></li>
+
+<li><img src="/imagens/default.jpg" class="parceiro-imagem" alt="criador"><a href="https://www.mediafire.com/file/nsfoxodgio02o4t/base-gasparzinho.zip/file">Gasparzinho-base</a></li>
+                              
+ <li><img src="/imagens/default.jpg" class="parceiro-imagem" alt="Parceiro 3"><a href="https://www.mediafire.com/file/qyy8q1ov2tfk6z6/%25F0%259D%2591%258A%25F0%259D%2590%25B4.%25F0%259D%2590%25B7%25F0%259D%2590%25B4%25F0%259D%2591%2585%25F0%259D%2590%25BE_%25F0%259D%2591%258F%25F0%259D%2591%25A6_%25F0%259D%2591%259D%25F0%259D%2591%2592%25F0%259D%2591%2591%25F0%259D%2591%259F%25F0%259D%2591%259C%25F0%259D%2591%25A7%25F0%259D%2591%25A7.apk/file">Wa Dark(imune)</a></li>
+                          </ul>
+                        </details>
+                         </div>
+                         </div>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+
+
+
+            <hr>
+            <br>
+<div class="item">
+  <a class="sub-btn"><i class='fa fa-user-circle'></i><i class="sup">Suporte</i><i class="fas fa-angle-right dropdown"></i></a>
+<div class="sub-menu">
+<a href="http://wa.me/556199317165">Pedrozz</a>
+</div>
+</div>
+
+          </div>
+          </div>
+          </div>
+
+
+</div>
+</div>
+
+      </nav>
+
+
+    </header>
+<div class="cabeca">
+  <p class="f"> Pedrozz - Api</p>
+</div>
+  <div class="center-image">
+                        <a href="https://telegra.ph/file/71f0b7f75b12b61178d8a.jpg" alt="pedrozz: criador">
+                        <img class="round-image" src="https://telegra.ph/file/71f0b7f75b12b61178d8a.jpg" alt="by Pedrozz">
+                        </a>
+  </div>  
+<div tabindex="0" class="content" onfocus="closeSidebar()" id="content">
+</div>
+
+</div>
+
+
+<div class="tutotxt">
+<br>
+<h3 class="tutotxtt">Informações básicas</h3><br><br>
+  <br><br>
+<p class="tutotxtt">O que e um chat bot</p>
+<div class="aaaa">
+<br>
+<p>O chatbot é um programa que funciona como um robô automatizado no WhatsApp Business, ou seja, é possível ter um bot para o aplicativo. Esse software tem inúmeras funções e, dentro deste aplicativo popular, apresenta utilitários incríveis para a conversação e o gerenciamento de problemas com consumidores.</p>
+<br>
+<hr>
+<br>
+<h4 class="tutotxtt">Para que servem?</h4>
+<br>
+<p>O que é um Bot para WhatsApp? Um bot para WhatsAppoferece aos clientes uma experiência conversacional automatizada em tempo real diretamente no aplicativo, usando a API do WhatsApp para Negócios.</p>
+<br>
+<hr>
+<br>
+<h4 class="tutotxtt">Como funciona o bot?</h4>
+<br>
+<p>
+Um 'bot' – abreviatura de robô – é um programa de software que executa tarefas automatizadas, repetitivas e pré-definidas. Os bots normalmente imitam ou substituem o comportamento do usuário humano. Por serem automatizados, operam muito mais rápido do que os usuários humanos.
+</p>
+<br>
+<hr>
+<br>
+<h4 class="tutotxtt">O que é um bot de atendimento?</h4>
+<br>
+<p>Os bots de atendimento se tornaram cada vez mais comuns no dia a dia das empresas, e tem a intenção de melhorar a qualidade nos canais de mensageria, automatizando atendimentos e otimizando o tempo de resposta para os clientes que entram em contato com uma marca.</p>
+
+<br>
+  </div>
+</div>
+  
+ 
+   <footer class="footer">
+<div class="d-sm-flex justify-content-center justify-content-sm-between">
+<p><span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright © 2024 Pedrozz Mods</span></p>
+<p><span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center"> Meu Canal: <a href="https://youtube.com/@Pedrozzmods?si=jiSnHTInW9EVrgXB`" target="_blank">「 Clique 」</a> RUMO AOS 10 INSCRITOS</span></p>
+</div>
+ </footer>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js">
+</script>
+  <!---
+<script>
+
+swal({
+title: 'Salve❤️',
+text: 'Espero que goste',
+imageUrl: 'https://pa1.narvii.com/6810/6ca17ac222220521e1c966cce82a34a52e12f3c4_hq.gif',
+footer: 'Clover-Mods',
+imageHeight: 200,
+imageAlt: ':)',
+animation: true
+})
+*/
+
+</script>
+  --->
+  <!---
+<audio autoplay="true" src="https://j.top4top.io/m_1772xeikf9.mp3">
+
+</audio>
+ ----->
+  
+    <script type="text/javascript">
+   // alert('deseja continuar?')
+        $(document).ready(function(){
+
+          $('.sub-btn').click(function(){
+            $(this).next('.sub-menu').slideToggle();
+            $(this).find('.dropdown').toggleClass('rotate');
+          });
+
+          $('.menu-btn').click(function(){
+            $('.side-bar').addClass('active');
+            $('.menu-btn').css("visibility", "hidden");
+          });
+
+          $('.close-btn').click(function(){
+            $('.side-bar').removeClass('active');
+            $('.menu-btn').css("visibility", "visible");
+          });
+
         });
 
-        // Alterna a visibilidade do submenu clicado
-        if (submenu.style.display === 'block') {
-            submenu.style.display = 'none';
-        } else {
-            submenu.style.display = 'block';
-        }
+
+let contador = 1;
+
+setInterval( function(){
+    document.getElementById('slide' + contador).checked = true;
+    contador++;
+
+    if(counter > 5 ) {
+        contador = 1;
     }
-      </script>
-            
-              
-          </body>
+}, 3000 );
 
-          </html>
-          
 
-          
-          
+document.getElementById("btn-laranja").addEventListener("click", function(){
+  document.querySelector("tut").setAttribute("class","laranja");
+})
+
+document.getElementById("btn-vermelho").addEventListener("click", function(){
+  document.querySelector("body").setAttribute("class","vermelho");
+})
+
+document.getElementById("btn-purpura").addEventListener("click", function(){
+  document.querySelector("body").setAttribute("class","purpura");
+})
+    </script>
+
+</body>
+</html>
+                  
