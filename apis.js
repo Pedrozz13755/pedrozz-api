@@ -94,6 +94,49 @@ function getRandom(nans) {
   res.type('jpg')
   res.send(await canvacord.changemymind(texto))
   break
+  case '/wasted':
+case '/wasted/':
+  if (!texto) return res.status(408).send(resposta.cdimg);
+  res.type('jpg');
+  res.send(await canvacord.wasted(texto));
+  break;
+   case '/drake':
+case '/drake/':
+  if (!texto) return res.status(408).send(resposta.cdimg);
+  res.type('jpg');
+  res.send(await canvacord.drake(texto.top, texto.bottom));
+  break;
+  case '/trump':
+case '/trump/':
+  if (!texto) return res.status(408).send(resposta.cdimg);
+  res.type('jpg');
+  res.send(await canvacord.trump(texto));
+  break;
+  case '/captcha':
+case '/captcha/':
+  if (!texto) return res.status(408).send(resposta.cdimg);
+  res.type('jpg');
+  res.send(await canvacord.captcha(texto));
+  break;
+   case '/trash':
+case '/trash/':
+  if (!texto) return res.status(408).send(resposta.cdimg);
+  res.type('jpg');
+  res.send(await canvacord.trash(texto));
+  break;
+   case '/affect':
+case '/affect/':
+  if (!texto) return res.status(408).send(resposta.cdimg);
+  res.type('jpg');
+  res.send(await canvacord.affect(texto));
+  break;
+  case '/wasted':
+case '/wasted/':
+  if (!texto) return res.status(408).send(resposta.cdimg);
+  res.type('jpg');
+  res.send(await canvacord.wasted(texto));
+  break;
+      
  case '/clyde':
  case '/clyde/':
   if (!texto) return res.status(408).send(resposta.cdimg)
