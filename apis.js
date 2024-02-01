@@ -249,6 +249,20 @@ router.all('/shota', async (req, res) => {
    }
    })
 
+router.all('/video+18', async (req, res) => {
+ var cdapikey = req.query.apikey;
+   try {
+   if(!cdapikey) return res.json(resposta.semkey)
+    if(cdapikey !== key) return res.sendFile(keyinvalida)
+   json = JSON.parse(fs.readFileSync('lib/video+18.json').toString())
+   random = json[Math.floor(Math.random() * json.length)]
+   res.type('png')
+   res.send(await getBuffer(random))
+   } catch (e) {
+   res.send(resposta.error)
+   }
+   })
+
 router.all('/cum', async (req, res) => {
  var cdapikey = req.query.apikey;
    try {
