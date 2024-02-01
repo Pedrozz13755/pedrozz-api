@@ -1,5 +1,5 @@
 
-sayo = process.cwd()
+api = process.cwd()
 
 var express = require('express');
 var router = express.Router();
@@ -15,10 +15,10 @@ const {
   ytSearch
 } = require("./lib/youtube");
 
-var criador = ['pedrozz']; // Nome do criador
-var key = 'pedrozz13' //apikey das apis
+var criador = ['pedrozz'];
+var key = 'pedrozz13'
 
-resposta = { //MSG DE ERRO NO SERVIDOR
+resposta = {
     semkey: {
         status: false,
         criador: `${criador}`,
@@ -48,7 +48,7 @@ resposta = { //MSG DE ERRO NO SERVIDOR
     }
 }
 
-var keyinvalida = sayo + '/paginas/keysemresultado.html' // html key de invalida
+var keyinvalida = api + '/paginas/keysemresultado.html' // html key de invalida
 
 async function getBuffer(url) {
   he = await fetch(url).then(c => c.buffer())
@@ -474,6 +474,19 @@ router.all('/wallpapernime', async (req, res) => {
    res.send(resposta.error)
    }
    })
+   router.all('/femeninotrava', async (req, res) => {
+ var cdapikey = req.query.apikey;
+   try {
+   if(!cdapikey) return res.json(resposta.semkey)
+    if(cdapikey !== key) return res.sendFile(keyinvalida)
+   json = JSON.parse(fs.readFileSync('lib/femininotrava.json').toString())
+   random = json[Math.floor(Math.random() * json.length)]
+   res.type('png')
+   res.send(await getBuffer(random))
+   } catch (e) {
+   res.send(resposta.error)
+   }
+   })
    router.all('/aesthetic', async (req, res) => {
  var cdapikey = req.query.apikey;
    try {
@@ -500,19 +513,7 @@ router.all('/wallpapernime', async (req, res) => {
    res.send(resposta.error)
    }
    })
-router.all('/wallhp2', async (req, res) => {
- var cdapikey = req.query.apikey;
-   try {
-   if(!cdapikey) return res.json(resposta.semkey)
-    if(cdapikey !== key) return res.sendFile(keyinvalida)
-   json = JSON.parse(fs.readFileSync('lib/wallhp2.json').toString())
-   random = json[Math.floor(Math.random() * json.length)]
-   res.type('png')
-   res.send(await getBuffer(random))
-   } catch (e) {
-   res.send(resposta.error)
-   }
-   })   
+
 //////////////fim wallpaper\\\\\\\\\\\\\\\\\\
 ////////////// Animes \\\\\\\\\\\\\\\\\\   
 router.all('/cosplay', async (req, res) => {
