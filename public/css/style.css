@@ -14,6 +14,30 @@
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
 }
+#wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex
+}
+
+#wrapper #content-wrapper {
+    background-color: #0B1622;
+    width: 100%;
+    overflow-x: hidden
+}
+
+#wrapper #content-wrapper #content {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 0 auto;
+    flex: 1 0 auto
+}
+.container,
+.container-fluid,
+.container-login {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem
+}
+
 .parceiro-imagem {
     width: 20px; /* Ajuste o tamanho conforme necessário */
     border-radius: 50%; /* Torna a imagem redonda */
@@ -500,4 +524,4 @@ text-align: center;
   border-radius: 100%;
   width: 200px; /* Ajuste o tamanho da imagem conforme necessário */
   height: 200px; /* Ajuste o tamanho da imagem conforme necessário */
-   }
+ }
