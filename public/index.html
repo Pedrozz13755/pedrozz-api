@@ -9,20 +9,19 @@
 
   <style>
 body, html {
-  height: 100%;
-  margin: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  font-family: Arial, Helvetica, sans-serif;
-  background: #310404 url(https://wallpaperaccess.com/full/8351171.gif) no-repeat center center fixed;
--webkit-background-size: cover;
--moz-background-size: cover;
--o-background-size: cover;
-background-size: cover;
-color: white;
-
+    /* Propriedades mantidas */
+    background: #310404 url(https://wallpaperaccess.com/full/8351171.gif) no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+}
+    body, html {
+    /* Propriedades mantidas */
+    background: #310404 url(https://wallpaperaccess.com/full/8351171.gif) no-repeat center center fixed;
+.footer-icon {
+    display: flex; /* Garante que os ícones fiquem lado a lado */
+    justify-content: center; /* Centraliza os ícones na div */
+    gap: 15px; /* Espaçamento entre os ícones */
+}
 .container {
   display: flex;
   flex-direction: column;
@@ -36,7 +35,7 @@ color: white;
   height: 150px;
   border-radius: 50%;
   overflow: hidden;
-  box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.9); /* Sombra branca com opacidade */
+  box-shadow: 0 0 10px 5px rgba(256, 255, 255, 0.9); /* Sombra branca com opacidade */
   margin-bottom: 20px;
 }
 
@@ -44,6 +43,20 @@ color: white;
   width: 100%;
   height: auto;
 }
+
+.link {
+    transition: background-color 0.3s ease; /* Suaviza a transição */
+}
+
+/* Acessibilidade */
+.text-white {
+    color: #fff !important;
+}
+
+.text-dark {
+    color: #000 !important;
+    }
+
   
 .pedrozz{
 color: black;
@@ -92,6 +105,35 @@ color: #fffff,;
   width: 200px; /* Ajuste o tamanho da imagem conforme necessário */
   height: 200px; /* Ajuste o tamanho da imagem conforme necessário */
     }
+
+.footer-icon {
+    display: flex;
+    justify-content: center; /* Centraliza os ícones na div */
+    gap: 20px; /* Espaçamento entre os ícones */
+}
+
+.footer-icon .btn {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #007bff; /* Cor de fundo azul */
+    color: white; /* Cor do ícone */
+    border: none; /* Remove a borda */
+    border-radius: 50%; /* Torna os botões circulares */
+    transition: all 0.3s ease; /* Suaviza a transição para o hover */
+}
+
+.footer-icon .btn i {
+    font-size: 20px; /* Tamanho do ícone */
+}
+
+.footer-icon .btn:hover {
+    background-color: #0056b3; /* Cor de fundo mais escura ao passar o mouse */
+    transform: scale(1.1); /* Aumenta o tamanho do botão ligeiramente */
+}
+
   </style>
 </head>
 <body>
@@ -104,16 +146,23 @@ color: #fffff,;
   <br></br>
   <br></br>
   <div class="links">
-    <a href="#" class="link">Test</a>
-    <a href="principal.html" class="link">Dashboard</a>
-    <a href="#" class="link">Test</a>
+    <a href="http://wa.me/556199317165" class="link">apiKey</a>
+    <a href="docs.html" class="link">Dashboard</a>
+    <a href="https://chat.whatsapp.com/GhXUAs02wrRKjcjZwtdFlq" class="link">Grupo</a>
   </div>
 </div>
+<div class="footer-icon d-flex">
+    <a class="btn btn-primary btn-sm-square me-3 rounded-circle text-white" href="https://www.instagram.com/pedrozz_13755"><i class="fab fa-facebook-f"></i></a>
+    <a class="btn btn-primary btn-sm-square me-3 rounded-circle text-white" href="https://www.instagram.com/pedrozz_13755"><i class="fab fa-"></i></a>
+    <a href="https://www.instagram.com/pedrozz_13755" class="btn btn-primary btn-sm-square me-3 rounded-circle text-white"><i class="fab fa-instagram"></i></a>
+    <a href="https://www.instagram.com/pedrozz_13755" class="btn btn-primary btn-sm-square rounded-circle text-white"><i class="fab fa-linkedin-in"></i></a>
+</div>
 
+  
 
 <script>
 const textElement = document.getElementById('text');
-const phrases = ['Bem-Vindo a Pedrozz - Api.', 'Aqui você pode encontrar varias coisas.', 'Explore nossas opções.', 'Obrigado por usar nossa api.', 'by Pedrozz'];
+const phrases = ['Bem-Vindo a Pedrozz - Api.', 'Aqui você pode encontrar varias coisas.', 'Explore nossas opções.', 'Obrigado por usar nossa api.', 'rest api by Pedrozz'];
 let phraseIndex = 0;
 let letterIndex = 0;
 
@@ -139,4 +188,5 @@ document.addEventListener('DOMContentLoaded', typeWriter);
 </script>
   
 </body>
-</html>
+  </html>
+      
