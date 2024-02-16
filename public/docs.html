@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" charset="UTF-8" ></script>
+  <link rel="stylesheet" href="/css/style.css">
+ <meta name='viewport' content='width=device-width, initial-scale=1'>
+<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+<link rel="shortcut icon" href="https://telegra.ph/file/df3c2ebe1d9b6417c2a05.jpg" type="image/x-icon" />
+  <title>Pedrozz_Mods</title>
+
+
+</head>
+<style>
+  @keyframes popUp {
+    from {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    to {
+        transform: scale(2);
+        opacity: 1;
+    }
+}
+
+
+.welcome-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed; /* Ou 'absolute', dependendo do layout */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+  pointer-events: none; 
+}
+
+.welcome-box {
+    position: relative;
+    width: 350px; /* Ajuste conforme necessário */
+    padding: 100px;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    pointer-events: auto; 
+}
+
+
+.close-btn {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 7px;
+    right: 5px;
+    cursor: pointer;
+    font-size: 20px;
+    color: black
+}
+
+.welcome-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.welcome-text {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #333;
+  }
+  
+  .footer-icon {
+      display: flex; /* Garante que os ícones fiquem lado a lado */
+      justify-content: center; /* Centraliza os ícones na div */
+      gap: 15px; /* Espaçamento entre os ícones */
+  }
+  .footer-icon .btn {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #007bff; /* Cor de fundo azul */
+    color: white; /* Cor do ícone */
+    border: none; /* Remove a borda */
+    border-radius: 50%; /* Torna os botões circulares */
+    transition: all 0.3s ease; /* Suaviza a transição para o hover */
+}
+
+.footer-icon .btn i {
+    font-size: 20px; /* Tamanho do ícone */
+}
+
+.footer-icon .btn:hover {
+    background-color: #0056b3; /* Cor de fundo mais escura ao passar o mouse */
+    transform: scale(1.1); /* Aumenta o tamanho do botão ligeiramente */
+}
+  .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center; /* Garante que o texto também esteja centralizado */
+    }
+
+ .contador-visitantes {
+        padding: 20px;
+        
+        
+        width: fit-content;
+        margin: auto; /* Centraliza o contador */
+    }
+
+    .contador-visitantes a {
+        border: none; /* Remove a borda do link, se houver */
+    }
+
+    .contador-visitantes img {
+        /* Personalizações da imagem aqui, se necessário */
+        max-width: 100px; /* Exemplo: Limita a largura da imagem */
+        border-radius: 5px; /* Bordas arredondadas na imagem */
+    } 
+</style>  
+<body>
+
+
+    <header>
+      <nav>
+        
+        <div class="menu-btn">
+          <i class="fas fa-bars"></i>
+        
+        </div>
+
+        
+        </div>
+
+
+        <div class="fe">
+      <a href="perfil.html">
+    <img src="https://telegra.ph/file/2f9c1f632b7f7790f3423.jpg" alt="Foto" id="imagem" style="cursor: pointer;">
+  </a>
+
+        </div>
+
+
+        
+        <div class="side-bar">
+          <div class="close-btn">
+            <i class="fas fa-times"></i>
+          </div>
+        
+            <div class="txt">
+<i class="fa fa-cog fa-spin fa-3x fa-fw"></i><i>PEDROZZ - API</i>
+              
+            </div>
+<br>
+<hr>
+    
+       <div class="menu">
+
+            <div class="item">
+<a class="sub-btn"><i class='far fa-check-circle'></i>DOWNLOADER<i class="fas fa-angle-right dropdown"></i></a>
+<div class="sub-menu">
+
+<a class="sub-item" target="_blank" href="download/play?&nome=M4rkim gasparzinho &apikey=SUAKEY"
+    target="_blank">PLAY</a>
+    
+<a class="sub-item" target="_blank" href="download/playv?&nome=M4rkim rep&apikey=SUAKEY"
+    target="_blank">PLAY VÍDEO</a>    
+    
+<a class="sub-item" target="_blank" href="download/ytmp3?&link=https://youtu.be/U8i2_6gG110?si=C75VDrmSvDVjzSs2&apikey=SUAKEY"
+    target="_blank">YTMP3</a>    
+    
+<a class="sub-item" target="_blank" href="download/ytmp4?&link=https://youtu.be/U8i2_6gG110?si=C75VDrmSvDVjzSs2&apikey=SUAKEY"
+    target="_blank">YTMP4</a>        
+    
+<a class="dropdown-item" target="_blank" href="travazap?apikey=SUAKEY" target="_blank">FOTO PARA PERFIL</a>
+
+<a class="dropdown-item" target="_blank" href="femeninotrava?apikey=SUAKEY" target="_blank">FOTOS FEMININAS</a>
+
+            </div>
+            </div>
+<br></br>          
+
+            <div class="item">
+<a class="sub-btn"><i class='far fa-check-circle'></i>CANVAS<i class="fas fa-angle-right dropdown"></i></a>
+<div class="sub-menu">
+
+  <a href="canvas/changemymind?texto=PEDROZZ O BRABO&apikey=SUAKEY">Canvas ChangeMyMind</a>
+  
+  <a href="canvas/clyde?texto=PEDROZZ O BRABO&apikey=SUAKEY">Canvas clyde</a>
+  
+  <a href="canvas/trigger?url=https://telegra.ph/file/71f0b7f75b12b61178d8a.jpg&apikey=SUAKEY">Canvas Trigger</a>
+
+            </div>
+            </div>
+<br></br>
+            <div class="item">
+<a class="sub-btn"><i class='far fa-check-circle'></i>WALLPAPERS<i class="fas fa-angle-right dropdown"></i></a>
+<div class="sub-menu">
+
+<a class="sub-item" target="_blank" href="wallpapernime?apikey=SUAKEY"
+    target="_blank">WALLPAPER-ANIME</a>
+    
+<a class="sub-item" target="_blank" href="GameWallp?apikey=SUAKEY"
+    target="_blank">WALLPAPER-GAME</a>    
+    
+<a class="sub-item" target="_blank" href="satanic?apikey=SUAKEY"
+    target="_blank">WALLPAPER-SATANIC</a>    
+    
+<a class="sub-item" target="_blank" href="aesthetic?apikey=SUAKEY"
+    target="_blank">WALLPAPER-AESTHETIC</a>        
+    
+<a class="sub-item" target="_blank" href="bonek?apikey=SUAKEY"
+    target="_blank">CHUCK</a>            
+            </div>
+            </div>
+<br></br>
+            <div class="item">
+<a class="sub-btn"><i class='far fa-check-circle'></i>ANIMES<i class="fas fa-angle-right dropdown"></i></a>
+<div class="sub-menu">
+
+<a class="dropdown-item" target="_blank" href="cosplay?apikey=SUAKEY" target="_blank">Cosplay</a>
+
+<a class="dropdown-item" target="_blank" href="coaplayloli?apikey=SUAKEY" target="_blank">Cosplay-loli</a>
+
+<a class="dropdown-item" target="_blank" href="cosplaysagiri?apikey=SUAKEY" target="_blank">Cosplay-sagiri</a>
+
+<a class="dropdown-item" target="_blank" href="boruto?apikey=SUAKEY" target="_blank">Boruto</a>
+
+<a class="dropdown-item" target="_blank" href="elaina?apikey=SUAKEY" target="_blank">Elaina</a>
+
+<a class="dropdown-item" target="_blank" href="emilia?apikey=SUAKEY" target="_blank">Emilia</a>
+
+<a class="dropdown-item" target="_blank" href="erza?apikey=SUAKEY" target="_blank">Erza</a>
+
+<a class="dropdown-item" target="_blank" href="hinata?apikey=SUAKEY" target="_blank">Hinata</a>
+
+<a class="dropdown-item" target="_blank" href="itachi?apikey=SUAKEY" target="_blank">Itachi</a>
+
+<a class="dropdown-item" target="_blank" href="itori?apikey=SUAKEY" target="_blank">Itori</a>
+
+<a class="dropdown-item" target="_blank" href="madara?apikey=SUAKEY" target="_blank">Madara</a>
+
+<a class="dropdown-item" target="_blank" href="mikasa?apikey=SUAKEY" target="_blank">Mikasa</a>
+
+<a class="dropdown-item" target="_blank" href="minato?apikey=SUAKEY" target="_blank">Minato</a>
+
+<a class="dropdown-item" target="_blank" href="nezuko?apikey=SUAKEY" target="_blank">Nezuko</a> 
+
+<a class="dropdown-item" target="_blank" href="onepiece?apikey=SUAKEY" target="_blank">OnePiece</a>
+
+<a class="dropdown-item" target="_blank" href="pokemon?apikey=SUAKEY" target="_blank">Pokemon</a>
+
+<a class="dropdown-item" target="_blank" href="rize?apikey=SUAKEY" target="_blank">Rize</a>
+
+<a class="dropdown-item" target="_blank" href="rose?apikey=SUAKEY" target="_blank">Rose</a>
+
+<a class="dropdown-item" target="_blank" href="sagiri?apikey=SUAKEY" target="_blank">Sagiri</a>
+
+<a class="dropdown-item" target="_blank" href="sakura?apikey=SUAKEY" target="_blank">Sakura</a>
+
+<a class="dropdown-item" target="_blank" href="sasuke?apikey=SUAKEY" target="_blank">Sasuke</a>
+
+<a class="dropdown-item" target="_blank" href="deidara?apikey=SUAKEY" target="_blank">Deidara</a>
+
+</div>
+</div>
+<br></br>
+            <div class="item">
+<a class="sub-btn"><i class='far fa-check-circle'></i>NSFW<i class="fas fa-angle-right dropdown"></i></a>
+<div class="sub-menu">
+<a class="dropdown-item" target="_blank" href="loli?apikey=SUAKEY">Loli</a>
+
+<a class="dropdown-item" target="_blank" href="shota?apikey=SUAKEY">Nsfw Shota</a>
+
+<a class="dropdown-item" target="_blank" href="cum?apikey=SUAKEY">Nsfw Cum</a>
+
+<a class="dropdown-item" target="_blank" href="ero?apikey=SUAKEY">Nsfw Ero</a>
+
+<a class="dropdown-item" target="_blank" href="neko?apikey=SUAKEY">Nsfw Neko</a>
+
+<a class="dropdown-item" target="_blank" href="neko2?apikey=SUAKEY">Nsfw Neko2</a>
+
+<a class="dropdown-item" target="_blank" href="zettai?apikey=SUAKEY">Nsfw Zettai</a>
+
+<a class="dropdown-item" target="_blank" href="foto18?apikey=SUAKEY">Nsfw Foto+18</a>
+
+<a class="dropdown-item" target="_blank" href="ass?apikey=SUAKEY">Nsfw Ass</a>
+
+<a class="dropdown-item" target="_blank" href="nsfwloli?apikey=SUAKEY">Nsfw Loli</a>
+
+<a class="dropdown-item" target="_blank" href="hentai?apikey=SUAKEY">Nsfw Hentai</a>
+
+<a class="dropdown-item" target="_blank" href="waifu?apikey=SUAKEY">Nsfw Waifu</a>
+
+<a class="dropdown-item" target="_blank" href="waifu2?apikey=SUAKEY">Nsfw Waifu2</a>
+
+<a class="dropdown-item" target="_blank" href="pussy?apikey=SUAKEY">Nsfw Pussy</a>
+
+<a class="dropdown-item" target="_blank" href="orgy?apikey=SUAKEY">Nsfw Orgy</a>
+
+<a class="dropdown-item" target="_blank" href="tentacles?apikey=SUAKEY">Nsfw Tentacles</a>
+
+<a class="dropdown-item" target="_blank" href="manga?apikey=SUAKEY">Nsfw Manga</a>
+
+<a class="dropdown-item" target="_blank" href="ahegao?qpikey=pedrozz14">Nsfw Ahegao</a>
+
+<a class="dropdown-item" target="_blank" href="masturbation?qpikey=pedrozz14">Nsfw masturbation</a>
+            </div>
+            </div>
+<br></br> 
+<br></br>
+         
+<div class="item">
+<a class="sub-btn"><i class='far fa-check-circle'></i>BOTS DE WHATSAPP<i class="fas fa-angle-right dropdown"></i></a>
+<div class="sub-menu">
+
+  <a href="https://www.mediafire.com/file/jcq97y6aax7376k/akame_bot.zip/file">Akame - Bot</a>
+  
+  <a href="https://www.mediafire.com/file/skigww0xi0u2yxt/laura_bot_V2.zip/file">Laura Privat V2</a>
+  
+  <a href="canvas/trigger?url=https://telegra.ph/file/71f0b7f75b12b61178d8a.jpg&apikey=SUAKEY">Gasparzinho-base V2</a>
+
+            </div>
+            </div>
+<br></br>         
+         
+ 
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+
+
+
+            <hr>
+            <br>
+<div class="item">
+  <a class="sub-btn"><i class='fa fa-user-circle'></i><i class="sup">Suporte</i><i class="fas fa-angle-right dropdown"></i></a>
+<div class="sub-menu">
+<a href="http://wa.me/556199317165">Pedrozz</a>
+</div>
+</div>
+
+          </div>
+          </div>
+          </div>
+
+
+</div>
+</div>
+
+      </nav>
+
+
+    </header>
+<div class="cabeca">
+<p class="pedrozz"> Pedrozz - Api</p>
+</div>
+  
+  <div class="center-image">
+                        <a href="https://telegra.ph/file/2f9c1f632b7f7790f3423.jpg" alt="pedrozz: criador">
+                        <img class="round-image" src="https://telegra.ph/file/2f9c1f632b7f7790f3423.jpg" alt="by Pedrozz">
+                        </a>
+  </div>  
+<div tabindex="0" class="content" onfocus="closeSidebar()" id="content">
+</div>
+  </div>
+  
+  <div class="footer-icon d-flex">
+      <a class="btn btn-primary btn-sm-square me-3 rounded-circle text-white" href="#"><i class="fab fa-facebook-f"></i></a>
+      <a class="btn btn-primary btn-sm-square me-3 rounded-circle text-white" href="http://wa.me/556199317165"><i class="fab fa-whatsapp"></i></a>
+      <a href="https://www.instagram.com/pedrozz_13755" class="btn btn-primary btn-sm-square me-3 rounded-circle text-white"><i class="fab fa-instagram"></i></a>
+      <a href="#" class="btn btn-primary btn-sm-square rounded-circle text-white"><i class="fab fa-linkedin-in"></i></a>
+  </div>
+</div>
+  <div class="welcome-container">
+  <div id="welcomeBox" class="welcome-box">
+    <div class="close-btn" onclick="closeWelcomeBox()">X</div>
+    <img src="https://telegra.ph/file/2f9c1f632b7f7790f3423.jpg" class="welcome-image" alt="Usuário">
+    <p class="welcome-text">Bem vindo a nossa REST API.</p>
+    <br></br>
+   <p class="welcome-text">by pedrozz</p>
+  </div>
+    </div>
+<section>
+  <div class="pedrozz">
+<h1>Rest Api feita com ❤️ por Pedrozz</h1>
+    
+  <br></br>
+    <br></br>
+  <!-- Contador de visitas -->
+   <h3>NÚMERO DE VISITAS</h3>
+<div class="contador-visitantes" align="center">
+    <a href="/">
+        <img src="https://contador.s12.com.br/img-ax3yw5zxZz84W7Z1-34.gif" border="00000" alt="contador grátis">
+    </a>
+    <script type="text/javascript" src="https://contador.s12.com.br/ad.js?id=ax3yw5zxZz84W7Z1"></script>
+</div>
+<!-- Fim Contador de visitas -->      
+  <br></br>
+  </section>
+  <section>
+  <div class="pedrozz2">
+    <h3>Na programação, cada bug é uma oportunidade de aprendizado. Veja os erros como desafios a serem superados, e cada correção como um passo rumo à maestria.</h3>
+  </div>
+</section>
+    <section>
+        <div class="pedrozz2" id="container-wrapper">
+          <div id="demo" class="alert alert-dark alert-dismissible" role="alert">
+            <div id="browser_info"></div>
+            <script>
+              let arrBulan = [
+                "Janeiro",
+                "Fevereiro",
+                "Março",
+                "Abril",
+                "Maio",
+                "Junho",
+                "Julho",
+                "Agosto",
+                "Setembro",
+                "Outubro",
+                "Novembro",
+                "Dezembro",
+              ];
+              let txt = "";
+              txt +=
+                "<p><b>Código do navegador</b>: " +
+                navigator.appCodeName +
+                "</p>";
+              txt += "<p><b>Nome do navegador</b>: " + navigator.appName + "</p>";
+              
+              txt += "<p><b>Navegador Online</b>: " + navigator.onLine + "</p>";
+              txt += "<p><b>Plataforma</b>: " + navigator.platform + "</p>";
+              txt += "<p><b>Insformaçoes do usuário</b>: " + navigator.userAgent + "</p>";
+              let text_el = document.querySelector("div#browser_info");
+              setInterval(() => {
+                var d = new Date();
+                const jam = d.getHours().toString().padStart(2, 0);
+                const menit = d.getMinutes().toString().padStart(2, 0);
+                const detik = d.getSeconds().toString().padStart(2, 0);
+                const tgl = d.getDate();
+                const bln = d.getMonth();
+                const thn = d.getFullYear();
+                const bulan = arrBulan[bln];
+                text_el.innerHTML =
+                  txt +
+                  "<b>Data</b>: " +
+                  jam +
+                  ":" +
+                  menit +
+                  ":" +
+                  detik +
+                  "~" +
+                  tgl +
+                  "-" +
+                  bulan +
+                  "-" +
+                  thn +
+                  "<br>Seja Bem vindo de volta Usuário!";
+              }, 250);
+            </script>
+          </div>
+        </section>
+<div class="tutotxt">
+<br>
+<h3 class="tutotxtt">Informações básicas</h3><br><br>
+  <br><br>
+<p class="tutotxtt">O que e um chat bot</p>
+<div class="aaaa">
+<br>
+<p>O chatbot é um programa que funciona como um robô automatizado no WhatsApp Business, ou seja, é possível ter um bot para o aplicativo. Esse software tem inúmeras funções e, dentro deste aplicativo popular, apresenta utilitários incríveis para a conversação e o gerenciamento de problemas com consumidores.</p>
+<br>
+<hr>
+<br>
+<h4 class="tutotxtt">Para que servem?</h4>
+<br>
+<p>O que é um Bot para WhatsApp? Um bot para WhatsAppoferece aos clientes uma experiência conversacional automatizada em tempo real diretamente no aplicativo, usando a API do WhatsApp para Negócios.</p>
+<br>
+<hr>
+<br>
+<h4 class="tutotxtt">Como funciona o bot?</h4>
+<br>
+<p>
+Um 'bot' – abreviatura de robô – é um programa de software que executa tarefas automatizadas, repetitivas e pré-definidas. Os bots normalmente imitam ou substituem o comportamento do usuário humano. Por serem automatizados, operam muito mais rápido do que os usuários humanos.
+</p>
+<br>
+<hr>
+<br>
+<h4 class="tutotxtt">O que é um bot de atendimento?</h4>
+<br>
+<p>Os bots de atendimento se tornaram cada vez mais comuns no dia a dia das empresas, e tem a intenção de melhorar a qualidade nos canais de mensageria, automatizando atendimentos e otimizando o tempo de resposta para os clientes que entram em contato com uma marca.</p>
+
+<br>
+  </div>
+</div>
+ 
+ 
+   <footer class="footer">
+<div class="d-sm-flex justify-content-center justify-content-sm-between">
+<p><span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright © 2024 Pedrozz Mods</span></p>
+<p><span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center"> Meu Canal: <a href="https://youtube.com/@Pedrozzmods?si=jiSnHTInW9EVrgXB`" target="_blank">「 Clique 」</a> RUMO AOS 50 INSCRITOS</span></p>
+</div>
+ </footer>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js">
+</script>
+  <!---
+<script>
+
+swal({
+title: 'Salve❤️',
+text: 'Espero que goste',
+imageUrl: 'https://pa1.narvii.com/6810/6ca17ac222220521e1c966cce82a34a52e12f3c4_hq.gif',
+footer: 'Clover-Mods',
+imageHeight: 200,
+imageAlt: ':)',
+animation: true
+})
+*/
+
+</script>
+  --->
+  <!---
+<audio autoplay="true" src="https://j.top4top.io/m_1772xeikf9.mp3">
+
+</audio>
+ ----->
+  
+    <script type="text/javascript">
+   // alert('deseja continuar?')
+        $(document).ready(function(){
+
+          $('.sub-btn').click(function(){
+            $(this).next('.sub-menu').slideToggle();
+            $(this).find('.dropdown').toggleClass('rotate');
+          });
+
+          $('.menu-btn').click(function(){
+            $('.side-bar').addClass('active');
+            $('.menu-btn').css("visibility", "hidden");
+          });
+
+          $('.close-btn').click(function(){
+            $('.side-bar').removeClass('active');
+            $('.menu-btn').css("visibility", "visible");
+          });
+
+        });
+
+
+let contador = 1;
+
+setInterval( function(){
+    document.getElementById('slide' + contador).checked = true;
+    contador++;
+
+    if (contador > 5) {
+  contador = 1;
+}
+}, 3000 );
+
+document.addEventListener('DOMContentLoaded', (event) => {
+    showWelcomeBox();
+});
+      
+function closeWelcomeBox() {
+    
+    document.querySelector('.welcome-container').style.display = 'none';
+      }
+      
+function showWelcomeBox() {
+
+    document.getElementById('welcomeBox').style.display = 'block';
+}
+
+function closeWelcomeBox() {
+    document.getElementById('welcomeBox').style.display = 'none';
+}
+
+      
+              </script>
+
+  <script>
+    document.getElementById('imagem').addEventListener('click', function() {
+      window.location.href = 'perfil.html';
+    });
+      </script>
+
+</body>
+
+  </html>
+  
