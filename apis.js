@@ -262,6 +262,21 @@ router.all('/video+18', async (req, res) => {
    res.send(resposta.error)
    }
    })
+router.all('/18/foto18', async (req, res) => {
+ var cdapikey = req.query.apikey;
+   try {
+   if(!cdapikey) return res.json(resposta.semkey)
+    if(cdapikey !== key) return res.sendFile(keyinvalida)
+    const tra = require("./lib/video+18.json")
+const foto_18 = tra.foto_18
+const traft = foto_18[Math.floor(Math.random() *foto_18.length)];
+   res.json({
+    url: `${traft}`
+    })
+   } catch (e) {
+   res.send(resposta.error)
+   }
+   })
 
 router.all('/cum', async (req, res) => {
  var cdapikey = req.query.apikey;
