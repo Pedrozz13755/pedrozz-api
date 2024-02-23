@@ -156,6 +156,21 @@ case '/wasted/':
    res.status(400).send(resposta.error)
  }
  })
+  router.get('/random/meme', async (req, res, next) => {
+     var cdapikey = req.query.apikey;
+   try {
+   if(!cdapikey) return res.json(resposta.semkey)
+    if(cdapikey !== key) return res.sendFile(keyinvalida)
+      const meme = JSON.parse(fs.readFileSync(__dirname + '/data/meme.json'));
+      const randmeme = meme[Math.floor(Math.random() * meme.length)];
+
+      res.json({
+        url: `${randmeme}`
+    })
+    } catch {
+      res.status(400).send(resposta.error)
+    }
+    })
  router.get('/nsfw/hentai', async (req, res) => {
  var cdapikey = req.query.apikey;
  try {
