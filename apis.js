@@ -14,17 +14,6 @@ const {
   ytPlayMp4,
   ytSearch
 } = require("./lib/youtube");
-const {
-  fetchSearchGogo,
-  fetchGogoRecentEpisodes,
-  fetchGogoAnimeInfo,
-  fetchGogoanimeEpisodeSource,
-  episod,
-  tiktokdownload,
-  getVideoDownloadLink,
-  getAudioDownloadLink,
-  scrapeWebsite
-  } = require("./lib/scraper.js");
 var criador = ['pedrozz'];
 var key = 'pedrozz13'
 
@@ -217,24 +206,6 @@ if(!cdapikey) return res.json(resposta.semkey)
  res.status(400).send(resposta.error)
  }
  })
- app.get('/download/tiktok', async(req, res) => {
- try {
-  var cdapikey = req.query.apikey;
- link = req.query.link          
-if(!cdapikey) return res.json(resposta.semkey)
- if(cdapikey !== key) return res.sendFile(keyinvalida)
-  var videoUrl = req.query.videoUrl
-  if(!videoUrl) return res.json({"error": "faltouo parâmetro videoUrl"})
-  //const getVideoDownloadLink = require("./lib/youtube.js")
-  
-  scrapeWebsite(videoUrl).then((videoLinks) => {
-    console.log('Links dos vídeos encontrados:');
-    res.json({ link: videoLinks[0] });
-  });
-    } catch {
-      res.status(400).send(resposta.error)
-    }
-  })
   
  router.get('/download/ytmp3', async(req, res, next) => {
  var cdapikey = req.query.apikey;
