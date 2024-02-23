@@ -14,7 +14,18 @@ const {
   ytPlayMp4,
   ytSearch
 } = require("./lib/youtube");
-
+const {
+  fetchSearchGogo,
+  fetchGogoRecentEpisodes,
+  fetchGogoAnimeInfo,
+  fetchGogoanimeEpisodeSource,
+  episod,
+  tiktokdownload,
+  ytPlayMp3,
+  getVideoDownloadLink,
+  getAudioDownloadLink,
+  scrapeWebsite
+  } = require("./lib/scraper.js");
 var criador = ['pedrozz'];
 var key = 'pedrozz13'
 
@@ -156,7 +167,7 @@ case '/wasted/':
    res.status(400).send(resposta.error)
  }
  })
-  router.get('/random/meme', async (req, res, next) => {
+  router.get('/api/meme', async (req, res, next) => {
      var cdapikey = req.query.apikey;
    try {
    if(!cdapikey) return res.json(resposta.semkey)
@@ -165,7 +176,28 @@ case '/wasted/':
       const randmeme = meme[Math.floor(Math.random() * meme.length)];
 
       res.json({
-        url: `${randmeme}`
+      status: true,
+      código: 200,
+      criador: `${criador}`,
+      url: `${randmeme}`
+    })
+    } catch {
+      res.status(400).send(resposta.error)
+    }
+    })
+     router.get('/api/memes', async (req, res, next) => {
+    var cdapikey = req.query.apikey;
+   try {
+   if(!cdapikey) return res.json(resposta.semkey)
+    if(cdapikey !== key) return res.sendFile(keyinvalida)
+      const meme = JSON.parse(fs.readFileSync(__dirname + '/lib/memes-video.json'));
+      const randmeme = meme[Math.floor(Math.random() * meme.length)];
+
+      res.json({
+      status: true,
+      código: 200,
+      criador: `${criador}`,
+      url: `${randmeme}`
     })
     } catch {
       res.status(400).send(resposta.error)
@@ -186,6 +218,24 @@ if(!cdapikey) return res.json(resposta.semkey)
  res.status(400).send(resposta.error)
  }
  })
+ app.get('/download/tiktok', async(req, res) => {
+  var cdapikey = req.query.apikey;
+ link = req.query.link          
+if(!cdapikey) return res.json(resposta.semkey)
+ if(cdapikey !== key) return res.sendFile(keyinvalida)
+  var videoUrl = req.query.videoUrl
+  if(!videoUrl) return res.json({"error": "faltouo parâmetro videoUrl"})
+  //const getVideoDownloadLink = require("./lib/youtube.js")
+  
+  scrapeWebsite(videoUrl).then((videoLinks) => {
+    console.log('Links dos vídeos encontrados:');
+    res.json({ link: videoLinks[0] });
+  });
+    } catch {
+      res.status(400).send(resposta.error)
+    }
+  })
+  
  router.get('/download/ytmp3', async(req, res, next) => {
  var cdapikey = req.query.apikey;
  link = req.query.link          
@@ -264,19 +314,22 @@ router.all('/shota', async (req, res) => {
    }
    })
 
-router.all('/video+18', async (req, res) => {
- var cdapikey = req.query.apikey;
+router.get('/18/video18', async (req, res, next) => {
+    var cdapikey = req.query.apikey;
    try {
    if(!cdapikey) return res.json(resposta.semkey)
     if(cdapikey !== key) return res.sendFile(keyinvalida)
-   json = JSON.parse(fs.readFileSync('lib/video+18.json').toString())
-   random = json[Math.floor(Math.random() * json.length)]
-   res.type('png')
-   res.send(await getBuffer(random))
-   } catch (e) {
-   res.send(resposta.error)
-   }
-   })
+      const vid = require("./lib/pack.js")
+      const video_18 = vid.video_18
+      const xvid = video_18[Math.floor(Math.random() * video_18.length)];
+
+      res.json({
+        url: `${xvid}`
+    })
+    } catch {
+      res.send(resposta.error)
+    }
+    })
 router.all('/18/foto18', async (req, res) => {
  var cdapikey = req.query.apikey;
    try {
@@ -930,3 +983,9 @@ router.post('/post/body', async (req, res) => {
 
 
 module.exports = router
+
+
+
+
+
+
