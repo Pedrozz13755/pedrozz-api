@@ -218,6 +218,7 @@ if(!cdapikey) return res.json(resposta.semkey)
  }
  })
  app.get('/download/tiktok', async(req, res) => {
+ try {
   var cdapikey = req.query.apikey;
  link = req.query.link          
 if(!cdapikey) return res.json(resposta.semkey)
