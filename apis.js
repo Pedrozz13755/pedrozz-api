@@ -161,7 +161,7 @@ case '/wasted/':
    try {
    if(!cdapikey) return res.json(resposta.semkey)
     if(cdapikey !== key) return res.sendFile(keyinvalida)
-      const meme = JSON.parse(fs.readFileSync(__dirname + '/data/meme.json'));
+      const meme = JSON.parse(fs.readFileSync(__dirname + '/lib/meme.json'));
       const randmeme = meme[Math.floor(Math.random() * meme.length)];
 
       res.json({
