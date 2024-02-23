@@ -21,7 +21,6 @@ const {
   fetchGogoanimeEpisodeSource,
   episod,
   tiktokdownload,
-  ytPlayMp3,
   getVideoDownloadLink,
   getAudioDownloadLink,
   scrapeWebsite
