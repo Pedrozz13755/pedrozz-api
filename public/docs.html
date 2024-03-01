@@ -10,7 +10,7 @@
  <meta name='viewport' content='width=device-width, initial-scale=1'>
 <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
 <link rel="shortcut icon" href="https://telegra.ph/file/df3c2ebe1d9b6417c2a05.jpg" type="image/x-icon" />
-  <title>Pedrozz_Mods</title>
+  <title>PEDROZZ - API</title>
 
 
 </head>
@@ -59,7 +59,7 @@
     right: 5px;
     cursor: pointer;
     font-size: 20px;
-    color: black
+    color: #0000
 }
 
 .welcome-image {
@@ -125,7 +125,21 @@
         /* Personalizações da imagem aqui, se necessário */
         max-width: 100px; /* Exemplo: Limita a largura da imagem */
         border-radius: 5px; /* Bordas arredondadas na imagem */
-    } 
+    }
+    
+        .container3 {
+            text-align: center;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .battery-icon3 {
+            width: 50px;
+            height: auto;
+            vertical-align: middle;
+        }    
+ 
 </style>  
 <body>
 
@@ -336,6 +350,12 @@
   <a href="#">Laura Privat V3</a>
 
   <a href="https://fir3.net/Aurora-bot">AURORA BOT V1</a>
+  
+  <a href="https://4br.me/Baselimpa">Silver stars</a>
+  
+  <a href="https://fir3.net/Packdecase">Pack case</a>
+  
+  <a href="https://fir3.net/Packdecasev2">Pack case2</a>
 
   <a href="https://pedrozz-api2.onrender.com/">Pedrozz-Api2</a>
   
@@ -394,7 +414,7 @@
 </div>
   <div class="welcome-container">
   <div id="welcomeBox" class="welcome-box">
-    <div class="close-btn" onclick="closeWelcomeBox()">Fechar</div>
+    <div class="close-btn" onclick="closeWelcomeBox()">X</div>
     <img src="https://telegra.ph/file/2f9c1f632b7f7790f3423.jpg" class="welcome-image" alt="Usuário">
     <p class="welcome-text">Bem vindo a nossa REST API</p>
     <br></br>
@@ -407,11 +427,6 @@
   </div>
   </selection>  
   <br></br>
-  <section>
-  <div class="pedrozz">
-<h1>por enquanto a key ta free</h1>
-  </div>
-  </selection> 
     <br></br>
     <br></br>
   <!-- Contador de visitas -->
@@ -424,69 +439,49 @@
 </div>
 <!-- Fim Contador de visitas -->      
   <br></br>
-  <section>
-  <div class="pedrozz2">
-    <h3>Na programação, cada bug é uma oportunidade de aprendizado. Veja os erros como desafios a serem superados, e cada correção como um passo rumo à maestria.</h3>
-  </div>
-</section>
-    <section>
-        <div class="pedrozz2" id="container-wrapper">
-          <div id="demo" class="alert alert-dark alert-dismissible" role="alert">
-            <div id="browser_info"></div>
-            <script>
-              let arrBulan = [
-                "Janeiro",
-                "Fevereiro",
-                "Março",
-                "Abril",
-                "Maio",
-                "Junho",
-                "Julho",
-                "Agosto",
-                "Setembro",
-                "Outubro",
-                "Novembro",
-                "Dezembro",
-              ];
-              let txt = "";
-              txt +=
-                "<p><b>Código do navegador</b>: " +
-                navigator.appCodeName +
-                "</p>";
-              txt += "<p><b>Nome do navegador</b>: " + navigator.appName + "</p>";
-              
-              txt += "<p><b>Navegador Online</b>: " + navigator.onLine + "</p>";
-              txt += "<p><b>Plataforma</b>: " + navigator.platform + "</p>";
-              txt += "<p><b>Insformaçoes do usuário</b>: " + navigator.userAgent + "</p>";
-              let text_el = document.querySelector("div#browser_info");
-              setInterval(() => {
-                var d = new Date();
-                const jam = d.getHours().toString().padStart(2, 0);
-                const menit = d.getMinutes().toString().padStart(2, 0);
-                const detik = d.getSeconds().toString().padStart(2, 0);
-                const tgl = d.getDate();
-                const bln = d.getMonth();
-                const thn = d.getFullYear();
-                const bulan = arrBulan[bln];
-                text_el.innerHTML =
-                  txt +
-                  "<b>Data</b>: " +
-                  jam +
-                  ":" +
-                  menit +
-                  ":" +
-                  detik +
-                  "~" +
-                  tgl +
-                  "-" +
-                  bulan +
-                  "-" +
-                  thn +
-                  "<br>Seja Bem vindo de volta Usuário!";
-              }, 250);
-            </script>
-          </div>
-        </section>
+<section2>
+   <div class="container3">
+<div class="pedrozz3">
+    <h1>Informacaes do usuário</h1>
+    <p>Cidade: <span id="city"></span></p>
+    <p>Pais: <span id="country"></span></p>
+    <p>Regiao: <span id="region"></span></p>
+    <p>Seu ip: <span id="ip"></span></p>
+    <p>Wifi: <span id="hostname"></span></p>
+    <p>loc: <span id="loc"></span></p>
+    <p>TimeZone: <span id="timezone"></span></p>
+    <p id="battery">Bateria: </p>
+    <p>Navegador: <span id="browserInfo"></span></p>
+    <p>Aparelho: <span id="deviceInfo"></span></p>
+</div>
+</div>
+    <script>
+        fetch('https://ipinfo.io/?token=b1459713df73c6')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('city').innerText = data.city;
+                document.getElementById('country').innerText = data.country;
+                document.getElementById('region').innerText = data.region;
+                document.getElementById('ip').innerText = data.ip;
+                document.getElementById('hostname').innerText = data.hostname;
+                document.getElementById('timezone').innerText = data.timezone;
+                document.getElementById('loc').innerText = data.loc;
+            });
+            
+    navigator.getBattery().then(function(battery) {
+  function updateBatteryStatus() {
+    document.getElementById('battery').textContent = 'Porcentagem da Bateria: ' + Math.floor(battery.level * 100) + '%';
+  }
+  battery.addEventListener('levelchange', updateBatteryStatus);
+  updateBatteryStatus();
+});        
+
+document.getElementById("browserInfo").innerHTML = navigator.appName;
+        var device = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ? "celular" : "computador";
+        document.getElementById("deviceInfo").innerHTML = device;
+        
+    </script>
+</section2>
 <div class="tutotxt">
 <br>
 <h3 class="tutotxtt">Informações básicas</h3><br><br>
@@ -599,19 +594,4 @@ function showWelcomeBox() {
 }
 
 function closeWelcomeBox() {
-    document.getElementById('welcomeBox').style.display = 'none';
-}
-
-      
-              </script>
-
-  <script>
-    document.getElementById('imagem').addEventListener('click', function() {
-      window.location.href = 'perfil.html';
-    });
-      </script>
-
-</body>
-
-  </html>
-  
+    document.getEl
