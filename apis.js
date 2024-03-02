@@ -334,8 +334,8 @@ var cdapikey = req.query.apikey;
    try {
    if(!cdapikey) return res.json(resposta.semkey)
     if(cdapikey !== key) return res.sendFile(keyinvalida)
-    if(!text1) return res.json(resposta.nottext1)
     const text1 = req.query.text;
+   if(!text1) return res.json(resposta.nottext1)
   pShadow(text1)
     .then((data) => {
       const result = {
@@ -355,12 +355,12 @@ var cdapikey = req.query.apikey;
 });
 
 router.get("/photooxy/romantic", async(req, res, next) => {
-  var cdapikey = req.query.apikey;
+var cdapikey = req.query.apikey;
    try {
    if(!cdapikey) return res.json(resposta.semkey)
     if(cdapikey !== key) return res.sendFile(keyinvalida)
-    if(!text1) return res.json(resposta.nottext1)
     const text1 = req.query.text;
+   if(!text1) return res.json(resposta.nottext1)
   pRomantic(text1)
     .then((data) => {
       const result = {
@@ -382,12 +382,12 @@ router.get("/photooxy/romantic", async(req, res, next) => {
 // @PHOTOOXY
 
 router.get("/photooxy/smoke", async(req, res, next) => {
-  var cdapikey = req.query.apikey;
+var cdapikey = req.query.apikey;
    try {
    if(!cdapikey) return res.json(resposta.semkey)
     if(cdapikey !== key) return res.sendFile(keyinvalida)
-    if(!text1) return res.json(resposta.nottext1)
     const text1 = req.query.text;
+   if(!text1) return res.json(resposta.nottext1)
   pSmoke(text1)
     .then((data) => {
       const result = {
@@ -407,12 +407,12 @@ router.get("/photooxy/smoke", async(req, res, next) => {
 });
 
 router.get("/photooxy/burn-papper", async(req, res, next) => {
-  var cdapikey = req.query.apikey;
+var cdapikey = req.query.apikey;
    try {
    if(!cdapikey) return res.json(resposta.semkey)
     if(cdapikey !== key) return res.sendFile(keyinvalida)
-    if(!text1) return res.json(resposta.nottext1)
     const text1 = req.query.text;
+   if(!text1) return res.json(resposta.nottext1)
   pBurnPapper(text1)
     .then((data) => {
       const result = {
@@ -432,12 +432,12 @@ router.get("/photooxy/burn-papper", async(req, res, next) => {
 });
 
 router.get("/photooxy/naruto", async(req, res, next) => {
-  var cdapikey = req.query.apikey;
+var cdapikey = req.query.apikey;
    try {
    if(!cdapikey) return res.json(resposta.semkey)
     if(cdapikey !== key) return res.sendFile(keyinvalida)
-    if(!text1) return res.json(resposta.nottext1)
     const text1 = req.query.text;
+   if(!text1) return res.json(resposta.nottext1)
   pNaruto(text1)
     .then((data) => {
       const result = {
@@ -457,12 +457,12 @@ router.get("/photooxy/naruto", async(req, res, next) => {
 });
 
 router.get("/photooxy/love-message", async(req, res, next) => {
-  var cdapikey = req.query.apikey;
+var cdapikey = req.query.apikey;
    try {
    if(!cdapikey) return res.json(resposta.semkey)
     if(cdapikey !== key) return res.sendFile(keyinvalida)
-    if(!text1) return res.json(resposta.nottext1)
     const text1 = req.query.text;
+   if(!text1) return res.json(resposta.nottext1)
   pLoveMsg(text1)
     .then((data) => {
       const result = {
@@ -486,8 +486,8 @@ router.get("/photooxy/message-under-grass", async(req, res, next) => {
    try {
    if(!cdapikey) return res.json(resposta.semkey)
     if(cdapikey !== key) return res.sendFile(keyinvalida)
-    if(!text1) return res.json(resposta.nottext1)
     const text1 = req.query.text;
+   if(!text1) return res.json(resposta.nottext1)
   pMsgGrass(text1)
     .then((data) => {
       const result = {
@@ -507,13 +507,13 @@ router.get("/photooxy/message-under-grass", async(req, res, next) => {
 });
 
 router.get("/photooxy/glitch", async(req, res, next) => {
-  const text1 = req.query.text1;
-  const text2 = req.query.text2;
-  const apikey = req.query.apikey;
+var cdapikey = req.query.apikey;
+   try {
+   if(!cdapikey) return res.json(resposta.semkey)
+    if(cdapikey !== key) return res.sendFile(keyinvalida)
+    const text1 = req.query.text;
   if(!text1) return res.json(loghandler.nottext1)
   if(!text2) return res.json(loghandler.nottext2)
-  if(!apikey) return res.json(loghandler.notparam)
-  if(listkey.includes(apikey)){
   pGlitch(text1, text2)
     .then((data) => {
       const result = {
@@ -533,12 +533,12 @@ router.get("/photooxy/glitch", async(req, res, next) => {
 });
 
 router.get("/photooxy/double-heart", async(req, res, next) => {
-  var cdapikey = req.query.apikey;
+var cdapikey = req.query.apikey;
    try {
    if(!cdapikey) return res.json(resposta.semkey)
     if(cdapikey !== key) return res.sendFile(keyinvalida)
-    if(!text1) return res.json(resposta.nottext1)
     const text1 = req.query.text;
+   if(!text1) return res.json(resposta.nottext1)
   pDoubleHeart(text1)
     .then((data) => {
       const result = {
@@ -558,12 +558,12 @@ router.get("/photooxy/double-heart", async(req, res, next) => {
 });
 
 router.get("/photooxy/coffe-cup", async(req, res, next) => {
-  var cdapikey = req.query.apikey;
+var cdapikey = req.query.apikey;
    try {
    if(!cdapikey) return res.json(resposta.semkey)
     if(cdapikey !== key) return res.sendFile(keyinvalida)
-    if(!text1) return res.json(resposta.nottext1)
     const text1 = req.query.text;
+   if(!text1) return res.json(resposta.nottext1)
   pCoffeCup(text1)
     .then((data) => {
       const result = {
@@ -583,12 +583,12 @@ router.get("/photooxy/coffe-cup", async(req, res, next) => {
 });
 
 router.get("/photooxy/love-text", async(req, res, next) => {
-  var cdapikey = req.query.apikey;
+var cdapikey = req.query.apikey;
    try {
    if(!cdapikey) return res.json(resposta.semkey)
     if(cdapikey !== key) return res.sendFile(keyinvalida)
-    if(!text1) return res.json(resposta.nottext1)
     const text1 = req.query.text;
+   if(!text1) return res.json(resposta.nottext1)
   pLoveText(text1)
     .then((data) => {
       const result = {
@@ -608,12 +608,12 @@ router.get("/photooxy/love-text", async(req, res, next) => {
 });
 
 router.get("/photooxy/butterfly", async(req, res, next) => {
-  var cdapikey = req.query.apikey;
+var cdapikey = req.query.apikey;
    try {
    if(!cdapikey) return res.json(resposta.semkey)
     if(cdapikey !== key) return res.sendFile(keyinvalida)
-    if(!text1) return res.json(resposta.nottext1)
     const text1 = req.query.text;
+   if(!text1) return res.json(resposta.nottext1)
   pButterfly(text1)
   .then((data) => {
       const result = {
@@ -643,8 +643,8 @@ var cdapikey = req.query.apikey;
    try {
    if(!cdapikey) return res.json(resposta.semkey)
     if(cdapikey !== key) return res.sendFile(keyinvalida)
-    if(!text1) return res.json(resposta.nottext1)
     const text1 = req.query.text;
+   if(!text1) return res.json(resposta.nottext1)
     zrapi 
   .textpro("https://photooxy.com/logo-and-text-effects/army-camouflage-fabric-text-effect-221.html", [
     text,
@@ -696,8 +696,8 @@ var cdapikey = req.query.apikey;
    try {
    if(!cdapikey) return res.json(resposta.semkey)
     if(cdapikey !== key) return res.sendFile(keyinvalida)
-    if(!text1) return res.json(resposta.nottext1)
     const text1 = req.query.text;
+   if(!text1) return res.json(resposta.nottext1)
     zrapi 
   .textpro("https://textpro.me/natural-leaves-text-effect-931.html", [
     text,
@@ -751,8 +751,8 @@ var cdapikey = req.query.apikey;
    try {
    if(!cdapikey) return res.json(resposta.semkey)
     if(cdapikey !== key) return res.sendFile(keyinvalida)
-    if(!text1) return res.json(resposta.nottext1)
     const text1 = req.query.text;
+   if(!text1) return res.json(resposta.nottext1)
     zrapi 
   .textpro("https://textpro.me/create-harry-potter-text-effect-online-1025.html", [
     text, 
@@ -776,8 +776,8 @@ var cdapikey = req.query.apikey;
    try {
    if(!cdapikey) return res.json(resposta.semkey)
     if(cdapikey !== key) return res.sendFile(keyinvalida)
-    if(!text1) return res.json(resposta.nottext1)
     const text1 = req.query.text;
+   if(!text1) return res.json(resposta.nottext1)
     zrapi 
   .textpro("https://textpro.me/create-a-magma-hot-text-effect-online-1030.html", [
     text, 
@@ -801,8 +801,8 @@ var cdapikey = req.query.apikey;
    try {
    if(!cdapikey) return res.json(resposta.semkey)
     if(cdapikey !== key) return res.sendFile(keyinvalida)
-    if(!text1) return res.json(resposta.nottext1)
     const text1 = req.query.text;
+   if(!text1) return res.json(resposta.nottext1)
     zrapi 
   .textpro("https://textpro.me/halloween-fire-text-effect-940.html", [
     text, 
@@ -826,8 +826,8 @@ var cdapikey = req.query.apikey;
    try {
    if(!cdapikey) return res.json(resposta.semkey)
     if(cdapikey !== key) return res.sendFile(keyinvalida)
-    if(!text1) return res.json(resposta.nottext1)
     const text1 = req.query.text;
+   if(!text1) return res.json(resposta.nottext1)
     zrapi 
   .textpro("https://textpro.me/create-3d-neon-light-text-effect-online-1028.html", [
     text, 
@@ -851,8 +851,8 @@ var cdapikey = req.query.apikey;
    try {
    if(!cdapikey) return res.json(resposta.semkey)
     if(cdapikey !== key) return res.sendFile(keyinvalida)
-    if(!text1) return res.json(resposta.nottext1)
     const text1 = req.query.text;
+   if(!text1) return res.json(resposta.nottext1)
     zrapi 
   .textpro("https://textpro.me/broken-glass-text-effect-free-online-1023.html", [
     text, 
@@ -876,8 +876,8 @@ var cdapikey = req.query.apikey;
    try {
    if(!cdapikey) return res.json(resposta.semkey)
     if(cdapikey !== key) return res.sendFile(keyinvalida)
-    if(!text1) return res.json(resposta.nottext1)
     const text1 = req.query.text;
+   if(!text1) return res.json(resposta.nottext1)
     zrapi 
   .textpro("https://textpro.me/create-art-paper-cut-text-effect-online-1022.html", [
     text,
@@ -901,8 +901,8 @@ var cdapikey = req.query.apikey;
    try {
    if(!cdapikey) return res.json(resposta.semkey)
     if(cdapikey !== key) return res.sendFile(keyinvalida)
-    if(!text1) return res.json(resposta.nottext1)
     const text1 = req.query.text;
+   if(!text1) return res.json(resposta.nottext1)
     zrapi 
   .textpro("https://textpro.me/create-a-3d-glossy-metal-text-effect-1019.html", [
     text,
@@ -926,8 +926,8 @@ var cdapikey = req.query.apikey;
    try {
    if(!cdapikey) return res.json(resposta.semkey)
     if(cdapikey !== key) return res.sendFile(keyinvalida)
-    if(!text1) return res.json(resposta.nottext1)
     const text1 = req.query.text;
+   if(!text1) return res.json(resposta.nottext1)
     zrapi 
   .textpro("https://textpro.me/create-a-free-online-watercolor-text-effect-1017.html", [
     text, 
@@ -951,8 +951,8 @@ var cdapikey = req.query.apikey;
    try {
    if(!cdapikey) return res.json(resposta.semkey)
     if(cdapikey !== key) return res.sendFile(keyinvalida)
-    if(!text1) return res.json(resposta.nottext1)
     const text1 = req.query.text;
+   if(!text1) return res.json(resposta.nottext1)
     zrapi 
   .textpro("https://textpro.me/online-multicolor-3d-paper-cut-text-effect-1016.html", [
     text,
@@ -976,8 +976,8 @@ var cdapikey = req.query.apikey;
    try {
    if(!cdapikey) return res.json(resposta.semkey)
     if(cdapikey !== key) return res.sendFile(keyinvalida)
-    if(!text1) return res.json(resposta.nottext1)
     const text1 = req.query.text;
+   if(!text1) return res.json(resposta.nottext1)
     zrapi 
   .textpro("https://textpro.me/create-neon-devil-wings-text-effect-online-free-1014.html", [
     text,
@@ -1001,8 +1001,8 @@ var cdapikey = req.query.apikey;
    try {
    if(!cdapikey) return res.json(resposta.semkey)
     if(cdapikey !== key) return res.sendFile(keyinvalida)
-    if(!text1) return res.json(resposta.nottext1)
     const text1 = req.query.text;
+   if(!text1) return res.json(resposta.nottext1)
     zrapi 
   .textpro("https://textpro.me/create-a-cloud-text-effect-on-the-sky-online-1004.html", [
     text,
@@ -1026,8 +1026,8 @@ var cdapikey = req.query.apikey;
    try {
    if(!cdapikey) return res.json(resposta.semkey)
     if(cdapikey !== key) return res.sendFile(keyinvalida)
-    if(!text1) return res.json(resposta.nottext1)
     const text1 = req.query.text;
+   if(!text1) return res.json(resposta.nottext1)
     zrapi 
   .textpro("https://textpro.me/3d-luxury-gold-text-effect-online-1003.html", [
     text,
@@ -1081,8 +1081,8 @@ var cdapikey = req.query.apikey;
    try {
    if(!cdapikey) return res.json(resposta.semkey)
     if(cdapikey !== key) return res.sendFile(keyinvalida)
-    if(!text1) return res.json(resposta.nottext1)
     const text1 = req.query.text;
+   if(!text1) return res.json(resposta.nottext1)
     zrapi 
   .textpro("https://textpro.me/sand-writing-text-effect-online-990.html", [
     text,
@@ -1106,8 +1106,8 @@ var cdapikey = req.query.apikey;
    try {
    if(!cdapikey) return res.json(resposta.semkey)
     if(cdapikey !== key) return res.sendFile(keyinvalida)
-    if(!text1) return res.json(resposta.nottext1)
     const text1 = req.query.text;
+   if(!text1) return res.json(resposta.nottext1)
     zrapi 
   .textpro("https://textpro.me/sand-engraved-3d-text-effect-989.html", [
     text,
@@ -1131,8 +1131,8 @@ var cdapikey = req.query.apikey;
    try {
    if(!cdapikey) return res.json(resposta.semkey)
     if(cdapikey !== key) return res.sendFile(keyinvalida)
-    if(!text1) return res.json(resposta.nottext1)
     const text1 = req.query.text;
+   if(!text1) return res.json(resposta.nottext1)
     zrapi 
   .textpro("https://textpro.me/create-3d-glue-text-effect-with-realistic-style-986.html", [
     text,
@@ -1156,8 +1156,8 @@ var cdapikey = req.query.apikey;
    try {
    if(!cdapikey) return res.json(resposta.semkey)
     if(cdapikey !== key) return res.sendFile(keyinvalida)
-    if(!text1) return res.json(resposta.nottext1)
     const text1 = req.query.text;
+   if(!text1) return res.json(resposta.nottext1)
     zrapi 
   .textpro("https://textpro.me/minion-text-effect-3d-online-978.html", [
     text,
