@@ -6,6 +6,7 @@ var router = express.Router();
 var { exec } = require('child_process')
 var fetch = require('node-fetch')
 var canvacord = require('canvacord').Canvas
+var zrapi = require("zrapi");
 var fs = require('fs')
 const {
   ytDonlodMp3,
@@ -14,6 +15,32 @@ const {
   ytPlayMp4,
   ytSearch
 } = require("./lib/youtube");
+var {
+  pShadow,
+  pRomantic,
+  pSmoke,
+  pBurnPapper,
+  pNaruto,
+  pLoveMsg,
+  pMsgGrass,
+  pGlitch,
+  pDoubleHeart,
+  pCoffeCup,
+  pLoveText,
+  pButterfly
+} = require("./lib/photooxy");
+
+var {
+  ttdownloader,
+  pinterest,
+  fbdown,
+  igstalk,
+  igstory,
+  igdl,
+  linkwa,
+  igDownloader
+} = require("./lib/anjay");
+
 var criador = ['pedrozz'];
 var key = 'pedrozz13'
 
@@ -38,6 +65,12 @@ resposta = {
         código: 406,
         mensagem: 
         'Insira a imagem na url'
+    },
+    nottext: {
+        status: false,
+        creator: `${creator}`,
+        code: 406,
+        message: 'insira o parâmetro text'
     },
     error: {
        status: false,
@@ -267,8 +300,881 @@ resultado: akk
 })}).catch(e => {
 res.sendFile(error)})})
 
-   
-   
+
+router.get("/photooxy/shadow", async(req, res, next) => {
+var cdapikey = req.query.apikey;
+   try {
+   if(!cdapikey) return res.json(resposta.semkey)
+    if(cdapikey !== key) return res.sendFile(keyinvalida)
+    if(!text1) return res.json(resposta.nottext1)
+    const text1 = req.query.text;
+  pShadow(text1)
+    .then((data) => {
+      const result = {
+        status: true,
+        code: 200,
+        creator: `${creator}`,
+        result: data.url
+      }
+      res.json(result)
+    })
+    .catch((error) => {
+      res.json(error)
+    });
+    } else {
+    	res.send(resposta.error)
+    }
+});
+
+router.get("/photooxy/romantic", async(req, res, next) => {
+  var cdapikey = req.query.apikey;
+   try {
+   if(!cdapikey) return res.json(resposta.semkey)
+    if(cdapikey !== key) return res.sendFile(keyinvalida)
+    if(!text1) return res.json(resposta.nottext1)
+    const text1 = req.query.text;
+  pRomantic(text1)
+    .then((data) => {
+      const result = {
+        status: true,
+        code: 200,
+        creator: `${creator}`,
+        result: data.url
+      }
+      res.json(result)
+    })
+    .catch((error) => {
+      res.json(error)
+    });
+    } else {
+    	res.send(resposta.error)
+    }
+});
+
+// @PHOTOOXY
+
+router.get("/photooxy/smoke", async(req, res, next) => {
+  var cdapikey = req.query.apikey;
+   try {
+   if(!cdapikey) return res.json(resposta.semkey)
+    if(cdapikey !== key) return res.sendFile(keyinvalida)
+    if(!text1) return res.json(resposta.nottext1)
+    const text1 = req.query.text;
+  pSmoke(text1)
+    .then((data) => {
+      const result = {
+        status: true,
+        code: 200,
+        creator: `${creator}`,
+        result: data.url
+      }
+      res.json(result)
+    })
+    .catch((error) => {
+      res.json(error)
+    });
+    } else {
+    	res.send(resposta.error)
+    }
+});
+
+router.get("/photooxy/burn-papper", async(req, res, next) => {
+  var cdapikey = req.query.apikey;
+   try {
+   if(!cdapikey) return res.json(resposta.semkey)
+    if(cdapikey !== key) return res.sendFile(keyinvalida)
+    if(!text1) return res.json(resposta.nottext1)
+    const text1 = req.query.text;
+  pBurnPapper(text1)
+    .then((data) => {
+      const result = {
+        status: true,
+        code: 200,
+        creator: `${creator}`,
+        result: data.url
+      }
+      res.json(result)
+    })
+    .catch((error) => {
+      res.json(error)
+    });
+    } else {
+    	res.send(resposta.error)
+    }
+});
+
+router.get("/photooxy/naruto", async(req, res, next) => {
+  var cdapikey = req.query.apikey;
+   try {
+   if(!cdapikey) return res.json(resposta.semkey)
+    if(cdapikey !== key) return res.sendFile(keyinvalida)
+    if(!text1) return res.json(resposta.nottext1)
+    const text1 = req.query.text;
+  pNaruto(text1)
+    .then((data) => {
+      const result = {
+        status: true,
+        code: 200,
+        creator: `${creator}`,
+        result: data.url
+      }
+      res.json(result)
+    })
+    .catch((error) => {
+      res.json(error)
+    });
+    } else {
+    	res.send(resposta.error)
+    }
+});
+
+router.get("/photooxy/love-message", async(req, res, next) => {
+  var cdapikey = req.query.apikey;
+   try {
+   if(!cdapikey) return res.json(resposta.semkey)
+    if(cdapikey !== key) return res.sendFile(keyinvalida)
+    if(!text1) return res.json(resposta.nottext1)
+    const text1 = req.query.text;
+  pLoveMsg(text1)
+    .then((data) => {
+      const result = {
+        status: true,
+        code: 200,
+        creator: `${creator}`,
+        result: data.url
+      }
+      res.json(result)
+    })
+    .catch((error) => {
+      res.json(error)
+    });
+    } else {
+    	res.send(resposta.error)
+    }
+});
+
+router.get("/photooxy/message-under-grass", async(req, res, next) => {
+  var cdapikey = req.query.apikey;
+   try {
+   if(!cdapikey) return res.json(resposta.semkey)
+    if(cdapikey !== key) return res.sendFile(keyinvalida)
+    if(!text1) return res.json(resposta.nottext1)
+    const text1 = req.query.text;
+  pMsgGrass(text1)
+    .then((data) => {
+      const result = {
+        status: true,
+        code: 200,
+        creator: `${creator}`,
+        result: data.url
+      }
+      res.json(result)
+    })
+    .catch((error) => {
+      res.json(error)
+    });
+    } else {
+    	res.send(resposta.error)
+    }
+});
+
+router.get("/photooxy/glitch", async(req, res, next) => {
+  const text1 = req.query.text1;
+  const text2 = req.query.text2;
+  const apikey = req.query.apikey;
+  if(!text1) return res.json(loghandler.nottext1)
+  if(!text2) return res.json(loghandler.nottext2)
+  if(!apikey) return res.json(loghandler.notparam)
+  if(listkey.includes(apikey)){
+  pGlitch(text1, text2)
+    .then((data) => {
+      const result = {
+        status: true,
+        code: 200,
+        creator: `${creator}`,
+        result: data.url
+      }
+      res.json(result)
+    })
+    .catch((error) => {
+      res.json(error)
+    });
+    } else {
+    	res.send(resposta.error)
+    }
+});
+
+router.get("/photooxy/double-heart", async(req, res, next) => {
+  var cdapikey = req.query.apikey;
+   try {
+   if(!cdapikey) return res.json(resposta.semkey)
+    if(cdapikey !== key) return res.sendFile(keyinvalida)
+    if(!text1) return res.json(resposta.nottext1)
+    const text1 = req.query.text;
+  pDoubleHeart(text1)
+    .then((data) => {
+      const result = {
+        status: true,
+        code: 200,
+        creator: `${creator}`,
+        result: data.url
+      }
+      res.json(result)
+    })
+    .catch((error) => {
+      res.json(error)
+    });
+    } else {
+    	res.send(resposta.error)
+    }
+});
+
+router.get("/photooxy/coffe-cup", async(req, res, next) => {
+  var cdapikey = req.query.apikey;
+   try {
+   if(!cdapikey) return res.json(resposta.semkey)
+    if(cdapikey !== key) return res.sendFile(keyinvalida)
+    if(!text1) return res.json(resposta.nottext1)
+    const text1 = req.query.text;
+  pCoffeCup(text1)
+    .then((data) => {
+      const result = {
+        status: true,
+        code: 200,
+        creator: `${creator}`,
+        result: data.url
+      }
+      res.json(result)
+    })
+    .catch((error) => {
+      res.json(error)
+    });
+    } else {
+    	res.send(resposta.error)
+    }
+});
+
+router.get("/photooxy/love-text", async(req, res, next) => {
+  var cdapikey = req.query.apikey;
+   try {
+   if(!cdapikey) return res.json(resposta.semkey)
+    if(cdapikey !== key) return res.sendFile(keyinvalida)
+    if(!text1) return res.json(resposta.nottext1)
+    const text1 = req.query.text;
+  pLoveText(text1)
+    .then((data) => {
+      const result = {
+        status: true,
+        code: 200,
+        creator: `${creator}`,
+        result: data.url
+      }
+      res.json(result)
+    })
+    .catch((error) => {
+      res.json(error)
+    });
+    } else {
+    	res.send(resposta.error)
+    }
+});
+
+router.get("/photooxy/butterfly", async(req, res, next) => {
+  var cdapikey = req.query.apikey;
+   try {
+   if(!cdapikey) return res.json(resposta.semkey)
+    if(cdapikey !== key) return res.sendFile(keyinvalida)
+    if(!text1) return res.json(resposta.nottext1)
+    const text1 = req.query.text;
+  pButterfly(text1)
+  .then((data) => {
+      const result = {
+        status: true,
+        code: 200,
+        creator: `${creator}`,
+        result: data.url
+      }
+      res.json(result)
+    })
+    .catch((error) => {
+      res.json(loghandler.error)
+    })
+    } else {
+    	res.send(resposta.error)
+    }
+});
+
+/*
+@ AKHIR PHOTOOXY
+*/
+/*
+@ TEXTPROME
+*/
+router.get('/photooxy/army', async(req, res, next) => {
+var cdapikey = req.query.apikey;
+   try {
+   if(!cdapikey) return res.json(resposta.semkey)
+    if(cdapikey !== key) return res.sendFile(keyinvalida)
+    if(!text1) return res.json(resposta.nottext1)
+    const text1 = req.query.text;
+    zrapi 
+  .textpro("https://photooxy.com/logo-and-text-effects/army-camouflage-fabric-text-effect-221.html", [
+    text,
+  ])
+  .then((data) => {
+    res.json({
+      status: true,
+      code: 200,
+      creator: `${creator}`,
+      result: data
+    })
+  })
+  .catch((err) => console.log(err));
+  } else {
+    res.send(resposta.error)
+  }
+});
+
+router.get('/textpro/logo-wolf', async(req, res, next) => {
+  const apikey = req.query.apikey;
+  const text = req.query.text;
+  const text2 = req.query.text2;
+  
+  if(!apikey) return res.json(loghandler.notparam)
+  if(!text) return res.json(loghandler.nottext)
+  if(!text2) return res.json(loghandler.nottext2)
+  
+  if(listkey.includes(apikey)){
+    zrapi 
+  .textpro("https://textpro.me/create-wolf-logo-black-white-937.html", [
+    text, text2
+  ])
+  .then((data) => {
+    res.json({
+      status: true,
+      code: 200,
+      creator: `${creator}`,
+      result: data
+    })
+  })
+  .catch((err) => console.log(err));
+  } else {
+    res.send(resposta.error)
+  }
+});
+
+router.get('/textpro/natural-leaves', async(req, res, next) => {
+var cdapikey = req.query.apikey;
+   try {
+   if(!cdapikey) return res.json(resposta.semkey)
+    if(cdapikey !== key) return res.sendFile(keyinvalida)
+    if(!text1) return res.json(resposta.nottext1)
+    const text1 = req.query.text;
+    zrapi 
+  .textpro("https://textpro.me/natural-leaves-text-effect-931.html", [
+    text,
+  ])
+  .then((data) => {
+    res.json({
+      status: true,
+      code: 200,
+      creator: `${creator}`,
+      result: data
+    })
+  })
+  .catch((err) => console.log(err));
+  } else {
+    res.send(resposta.error)
+  }
+});
+
+router.get('/textpro/logo-wolf2', async(req, res, next) => {
+
+  const apikey = req.query.apikey;
+
+  const text = req.query.text;
+  const text2 = req.query.text2;
+  
+  if(!apikey) return res.json(loghandler.notparam)
+  if(!text) return res.json(loghandler.nottext)
+  if(!text2) return res.json(loghandler.nottext2)
+  
+  if(listkey.includes(apikey)){
+    zrapi 
+  .textpro("https://textpro.me/create-wolf-logo-galaxy-online-936.html", [
+    text, text2
+  ])
+  .then((data) => {
+    res.json({
+      status: true,
+      code: 200,
+      creator: `${creator}`,
+      result: data
+    })
+  })
+  .catch((err) => console.log(err));
+  } else {
+    res.send(resposta.error)
+  }
+});
+
+router.get('/textpro/harry-potter', async(req, res, next) => {
+var cdapikey = req.query.apikey;
+   try {
+   if(!cdapikey) return res.json(resposta.semkey)
+    if(cdapikey !== key) return res.sendFile(keyinvalida)
+    if(!text1) return res.json(resposta.nottext1)
+    const text1 = req.query.text;
+    zrapi 
+  .textpro("https://textpro.me/create-harry-potter-text-effect-online-1025.html", [
+    text, 
+  ])
+  .then((data) => {
+    res.json({
+      status: true,
+      code: 200,
+      creator: `${creator}`,
+      result: data
+    })
+  })
+  .catch((err) => console.log(err));
+  } else {
+    res.send(resposta.error)
+  }
+});
+
+router.get('/textpro/magma', async(req, res, next) => {
+var cdapikey = req.query.apikey;
+   try {
+   if(!cdapikey) return res.json(resposta.semkey)
+    if(cdapikey !== key) return res.sendFile(keyinvalida)
+    if(!text1) return res.json(resposta.nottext1)
+    const text1 = req.query.text;
+    zrapi 
+  .textpro("https://textpro.me/create-a-magma-hot-text-effect-online-1030.html", [
+    text, 
+  ])
+  .then((data) => {
+    res.json({
+      status: true,
+      code: 200,
+      creator: `${creator}`,
+      result: data
+    })
+  })
+  .catch((err) => console.log(err));
+  } else {
+    res.send(resposta.error)
+  }
+});
+
+router.get('/textpro/hallowen-text', async(req, res, next) => {
+var cdapikey = req.query.apikey;
+   try {
+   if(!cdapikey) return res.json(resposta.semkey)
+    if(cdapikey !== key) return res.sendFile(keyinvalida)
+    if(!text1) return res.json(resposta.nottext1)
+    const text1 = req.query.text;
+    zrapi 
+  .textpro("https://textpro.me/halloween-fire-text-effect-940.html", [
+    text, 
+  ])
+  .then((data) => {
+    res.json({
+      status: true,
+      code: 200,
+      creator: `${creator}`,
+      result: data
+    })
+  })
+  .catch((err) => console.log(err));
+  } else {
+    res.send(resposta.error)
+  }
+});
+
+router.get('/textpro/neon-light', async(req, res, next) => {
+var cdapikey = req.query.apikey;
+   try {
+   if(!cdapikey) return res.json(resposta.semkey)
+    if(cdapikey !== key) return res.sendFile(keyinvalida)
+    if(!text1) return res.json(resposta.nottext1)
+    const text1 = req.query.text;
+    zrapi 
+  .textpro("https://textpro.me/create-3d-neon-light-text-effect-online-1028.html", [
+    text, 
+  ])
+  .then((data) => {
+    res.json({
+      status: true,
+      code: 200,
+      creator: `${creator}`,
+      result: data
+    })
+  })
+  .catch((err) => console.log(err));
+  } else {
+    res.send(resposta.error)
+  }
+});
+
+router.get('/textpro/broken-glass', async(req, res, next) => {
+var cdapikey = req.query.apikey;
+   try {
+   if(!cdapikey) return res.json(resposta.semkey)
+    if(cdapikey !== key) return res.sendFile(keyinvalida)
+    if(!text1) return res.json(resposta.nottext1)
+    const text1 = req.query.text;
+    zrapi 
+  .textpro("https://textpro.me/broken-glass-text-effect-free-online-1023.html", [
+    text, 
+  ])
+  .then((data) => {
+    res.json({
+      status: true,
+      code: 200,
+      creator: `${creator}`,
+      result: data
+    })
+  })
+  .catch((err) => console.log(err));
+  } else {
+    res.send(resposta.error)
+  }
+});
+
+router.get('/textpro/art-papper', async(req, res, next) => {
+var cdapikey = req.query.apikey;
+   try {
+   if(!cdapikey) return res.json(resposta.semkey)
+    if(cdapikey !== key) return res.sendFile(keyinvalida)
+    if(!text1) return res.json(resposta.nottext1)
+    const text1 = req.query.text;
+    zrapi 
+  .textpro("https://textpro.me/create-art-paper-cut-text-effect-online-1022.html", [
+    text,
+  ])
+  .then((data) => {
+    res.json({
+      status: true,
+      code: 200,
+      creator: `${creator}`,
+      result: data
+    })
+  })
+  .catch((err) => console.log(err));
+  } else {
+    res.send(resposta.error)
+  }
+});
+
+router.get('/textpro/glossy', async(req, res, next) => {
+var cdapikey = req.query.apikey;
+   try {
+   if(!cdapikey) return res.json(resposta.semkey)
+    if(cdapikey !== key) return res.sendFile(keyinvalida)
+    if(!text1) return res.json(resposta.nottext1)
+    const text1 = req.query.text;
+    zrapi 
+  .textpro("https://textpro.me/create-a-3d-glossy-metal-text-effect-1019.html", [
+    text,
+  ])
+  .then((data) => {
+    res.json({
+      status: true,
+      code: 200,
+      creator: `${creator}`,
+      result: data
+    })
+  })
+  .catch((err) => console.log(err));
+  } else {
+    res.send(resposta.error)
+  }
+});
+
+router.get('/textpro/water-color', async(req, res, next) => {
+var cdapikey = req.query.apikey;
+   try {
+   if(!cdapikey) return res.json(resposta.semkey)
+    if(cdapikey !== key) return res.sendFile(keyinvalida)
+    if(!text1) return res.json(resposta.nottext1)
+    const text1 = req.query.text;
+    zrapi 
+  .textpro("https://textpro.me/create-a-free-online-watercolor-text-effect-1017.html", [
+    text, 
+  ])
+  .then((data) => {
+    res.json({
+      status: true,
+      code: 200,
+      creator: `${creator}`,
+      result: data
+    })
+  })
+  .catch((err) => console.log(err));
+  } else {
+    res.send(resposta.error)
+  }
+});
+
+router.get('/textpro/multi-color', async(req, res, next) => {
+var cdapikey = req.query.apikey;
+   try {
+   if(!cdapikey) return res.json(resposta.semkey)
+    if(cdapikey !== key) return res.sendFile(keyinvalida)
+    if(!text1) return res.json(resposta.nottext1)
+    const text1 = req.query.text;
+    zrapi 
+  .textpro("https://textpro.me/online-multicolor-3d-paper-cut-text-effect-1016.html", [
+    text,
+  ])
+  .then((data) => {
+    res.json({
+      status: true,
+      code: 200,
+      creator: `${creator}`,
+      result: data
+    })
+  })
+  .catch((err) => console.log(err));
+  } else {
+    res.send(resposta.error)
+  }
+});
+
+router.get('/textpro/neon-devil', async(req, res, next) => {
+var cdapikey = req.query.apikey;
+   try {
+   if(!cdapikey) return res.json(resposta.semkey)
+    if(cdapikey !== key) return res.sendFile(keyinvalida)
+    if(!text1) return res.json(resposta.nottext1)
+    const text1 = req.query.text;
+    zrapi 
+  .textpro("https://textpro.me/create-neon-devil-wings-text-effect-online-free-1014.html", [
+    text,
+  ])
+  .then((data) => {
+    res.json({
+      status: true,
+      code: 200,
+      creator: `${creator}`,
+      result: data
+    })
+  })
+  .catch((err) => console.log(err));
+  } else {
+    res.send(resposta.error)
+  }
+});
+
+router.get('/textpro/sky-text', async(req, res, next) => {
+var cdapikey = req.query.apikey;
+   try {
+   if(!cdapikey) return res.json(resposta.semkey)
+    if(cdapikey !== key) return res.sendFile(keyinvalida)
+    if(!text1) return res.json(resposta.nottext1)
+    const text1 = req.query.text;
+    zrapi 
+  .textpro("https://textpro.me/create-a-cloud-text-effect-on-the-sky-online-1004.html", [
+    text,
+  ])
+  .then((data) => {
+    res.json({
+      status: true,
+      code: 200,
+      creator: `${creator}`,
+      result: data
+    })
+  })
+  .catch((err) => console.log(err));
+  } else {
+    res.send(resposta.error)
+  }
+});
+
+router.get('/textpro/luxury', async(req, res, next) => {
+var cdapikey = req.query.apikey;
+   try {
+   if(!cdapikey) return res.json(resposta.semkey)
+    if(cdapikey !== key) return res.sendFile(keyinvalida)
+    if(!text1) return res.json(resposta.nottext1)
+    const text1 = req.query.text;
+    zrapi 
+  .textpro("https://textpro.me/3d-luxury-gold-text-effect-online-1003.html", [
+    text,
+  ])
+  .then((data) => {
+    res.json({
+      status: true,
+      code: 200,
+      creator: `${creator}`,
+      result: data
+    })
+  })
+  .catch((err) => console.log(err));
+  } else {
+    res.send(resposta.error)
+  }
+});
+
+router.get('/textpro/vintage', async(req, res, next) => {
+
+  const apikey = req.query.apikey;
+
+  const text = req.query.text;
+  const text2 = req.query.text2;
+  
+  if(!apikey) return res.json(loghandler.notparam)
+  if(!text) return res.json(loghandler.nottext)
+  if(!text2) return res.json(loghandler.nottext2)
+  
+  if(listkey.includes(apikey)){
+    zrapi 
+  .textpro("https://textpro.me/create-realistic-vintage-style-light-bulb-1000.html", [
+    text, text2
+  ])
+  .then((data) => {
+    res.json({
+      status: true,
+      code: 200,
+      creator: `${creator}`,
+      result: data
+    })
+  })
+  .catch((err) => console.log(err));
+  } else {
+    res.send(resposta.error)
+  }
+});
+
+router.get('/textpro/writing', async(req, res, next) => {
+var cdapikey = req.query.apikey;
+   try {
+   if(!cdapikey) return res.json(resposta.semkey)
+    if(cdapikey !== key) return res.sendFile(keyinvalida)
+    if(!text1) return res.json(resposta.nottext1)
+    const text1 = req.query.text;
+    zrapi 
+  .textpro("https://textpro.me/sand-writing-text-effect-online-990.html", [
+    text,
+  ])
+  .then((data) => {
+    res.json({
+      status: true,
+      code: 200,
+      creator: `${creator}`,
+      result: data
+    })
+  })
+  .catch((err) => console.log(err));
+  } else {
+    res.send(resposta.error)
+  }
+});
+
+router.get('/textpro/engraved', async(req, res, next) => {
+var cdapikey = req.query.apikey;
+   try {
+   if(!cdapikey) return res.json(resposta.semkey)
+    if(cdapikey !== key) return res.sendFile(keyinvalida)
+    if(!text1) return res.json(resposta.nottext1)
+    const text1 = req.query.text;
+    zrapi 
+  .textpro("https://textpro.me/sand-engraved-3d-text-effect-989.html", [
+    text,
+  ])
+  .then((data) => {
+    res.json({
+      status: true,
+      code: 200,
+      creator: `${creator}`,
+      result: data
+    })
+  })
+  .catch((err) => console.log(err));
+  } else {
+    res.send(resposta.error)
+  }
+});
+
+router.get('/textpro/glue-text', async(req, res, next) => {
+var cdapikey = req.query.apikey;
+   try {
+   if(!cdapikey) return res.json(resposta.semkey)
+    if(cdapikey !== key) return res.sendFile(keyinvalida)
+    if(!text1) return res.json(resposta.nottext1)
+    const text1 = req.query.text;
+    zrapi 
+  .textpro("https://textpro.me/create-3d-glue-text-effect-with-realistic-style-986.html", [
+    text,
+  ])
+  .then((data) => {
+    res.json({
+      status: true,
+      code: 200,
+      creator: `${creator}`,
+      result: data
+    })
+  })
+  .catch((err) => console.log(err));
+  } else {
+    res.send(resposta.error)
+  }
+});
+
+router.get('/textpro/minios', async(req, res, next) => {
+var cdapikey = req.query.apikey;
+   try {
+   if(!cdapikey) return res.json(resposta.semkey)
+    if(cdapikey !== key) return res.sendFile(keyinvalida)
+    if(!text1) return res.json(resposta.nottext1)
+    const text1 = req.query.text;
+    zrapi 
+  .textpro("https://textpro.me/minion-text-effect-3d-online-978.html", [
+    text,
+  ])
+  .then((data) => {
+    res.json({
+      status: true,
+      code: 200,
+      creator: `${creator}`,
+      result: data
+    })
+  })
+  .catch((err) => console.log(err));
+  } else {
+    res.send(resposta.error)
+  }
+});
+
+router.get('/textpro/porn-hub', async(req, res, next) => {
+
+var cdapikey = req.query.apikey;
+   try {
+   if(!cdapikey) return res.json(resposta.semkey)
+    if(cdapikey !== key) return res.sendFile(keyinvalida)
+  const text = req.query.text1;
+  const text2 = req.query.text2;
+  if(!text) return res.json(resposta.nottext1)
+  if(!text2) return res.json(resposta.nottext2)
+    zrapi 
+  .textpro("https://textpro.me/pornhub-style-logo-online-generator-free-977.html", [
+    text, text2
+  ])
+  .then((data) => {
+    res.json({
+      status: true,
+      code: 200,
+      creator: `${creator}`,
+      result: data
+    })
+  })
+  .catch((err) => console.log(err));
+  } else {
+    res.json(loghandler.invalidKey)
+  }
+});
 
 //////////////// +18 \\\\\\\\\\\\\\\\\\\\
 router.all('/shota', async (req, res) => {
