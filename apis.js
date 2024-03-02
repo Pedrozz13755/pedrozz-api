@@ -300,6 +300,34 @@ resultado: akk
 })}).catch(e => {
 res.sendFile(error)})})
 
+router.get("/photooxy/shadow", async (req, res, next) => {
+  var cdapikey = req.query.apikey;
+  try {
+    if (!cdapikey) return res.json({ error: "Chave API não fornecida" });
+    
+    if (cdapikey !== key) return res.sendFile(keyinvalida); // Certifique-se de que keyinvalida esteja definida
+    
+    const text1 = req.query.text;
+    
+    if (!text1) return res.json({ error: "Texto não fornecido" });
+    
+    pShadow(text1)
+      .then((data) => {
+        const result = {
+          status: true,
+          code: 200,
+          creator: `${creator}`,
+          result: data.url
+        };
+        res.json(result);
+      })
+      .catch((error) => {
+        res.json({ error: error.message });
+      });
+  } catch (error) {
+    res.json({ error: error.message });
+  }
+});
 
 router.get("/photooxy/shadow", async(req, res, next) => {
 var cdapikey = req.query.apikey;
@@ -321,7 +349,7 @@ var cdapikey = req.query.apikey;
     .catch((error) => {
       res.json(error)
     });
-    } else {
+    } catch {
     	res.send(resposta.error)
     }
 });
@@ -346,7 +374,7 @@ router.get("/photooxy/romantic", async(req, res, next) => {
     .catch((error) => {
       res.json(error)
     });
-    } else {
+    } catch {
     	res.send(resposta.error)
     }
 });
@@ -373,7 +401,7 @@ router.get("/photooxy/smoke", async(req, res, next) => {
     .catch((error) => {
       res.json(error)
     });
-    } else {
+    } catch {
     	res.send(resposta.error)
     }
 });
@@ -398,7 +426,7 @@ router.get("/photooxy/burn-papper", async(req, res, next) => {
     .catch((error) => {
       res.json(error)
     });
-    } else {
+    } catch {
     	res.send(resposta.error)
     }
 });
@@ -423,7 +451,7 @@ router.get("/photooxy/naruto", async(req, res, next) => {
     .catch((error) => {
       res.json(error)
     });
-    } else {
+    } catch {
     	res.send(resposta.error)
     }
 });
@@ -448,7 +476,7 @@ router.get("/photooxy/love-message", async(req, res, next) => {
     .catch((error) => {
       res.json(error)
     });
-    } else {
+    } catch {
     	res.send(resposta.error)
     }
 });
@@ -473,7 +501,7 @@ router.get("/photooxy/message-under-grass", async(req, res, next) => {
     .catch((error) => {
       res.json(error)
     });
-    } else {
+    } catch {
     	res.send(resposta.error)
     }
 });
@@ -499,7 +527,7 @@ router.get("/photooxy/glitch", async(req, res, next) => {
     .catch((error) => {
       res.json(error)
     });
-    } else {
+    } catch {
     	res.send(resposta.error)
     }
 });
@@ -524,7 +552,7 @@ router.get("/photooxy/double-heart", async(req, res, next) => {
     .catch((error) => {
       res.json(error)
     });
-    } else {
+    } catch {
     	res.send(resposta.error)
     }
 });
@@ -549,7 +577,7 @@ router.get("/photooxy/coffe-cup", async(req, res, next) => {
     .catch((error) => {
       res.json(error)
     });
-    } else {
+    } catch {
     	res.send(resposta.error)
     }
 });
@@ -574,7 +602,7 @@ router.get("/photooxy/love-text", async(req, res, next) => {
     .catch((error) => {
       res.json(error)
     });
-    } else {
+    } catch {
     	res.send(resposta.error)
     }
 });
@@ -599,7 +627,7 @@ router.get("/photooxy/butterfly", async(req, res, next) => {
     .catch((error) => {
       res.json(loghandler.error)
     })
-    } else {
+    } catch {
     	res.send(resposta.error)
     }
 });
@@ -630,7 +658,7 @@ var cdapikey = req.query.apikey;
     })
   })
   .catch((err) => console.log(err));
-  } else {
+  } catch {
     res.send(resposta.error)
   }
 });
@@ -658,7 +686,7 @@ router.get('/textpro/logo-wolf', async(req, res, next) => {
     })
   })
   .catch((err) => console.log(err));
-  } else {
+  } catch {
     res.send(resposta.error)
   }
 });
@@ -683,7 +711,7 @@ var cdapikey = req.query.apikey;
     })
   })
   .catch((err) => console.log(err));
-  } else {
+  } catch {
     res.send(resposta.error)
   }
 });
@@ -713,7 +741,7 @@ router.get('/textpro/logo-wolf2', async(req, res, next) => {
     })
   })
   .catch((err) => console.log(err));
-  } else {
+  } catch {
     res.send(resposta.error)
   }
 });
@@ -738,7 +766,7 @@ var cdapikey = req.query.apikey;
     })
   })
   .catch((err) => console.log(err));
-  } else {
+  } catch {
     res.send(resposta.error)
   }
 });
@@ -763,7 +791,7 @@ var cdapikey = req.query.apikey;
     })
   })
   .catch((err) => console.log(err));
-  } else {
+  } catch {
     res.send(resposta.error)
   }
 });
@@ -788,7 +816,7 @@ var cdapikey = req.query.apikey;
     })
   })
   .catch((err) => console.log(err));
-  } else {
+  } catch {
     res.send(resposta.error)
   }
 });
@@ -813,7 +841,7 @@ var cdapikey = req.query.apikey;
     })
   })
   .catch((err) => console.log(err));
-  } else {
+  } catch {
     res.send(resposta.error)
   }
 });
@@ -838,7 +866,7 @@ var cdapikey = req.query.apikey;
     })
   })
   .catch((err) => console.log(err));
-  } else {
+  } catch {
     res.send(resposta.error)
   }
 });
@@ -863,7 +891,7 @@ var cdapikey = req.query.apikey;
     })
   })
   .catch((err) => console.log(err));
-  } else {
+  } catch {
     res.send(resposta.error)
   }
 });
@@ -888,7 +916,7 @@ var cdapikey = req.query.apikey;
     })
   })
   .catch((err) => console.log(err));
-  } else {
+  } catch {
     res.send(resposta.error)
   }
 });
@@ -913,7 +941,7 @@ var cdapikey = req.query.apikey;
     })
   })
   .catch((err) => console.log(err));
-  } else {
+  } catch {
     res.send(resposta.error)
   }
 });
@@ -938,7 +966,7 @@ var cdapikey = req.query.apikey;
     })
   })
   .catch((err) => console.log(err));
-  } else {
+  } catch {
     res.send(resposta.error)
   }
 });
@@ -963,7 +991,7 @@ var cdapikey = req.query.apikey;
     })
   })
   .catch((err) => console.log(err));
-  } else {
+  } catch {
     res.send(resposta.error)
   }
 });
@@ -988,7 +1016,7 @@ var cdapikey = req.query.apikey;
     })
   })
   .catch((err) => console.log(err));
-  } else {
+  } catch {
     res.send(resposta.error)
   }
 });
@@ -1013,7 +1041,7 @@ var cdapikey = req.query.apikey;
     })
   })
   .catch((err) => console.log(err));
-  } else {
+  } catch {
     res.send(resposta.error)
   }
 });
@@ -1043,7 +1071,7 @@ router.get('/textpro/vintage', async(req, res, next) => {
     })
   })
   .catch((err) => console.log(err));
-  } else {
+  } catch {
     res.send(resposta.error)
   }
 });
@@ -1068,7 +1096,7 @@ var cdapikey = req.query.apikey;
     })
   })
   .catch((err) => console.log(err));
-  } else {
+  } catch {
     res.send(resposta.error)
   }
 });
@@ -1093,7 +1121,7 @@ var cdapikey = req.query.apikey;
     })
   })
   .catch((err) => console.log(err));
-  } else {
+  } catch {
     res.send(resposta.error)
   }
 });
@@ -1117,9 +1145,9 @@ var cdapikey = req.query.apikey;
       result: data
     })
   })
-  .catch((err) => console.log(err));
-  } else {
-    res.send(resposta.error)
+  .catch((e) => console.log(e));
+  } catch {
+    res.send(resposta.eor)
   }
 });
 
@@ -1142,9 +1170,9 @@ var cdapikey = req.query.apikey;
       result: data
     })
   })
-  .catch((err) => console.log(err));
-  } else {
-    res.send(resposta.error)
+  .catch((e) => console.log(e));
+  } catch {
+    res.send(resposta.eor)
   }
 });
 
@@ -1170,8 +1198,8 @@ var cdapikey = req.query.apikey;
       result: data
     })
   })
-  .catch((err) => console.log(err));
-  } else {
+  .catch((e) => console.log(e));
+  } catch {
     res.json(loghandler.invalidKey)
   }
 });
