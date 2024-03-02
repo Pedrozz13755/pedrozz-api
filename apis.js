@@ -68,7 +68,7 @@ resposta = {
     },
     nottext: {
         status: false,
-        creator: `${creator}`,
+        creator: `${criador}`,
         code: 406,
         message: 'insira o parâmetro text'
     },
