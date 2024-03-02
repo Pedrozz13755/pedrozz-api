@@ -68,7 +68,7 @@ resposta = {
     },
     nottext: {
         status: false,
-        creator: `${criador}`,
+        criador: `${criador}`,
         code: 406,
         message: 'insira o parâmetro text'
     },
@@ -316,7 +316,7 @@ router.get("/photooxy/shadow", async (req, res, next) => {
         const result = {
           status: true,
           code: 200,
-          creator: `${creator}`,
+          criador: `${criador}`,
           result: data.url
         };
         res.json(result);
@@ -341,7 +341,7 @@ var cdapikey = req.query.apikey;
       const result = {
         status: true,
         code: 200,
-        creator: `${creator}`,
+        criador: `${criador}`,
         result: data.url
       }
       res.json(result)
@@ -366,7 +366,7 @@ var cdapikey = req.query.apikey;
       const result = {
         status: true,
         code: 200,
-        creator: `${creator}`,
+        criador: `${criador}`,
         result: data.url
       }
       res.json(result)
@@ -393,7 +393,7 @@ var cdapikey = req.query.apikey;
       const result = {
         status: true,
         code: 200,
-        creator: `${creator}`,
+        criador: `${criador}`,
         result: data.url
       }
       res.json(result)
@@ -418,7 +418,7 @@ var cdapikey = req.query.apikey;
       const result = {
         status: true,
         code: 200,
-        creator: `${creator}`,
+        criador: `${criador}`,
         result: data.url
       }
       res.json(result)
@@ -443,7 +443,7 @@ var cdapikey = req.query.apikey;
       const result = {
         status: true,
         code: 200,
-        creator: `${creator}`,
+        criador: `${criador}`,
         result: data.url
       }
       res.json(result)
@@ -468,7 +468,7 @@ var cdapikey = req.query.apikey;
       const result = {
         status: true,
         code: 200,
-        creator: `${creator}`,
+        criador: `${criador}`,
         result: data.url
       }
       res.json(result)
@@ -493,7 +493,7 @@ router.get("/photooxy/message-under-grass", async(req, res, next) => {
       const result = {
         status: true,
         code: 200,
-        creator: `${creator}`,
+        criador: `${criador}`,
         result: data.url
       }
       res.json(result)
@@ -519,7 +519,7 @@ var cdapikey = req.query.apikey;
       const result = {
         status: true,
         code: 200,
-        creator: `${creator}`,
+        criador: `${criador}`,
         result: data.url
       }
       res.json(result)
@@ -544,7 +544,7 @@ var cdapikey = req.query.apikey;
       const result = {
         status: true,
         code: 200,
-        creator: `${creator}`,
+        criador: `${criador}`,
         result: data.url
       }
       res.json(result)
@@ -569,7 +569,7 @@ var cdapikey = req.query.apikey;
       const result = {
         status: true,
         code: 200,
-        creator: `${creator}`,
+        criador: `${criador}`,
         result: data.url
       }
       res.json(result)
@@ -594,7 +594,7 @@ var cdapikey = req.query.apikey;
       const result = {
         status: true,
         code: 200,
-        creator: `${creator}`,
+        criador: `${criador}`,
         result: data.url
       }
       res.json(result)
@@ -619,7 +619,7 @@ var cdapikey = req.query.apikey;
       const result = {
         status: true,
         code: 200,
-        creator: `${creator}`,
+        criador: `${criador}`,
         result: data.url
       }
       res.json(result)
@@ -653,7 +653,7 @@ var cdapikey = req.query.apikey;
     res.json({
       status: true,
       code: 200,
-      creator: `${creator}`,
+      criador: `${criador}`,
       result: data
     })
   })
@@ -678,7 +678,7 @@ router.get('/textpro/logo-wolf', async(req, res, next) => {
     res.json({
       status: true,
       code: 200,
-      creator: `${creator}`,
+      criador: `${criador}`,
       result: data
     })
   })
@@ -703,7 +703,7 @@ var cdapikey = req.query.apikey;
     res.json({
       status: true,
       code: 200,
-      creator: `${creator}`,
+      criador: `${criador}`,
       result: data
     })
   })
@@ -730,7 +730,7 @@ router.get('/textpro/logo-wolf2', async(req, res, next) => {
     res.json({
       status: true,
       code: 200,
-      creator: `${creator}`,
+      criador: `${criador}`,
       result: data
     })
   })
@@ -755,7 +755,7 @@ var cdapikey = req.query.apikey;
     res.json({
       status: true,
       code: 200,
-      creator: `${creator}`,
+      criador: `${criador}`,
       result: data
     })
   })
@@ -780,7 +780,7 @@ var cdapikey = req.query.apikey;
     res.json({
       status: true,
       code: 200,
-      creator: `${creator}`,
+      criador: `${criador}`,
       result: data
     })
   })
@@ -805,7 +805,7 @@ var cdapikey = req.query.apikey;
     res.json({
       status: true,
       code: 200,
-      creator: `${creator}`,
+      criador: `${criador}`,
       result: data
     })
   })
@@ -830,7 +830,7 @@ var cdapikey = req.query.apikey;
     res.json({
       status: true,
       code: 200,
-      creator: `${creator}`,
+      criador: `${criador}`,
       result: data
     })
   })
@@ -855,7 +855,7 @@ var cdapikey = req.query.apikey;
     res.json({
       status: true,
       code: 200,
-      creator: `${creator}`,
+      criador: `${criador}`,
       result: data
     })
   })
@@ -880,7 +880,7 @@ var cdapikey = req.query.apikey;
     res.json({
       status: true,
       code: 200,
-      creator: `${creator}`,
+      criador: `${criador}`,
       result: data
     })
   })
@@ -905,7 +905,7 @@ var cdapikey = req.query.apikey;
     res.json({
       status: true,
       code: 200,
-      creator: `${creator}`,
+      criador: `${criador}`,
       result: data
     })
   })
@@ -930,7 +930,7 @@ var cdapikey = req.query.apikey;
     res.json({
       status: true,
       code: 200,
-      creator: `${creator}`,
+      criador: `${criador}`,
       result: data
     })
   })
@@ -955,7 +955,7 @@ var cdapikey = req.query.apikey;
     res.json({
       status: true,
       code: 200,
-      creator: `${creator}`,
+      criador: `${criador}`,
       result: data
     })
   })
@@ -980,7 +980,7 @@ var cdapikey = req.query.apikey;
     res.json({
       status: true,
       code: 200,
-      creator: `${creator}`,
+      criador: `${criador}`,
       result: data
     })
   })
@@ -1005,7 +1005,7 @@ var cdapikey = req.query.apikey;
     res.json({
       status: true,
       code: 200,
-      creator: `${creator}`,
+      criador: `${criador}`,
       result: data
     })
   })
@@ -1030,7 +1030,7 @@ var cdapikey = req.query.apikey;
     res.json({
       status: true,
       code: 200,
-      creator: `${creator}`,
+      criador: `${criador}`,
       result: data
     })
   })
@@ -1056,7 +1056,7 @@ var cdapikey = req.query.apikey;
     res.json({
       status: true,
       code: 200,
-      creator: `${creator}`,
+      criador: `${criador}`,
       result: data
     })
   })
@@ -1081,7 +1081,7 @@ var cdapikey = req.query.apikey;
     res.json({
       status: true,
       code: 200,
-      creator: `${creator}`,
+      criador: `${criador}`,
       result: data
     })
   })
@@ -1106,7 +1106,7 @@ var cdapikey = req.query.apikey;
     res.json({
       status: true,
       code: 200,
-      creator: `${creator}`,
+      criador: `${criador}`,
       result: data
     })
   })
@@ -1131,7 +1131,7 @@ var cdapikey = req.query.apikey;
     res.json({
       status: true,
       code: 200,
-      creator: `${creator}`,
+      criador: `${criador}`,
       result: data
     })
   })
@@ -1156,7 +1156,7 @@ var cdapikey = req.query.apikey;
     res.json({
       status: true,
       code: 200,
-      creator: `${creator}`,
+      criador: `${criador}`,
       result: data
     })
   })
@@ -1184,7 +1184,7 @@ var cdapikey = req.query.apikey;
     res.json({
       status: true,
       code: 200,
-      creator: `${creator}`,
+      criador: `${criador}`,
       result: data
     })
   })
