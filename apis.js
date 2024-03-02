@@ -1190,9 +1190,25 @@ var cdapikey = req.query.apikey;
   })
   .catch((e) => console.log(e));
   } catch {
-    res.json(loghandler.invalidKey)
+    res.send(`deu erro`)
   }
 });
+
+router.get('/api/attp', async(req, res, next) => {
+var cdapikey = req.query.apikey;
+   try {
+   if(!cdapikey) return res.json(resposta.semkey)
+    if(cdapikey !== key) return res.sendFile(keyinvalida)
+    const text1 = req.query.text;
+   if(!text1) return res.json(resposta.nottext1)
+  let hasil = 'https://api.sabapi.tech/api/ttp?texto='+ text +'&apikey=@Luix1397
+  data = await fetch(hasil).then(v => v.buffer())
+  await fs.writeFileSync(__path +'/tmp/attp.gif', data)
+  res.sendFile(__path +'/tmp/attp.gif')
+  } catch {
+    res.send(`deu erro`)
+  }
+})
 
 //////////////// +18 \\\\\\\\\\\\\\\\\\\\
 router.all('/shota', async (req, res) => {
