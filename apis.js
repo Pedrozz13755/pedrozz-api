@@ -664,15 +664,12 @@ var cdapikey = req.query.apikey;
 });
 
 router.get('/textpro/logo-wolf', async(req, res, next) => {
-  const apikey = req.query.apikey;
-  const text = req.query.text;
-  const text2 = req.query.text2;
-  
-  if(!apikey) return res.json(loghandler.notparam)
-  if(!text) return res.json(loghandler.nottext)
-  if(!text2) return res.json(loghandler.nottext2)
-  
-  if(listkey.includes(apikey)){
+  var cdapikey = req.query.apikey;
+   try {
+   if(!cdapikey) return res.json(resposta.semkey)
+    if(cdapikey !== key) return res.sendFile(keyinvalida)
+    const text1 = req.query.text;
+   if(!text1) return res.json(resposta.nottext1)
     zrapi 
   .textpro("https://textpro.me/create-wolf-logo-black-white-937.html", [
     text, text2
@@ -718,16 +715,13 @@ var cdapikey = req.query.apikey;
 
 router.get('/textpro/logo-wolf2', async(req, res, next) => {
 
-  const apikey = req.query.apikey;
-
-  const text = req.query.text;
-  const text2 = req.query.text2;
-  
-  if(!apikey) return res.json(loghandler.notparam)
-  if(!text) return res.json(loghandler.nottext)
+  var cdapikey = req.query.apikey;
+   try {
+   if(!cdapikey) return res.json(resposta.semkey)
+    if(cdapikey !== key) return res.sendFile(keyinvalida)
+    const text1 = req.query.text;
+  if(!text1) return res.json(loghandler.nottext1)
   if(!text2) return res.json(loghandler.nottext2)
-  
-  if(listkey.includes(apikey)){
     zrapi 
   .textpro("https://textpro.me/create-wolf-logo-galaxy-online-936.html", [
     text, text2
@@ -1047,17 +1041,13 @@ var cdapikey = req.query.apikey;
 });
 
 router.get('/textpro/vintage', async(req, res, next) => {
-
-  const apikey = req.query.apikey;
-
-  const text = req.query.text;
-  const text2 = req.query.text2;
-  
-  if(!apikey) return res.json(loghandler.notparam)
-  if(!text) return res.json(loghandler.nottext)
+var cdapikey = req.query.apikey;
+   try {
+   if(!cdapikey) return res.json(resposta.semkey)
+    if(cdapikey !== key) return res.sendFile(keyinvalida)
+    const text1 = req.query.text;
+  if(!text1) return res.json(loghandler.nottext1)
   if(!text2) return res.json(loghandler.nottext2)
-  
-  if(listkey.includes(apikey)){
     zrapi 
   .textpro("https://textpro.me/create-realistic-vintage-style-light-bulb-1000.html", [
     text, text2
