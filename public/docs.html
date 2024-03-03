@@ -958,11 +958,6 @@ text-align: center;
    <p class="welcome-text">Feita com ❤️ por Pedrozz</p>
   </div>
     </div>
-<section>
-  <div class="pedrozz">
-<h1>Rest Api feita com ❤️ por Pedrozz</h1>
-  </div>
-  </selection>  
   <br></br>
     <br></br>
     <br></br>
@@ -976,49 +971,6 @@ text-align: center;
 </div>
 <!-- Fim Contador de visitas -->      
   <br></br>
-<section2>
-   <div class="container3">
-<div class="pedrozz3">
-    <h1>Informacaes do usuário</h1>
-    <p>Cidade: <span id="city"></span></p>
-    <p>Pais: <span id="country"></span></p>
-    <p>Regiao: <span id="region"></span></p>
-    <p>Ip: <span id="ip"></span></p>
-    <p>Wifi: <span id="hostname"></span></p>
-    <p>loc: <span id="loc"></span></p>
-    <p>TimeZone: <span id="timezone"></span></p>
-    <p id="battery">Porcentagem da Bateria: </p>
-    <p>Navegador: <span id="browserInfo"></span></p>
-    <p>Aparelho: <span id="deviceInfo"></span></p>
-</div>
-</div>
-    <script>
-        fetch('https://ipinfo.io/?token=b1459713df73c6')
-            .then(response => response.json())
-            .then(data => {
-                document.getElementById('city').innerText = data.city;
-                document.getElementById('country').innerText = data.country;
-                document.getElementById('region').innerText = data.region;
-                document.getElementById('ip').innerText = data.ip;
-                document.getElementById('hostname').innerText = data.hostname;
-                document.getElementById('timezone').innerText = data.timezone;
-                document.getElementById('loc').innerText = data.loc;
-            });
-            
-    navigator.getBattery().then(function(battery) {
-  function updateBatteryStatus() {
-    document.getElementById('battery').textContent = 'Porcentagem da Bateria: ' + Math.floor(battery.level * 100) + '%';
-  }
-  battery.addEventListener('levelchange', updateBatteryStatus);
-  updateBatteryStatus();
-});        
-
-document.getElementById("browserInfo").innerHTML = navigator.appName;
-        var device = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ? "celular" : "computador";
-        document.getElementById("deviceInfo").innerHTML = device;
-        
-    </script>
-</section2>
 <div class="tutotxt">
 <br>
 <h3 class="tutotxtt">Informações básicas</h3><br><br>
