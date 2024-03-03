@@ -3,19 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link href="https://inirey.github.io/lolhuman/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="https://inirey.github.io/lolhuman/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="https://inirey.github.io/lolhuman/css/default.css" rel="stylesheet">
+    <link href="https://inirey.github.io/lolhuman/css/style.css" rel="stylesheet">
   <title>perfil do user</title>
 </head>
 <style>
         *{
           margin: 0;
         }
-        body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      background-color: #333;
-      color: white;
-      overflow: hidden; 
-        }
+        body{
+  font-family: Arial, Helvetica, sans-serif;
+  background: #310404
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+color: white;
+}
 
       .video-background {
       position: fixed;
@@ -91,7 +97,7 @@ background-color: black;
 
         .menu-container button:hover {
             background-color: #0056b3;
-        }
+        } 
 
         .menu-toggle {
             position: fixed;
@@ -189,6 +195,30 @@ background-color: black;
         border-radius: 50%;
         box-shadow: 0px 0px 23px 5px red;
         }
+        
+                .container3 {
+            text-align: center;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .battery-icon3 {
+            width: 50px;
+            height: auto;
+            vertical-align: middle;
+        }    
+ section2 {
+  padding: 40px;
+  text-align: center;
+  background-color: black
+  border-radius: 10px;
+}
+
+.pedrozz3{
+color: #000000;
+
+}
 
     </style>
     
@@ -216,26 +246,49 @@ background-color: black;
 
   </audio>
   <br>
-  <h1>PERFIL DE INFORMAÇÕES</h1>
-<h3>EM DESENVOLVIMENTO</h3>
+  <center>
+  <h1>PERFIL DO USUÁRIO</h1>
+<h4>EM DESENVOLVIMENTO</h4>
+</center>
   <div class="video-container">
     <center>
       <!-- Modificado para usar um link para a imagem -->
       <img src="https://telegra.ph/file/cc01afa995d91f72ab16a.jpg" alt="Foto do Usuário">
     </center>
+    <center>
     <br>
     <h3>LAURA PRIVAT V2</h3>
     <h4>Key: infinito por enquanto kk</h4>
     <br>
-    <center>
-      <form action="/edit/<%= user.username %>" method="post">
+    
+    
+   <br></br>
+ </center>
+<section3>
+   <div class="container3">
+<div class="pedrozz3">
+    <h1>Informacaes do usuário</h1>
+    <p>Cidade: <span id="city"></span></p>
+    <p>Pais: <span id="country"></span></p>
+    <p>Regiao: <span id="region"></span></p>
+    <p>Ip: <span id="ip"></span></p>
+    <p>Wifi: <span id="hostname"></span></p>
+    <p>loc: <span id="loc"></span></p>
+    <p>TimeZone: <span id="timezone"></span></p>
+    <p id="battery">Porcentagem da Bateria: </p>
+    <p>Navegador: <span id="browserInfo"></span></p>
+    <p>Aparelho: <span id="deviceInfo"></span></p>
+</div>
+</div>
+    </section3> 
 
-        <center> 
-          
+        <center>
+
+<br><br>
+<br><br>
+<br><br>          
 <a href="docs.html">VOLTAR</a>
         </center>
-      </form>
-    </center>
   </div>
   </audio>
     <script>
@@ -271,5 +324,33 @@ background-color: black;
             menuToggle.classList.toggle('hide-menu');
         }
     </script>
+    
+    <script>
+        fetch('https://ipinfo.io/?token=b1459713df73c6')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('city').innerText = data.city;
+                document.getElementById('country').innerText = data.country;
+                document.getElementById('region').innerText = data.region;
+                document.getElementById('ip').innerText = data.ip;
+                document.getElementById('hostname').innerText = data.hostname;
+                document.getElementById('timezone').innerText = data.timezone;
+                document.getElementById('loc').innerText = data.loc;
+            });
+            
+    navigator.getBattery().then(function(battery) {
+  function updateBatteryStatus() {
+    document.getElementById('battery').textContent = 'Porcentagem da Bateria: ' + Math.floor(battery.level * 100) + '%';
+  }
+  battery.addEventListener('levelchange', updateBatteryStatus);
+  updateBatteryStatus();
+});        
+
+document.getElementById("browserInfo").innerHTML = navigator.appName;
+        var device = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ? "celular" : "computador";
+        document.getElementById("deviceInfo").innerHTML = device;
+        
+    </script>
+        
 </body>
   </html>
