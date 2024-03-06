@@ -677,6 +677,18 @@ text-align: center;
   width: 200px; /* Ajuste o tamanho da imagem conforme necessário */
   height: 200px; /* Ajuste o tamanho da imagem conforme necessário */
  }    
+
+   @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-20px);
+    }
+    60% {
+      transform: translateY(-10px);
+    }
+  }
 </style>  
 <body>
 
@@ -707,8 +719,8 @@ text-align: center;
             <i class="fas fa-times"></i>
           </div>
         
-            <div class="txt">
-<i class="fa fa-cog fa-spin fa-3x fa-fw"></i><i>PEDROZZ - API</i>
+           <div class="txt">
+<i class="fas fa-folder"></i><i>PEDROZZ - API</i>
               
             </div>
 <br>
@@ -717,7 +729,7 @@ text-align: center;
        <div class="menu">
 
             <div class="item">
-<a class="sub-btn"><i class='far fa-check-circle'></i>DOWNLOADER<i class="fas fa-angle-right dropdown"></i></a>
+<a class="sub-btn"><i class='fas fa-download'></i>DOWNLOADER<i class="fas fa-angle-right dropdown"></i></a>
 <div class="sub-menu">
 
 <a class="sub-item" target="_blank" href="download/play?&nome=M4rkim gasparzinho &apikey=pedrozz13"
@@ -746,10 +758,10 @@ text-align: center;
 
             </div>
             </div>
-<br></br>          
-
-            <div class="item">
-<a class="sub-btn"><i class='far fa-check-circle'></i>CANVAS<i class="fas fa-angle-right dropdown"></i></a>
+<br></br>        
+         
+ <div class="item">
+<a class="sub-btn"><i class='fas fa-camera-retro fa-bounce'></i>CANVAS<i class="fas fa-angle-right dropdown"></i></a>
 <div class="sub-menu">
 
   <a href="canvas/changemymind?texto=PEDROZZ O BRABO&apikey=pedrozz13">Canvas ChangeMyMind</a>
@@ -761,10 +773,10 @@ text-align: center;
             </div>
             </div>
 <br></br>
-          <div class="item">
-         <a class="sub-btn"><i class='far fa-check-circle'></i>GAMES<i class="fas fa-angle-right dropdown"></i></a>
+         <div class="item">
+         <a class="sub-btn"><i class='fas fa-gamepad'></i>GAMES<i class="fas fa-angle-right dropdown"></i></a>
          <div class="sub-menu">
-
+           
            <a href="/ping.html">Ping-Pong</a>
 
            <a href="/velha.html">jogodaVelha</a>
@@ -774,8 +786,8 @@ text-align: center;
                      </div>
                      </div>
          <br></br>
-            <div class="item">
-<a class="sub-btn"><i class='far fa-check-circle'></i>WALLPAPERS<i class="fas fa-angle-right dropdown"></i></a>
+           <div class="item">
+<a class="sub-btn"><i class='far fa-laugh-wink'></i>WALLPAPERS<i class="fas fa-angle-right dropdown"></i></a>
 <div class="sub-menu">
 
 <a class="sub-item" target="_blank" href="wallpapernime?apikey=pedrozz13"
@@ -795,8 +807,8 @@ text-align: center;
             </div>
             </div>
 <br></br>
-            <div class="item">
-<a class="sub-btn"><i class='far fa-check-circle'></i>ANIMES<i class="fas fa-angle-right dropdown"></i></a>
+          <div class="item">
+<a class="sub-btn"><i class='far fa-meh-blank'></i>ANIMES<i class="fas fa-angle-right dropdown"></i></a>
 <div class="sub-menu">
 
 <a class="dropdown-item" target="_blank" href="cosplay?apikey=pedrozz13" target="_blank">Cosplay</a>
@@ -846,8 +858,8 @@ text-align: center;
 </div>
 </div>
 <br></br>
-            <div class="item">
-<a class="sub-btn"><i class='far fa-check-circle'></i>NSFW<i class="fas fa-angle-right dropdown"></i></a>
+            <<div class="item">
+<a class="sub-btn"><i class='far fa-grin-hearts'></i>NSFW<i class="fas fa-angle-right dropdown"></i></a>
 <div class="sub-menu">
 <a class="dropdown-item" target="_blank" href="loli?apikey=pedrozz13">Loli</a>
 
@@ -892,7 +904,7 @@ text-align: center;
 <br></br>
          
 <div class="item">
-<a class="sub-btn"><i class='far fa-check-circle'></i>BOTS DE WHATSAPP<i class="fas fa-angle-right dropdown"></i></a>
+<a class="sub-btn"><i class='fas fa-robot'></i>BOTS DE WHATSAPP<i class="fas fa-angle-right dropdown"></i></a>
 <div class="sub-menu">
 
   <a href="https://fir3.net/Akame-bot">Akame - Bot</a>
@@ -943,7 +955,7 @@ text-align: center;
 
     </header>
 <div class="cabeca">
-<p class="pedrozz"> Pedrozz - Api</p>
+  <p class="fa fa-layer-group" style="animation: bounce 2s infinite;">       Pedrozz - Api</p>
 </div>
   
   <div class="center-image">
