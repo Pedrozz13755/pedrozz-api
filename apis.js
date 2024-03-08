@@ -1210,6 +1210,130 @@ var cdapikey = req.query.apikey;
   }
 })
 
+
+
+
+
+////////////////(ia)//////////////////
+
+router.get('/ia/gpt4', async(req, res, next) => {
+  var cdapikey = req.query.apikey;
+  try {
+    if (!cdapikey) return res.json(resposta.semkey);
+    if (cdapikey !== key) return res.sendFile(keyinvalida);
+
+    const text = req.query.text1;
+    if (!text) return res.json("coloque sua perqunta na URL :)");
+
+    fetch("https://aemt.me/gpt4?text=" + text)
+      .then(response => response.json())
+      .then(data => {
+        res.json({
+          status: true,
+          code: 200,
+          criador: `${criador}`,
+          resultado: data.result
+        });
+      })
+      .catch(error => {
+        console.log(error);
+        res.send(`Deu erro: ${error}`);
+      });
+  } catch (error) {
+    console.log(error);
+    res.send(`Deu erro: ${error}`);
+  }
+});
+
+
+router.get('/ia/gemini', async(req, res, next) => {
+  var cdapikey = req.query.apikey;
+  try {
+    if (!cdapikey) return res.json(resposta.semkey);
+    if (cdapikey !== key) return res.sendFile(keyinvalida);
+
+    const text = req.query.text1;
+     if (!text) return res.json("coloque sua perqunta na URL :)");
+
+    fetch("https://aemt.me/gemini?text=" + text)
+      .then(response => response.json())
+      .then(data => {
+        res.json({
+          status: true,
+          code: 200,
+          criador: `${criador}`,
+          resultado: data.result
+        });
+      })
+      .catch(error => {
+        console.log(error);
+        res.send(`Deu erro: ${error}`);
+      });
+  } catch (error) {
+    console.log(error);
+    res.send(`Deu erro: ${error}`);
+  }
+});
+
+router.get('/ia/turbo', async(req, res, next) => {
+  var cdapikey = req.query.apikey;
+  try {
+    if (!cdapikey) return res.json(resposta.semkey);
+    if (cdapikey !== key) return res.sendFile(keyinvalida);
+
+    const text = req.query.text1;
+     if (!text) return res.json("coloque sua perqunta na URL :)");
+
+    fetch("https://aemt.me/turbo?text=" + text)
+      .then(response => response.json())
+      .then(data => {
+        res.json({
+          status: true,
+          code: 200,
+          criador: `${criador}`,
+          resultado: data.result
+        });
+      })
+      .catch(error => {
+        console.log(error);
+        res.send(`Deu erro: ${error}`);
+      });
+  } catch (error) {
+    console.log(error);
+    res.send(`Deu erro: ${error}`);
+  }
+});
+
+router.get('/ia/bingia', async(req, res, next) => {
+  var cdapikey = req.query.apikey;
+  try {
+    if (!cdapikey) return res.json(resposta.semkey);
+    if (cdapikey !== key) return res.sendFile(keyinvalida);
+
+    const text = req.query.text1;
+     if (!text) return res.json("coloque sua perqunta na URL :)");
+
+    fetch("https://aemt.me/bingai?text=" + text)
+      .then(response => response.json())
+      .then(data => {
+        res.json({
+          status: true,
+          code: 200,
+          criador: `${criador}`,
+          resultado: data.result
+        });
+      })
+      .catch(error => {
+        console.log(error);
+        res.send(`Deu erro: ${error}`);
+      });
+  } catch (error) {
+    console.log(error);
+    res.send(`Deu erro: ${error}`);
+  }
+});
+
+//////////////////(ia)//////////////////
 //////////////// +18 \\\\\\\\\\\\\\\\\\\\
 router.all('/shota', async (req, res) => {
  var cdapikey = req.query.apikey;
