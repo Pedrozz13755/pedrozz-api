@@ -1223,7 +1223,7 @@ router.get('/ia/gpt4', async(req, res, next) => {
     if (cdapikey !== key) return res.sendFile(keyinvalida);
 
     const text = req.query.text1;
-    if (!text) return res.json("coloque sua perqunta na URL :)");
+    if (!text) return res.json("coloque sua perqunta na URL 🥰");
 
     fetch("https://aemt.me/gpt4?text=" + text)
       .then(response => response.json())
@@ -1253,7 +1253,7 @@ router.get('/ia/gemini', async(req, res, next) => {
     if (cdapikey !== key) return res.sendFile(keyinvalida);
 
     const text = req.query.text1;
-     if (!text) return res.json("coloque sua perqunta na URL :)");
+     if (!text) return res.json("coloque sua perqunta na URL 🥰");
 
     fetch("https://aemt.me/gemini?text=" + text)
       .then(response => response.json())
@@ -1282,7 +1282,7 @@ router.get('/ia/turbo', async(req, res, next) => {
     if (cdapikey !== key) return res.sendFile(keyinvalida);
 
     const text = req.query.text1;
-     if (!text) return res.json("coloque sua perqunta na URL :)");
+     if (!text) return res.json("coloque sua perqunta na URL 🥰");
 
     fetch("https://aemt.me/turbo?text=" + text)
       .then(response => response.json())
@@ -1311,7 +1311,7 @@ router.get('/ia/bingia', async(req, res, next) => {
     if (cdapikey !== key) return res.sendFile(keyinvalida);
 
     const text = req.query.text1;
-     if (!text) return res.json("coloque sua perqunta na URL :)");
+     if (!text) return res.json("coloque sua perqunta na URL 🥰)");
 
     fetch("https://aemt.me/bingai?text=" + text)
       .then(response => response.json())
