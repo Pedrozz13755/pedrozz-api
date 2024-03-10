@@ -596,6 +596,41 @@ router.get('/api/ttp', async(req, res, next) => {
 
  });
 
+  router.get('/api/pinterest', async(req, res, next) => {
+  var cdapikey = req.query.apikey;
+  try {
+    if (!cdapikey) return res.json(resposta.semkey);
+    if (cdapikey !== key) return res.sendFile(keyinvalida);
+
+    const text = req.query.text1;
+    if (!text) return res.json("cade o titulo da sua pesquisa");
+
+    fetch("https://aemt.me/pinimg?query=" + text)
+      .then(response => {
+        // Verifica se a resposta é uma imagem (content-type: image/*)
+        if (response.headers.get('content-type').startsWith('image/')) {
+          // Retorna a imagem como buffer
+          return response.buffer();
+        } else {
+          throw new Error('A resposta não é uma imagem.');
+        }
+      })
+      .then(imageBuffer => {
+        // Converte o buffer da imagem para base64
+        const imageBase64 = imageBuffer.toString('base64');
+        // Envie a imagem como resposta
+        res.send(`<img src="data:image/jpeg;base64,${imageBase64}" />`);
+      })
+      .catch(error => {
+        console.log(error);
+        res.send(`Deu erro: ${error}`);
+      });
+  } catch (error) {
+    console.log(error);
+    res.send(`Deu erro: ${error}`);
+  }
+}); 
+
 //////////////////(ia)//////////////////
 //////////////// +18 \\\\\\\\\\\\\\\\\\\\
 router.all('/shota', async (req, res) => {
