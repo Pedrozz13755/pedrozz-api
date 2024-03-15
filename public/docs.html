@@ -875,6 +875,83 @@ text-align: center;
       <a href="#" class="btn btn-primary btn-sm-square rounded-circle text-white"><i class="fab fa-linkedin-in"></i></a>
   </div>
 </div>
+  <style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f8f9fa;
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+        border-radius: 10px;
+
+    }
+
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -15px;
+    }
+
+    .col-sm-3 {
+        flex: 0 0 25%;
+        max-width: 25%;
+        padding: 0 15px;
+        margin-bottom: 30px;
+    }
+
+    .card {
+        border: none;
+        border-radius: 8px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+    }
+
+    .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .card-body {
+        padding: 20px;
+    }
+
+    .icon-big {
+        color: #007bff;
+    }
+
+    .card-title {
+        font-size: 35px;
+        margin-bottom: 5px;
+        color: black;
+    }
+
+    .card-text {
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    .user-photo1 {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        margin-right: 10px;
+    }
+
+    .user-name1 {
+        font-size: 16px;
+        color: white;
+    }
+
+   </style>
+  <section>
+      <div class="card-title" id="horario"></div>
+      <div class="card-title" id="educado"></div>
+  </section>
   <div class="welcome-container">
   <div id="welcomeBox" class="welcome-box">
     <div class="close-btn" onclick="closeWelcomeBox()">X</div>
@@ -885,8 +962,7 @@ text-align: center;
   </div>
     </div>
   <br></br>
-    <br></br>
-    <br></br>
+  
   <center>
   <!-- Contador de visitas -->
    <h3>NÚMERO DE VISITAS</h3>
@@ -897,6 +973,7 @@ text-align: center;
     <script type="text/javascript" src="https://contador.s12.com.br/ad.js?id=ax3yw5zxZz84W7Z1"></script>
 </div>
   </center>
+
 <!-- Fim Contador de visitas -->      
   <br></br>
 <div class="tutotxt">
@@ -1033,6 +1110,39 @@ function closeWelcomeBox() {
       window.location.href = 'perfil.html';
     });
       </script>
+  <script>
+
+
+      // Selecionando os elementos corretamente pelo ID
+      let ata1 = document.querySelector('#horario');
+      let ata2 = document.querySelector('#educado');
+
+      // Função para atualizar o horário e a mensagem
+      function atualizarHorario() {
+          var d = new Date();
+          const hora = d.getHours().toString().padStart(2, '0');
+          const minuto = d.getMinutes().toString().padStart(2, '0');
+           const segundo = d.getSeconds().toString().padStart(2, '0');
+
+
+          if (d.getHours() < 12) {
+              ata2.innerHTML = "Bom Dia!";
+          } else if (d.getHours() < 18) {
+              ata2.innerHTML = "Boa Tarde!";
+          } else {
+              ata2.innerHTML = "Boa Noite!";
+          }
+
+          ata1.innerHTML = hora + ":" + minuto + ":" + segundo;
+      }
+
+      // Chamando a função inicialmente para evitar atrasos no início
+      atualizarHorario();
+
+      // Atualizando o horário a cada segundo
+      setInterval(atualizarHorario, 1000);
+  </script>
+
 
     <script src="script.js"></script>
 
