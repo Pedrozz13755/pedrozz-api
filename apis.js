@@ -107,6 +107,53 @@ function getRandom(nans) {
    res.send(resposta.error)
    }
    })
+   
+router.get('/download', (req, res) => {
+  const htmlPath = path.join(__dirname, './public/download.html');
+  res.sendFile(htmlPath);
+});
+router.get('/ia', (req, res) => {
+  const htmlPath = path.join(__dirname, './public/ia.html');
+  res.sendFile(htmlPath);
+});   
+router.get('/nsfw', (req, res) => {
+  const htmlPath = path.join(__dirname, './public/nsfw.html');
+  res.sendFile(htmlPath);
+});   
+router.get('/animes', (req, res) => {
+  const htmlPath = path.join(__dirname, './public/animes.html');
+  res.sendFile(htmlPath);
+});   
+router.get('/games', (req, res) => {
+  const htmlPath = path.join(__dirname, './public/games.html');
+  res.sendFile(htmlPath);
+});   
+router.get('/canvas', (req, res) => {
+  const htmlPath = path.join(__dirname, './public/canvas.html');
+  res.sendFile(htmlPath);
+});   
+router.get('/wallpapers', (req, res) => {
+  const htmlPath = path.join(__dirname, './public/wallpapere.html');
+  res.sendFile(htmlPath);
+});   
+router.get('/bots', (req, res) => {
+  const htmlPath = path.join(__dirname, './public/bots.html');
+  res.sendFile(htmlPath);
+});   
+router.get('/sticks', (req, res) => {
+  const htmlPath = path.join(__dirname, './public/sticker.html');
+  res.sendFile(htmlPath);
+});
+router.get('/docs', (req, res) => {
+  const htmlPath = path.join(__dirname, './public/docs.html');
+  res.sendFile(htmlPath);
+});
+
+router.get('/perfil', (req, res) => {
+  const htmlPath = path.join(__dirname, './public/perfil.html');
+  res.sendFile(htmlPath);
+});
+   
   router.get('/canvas/*', async (req, res) => {
   var cdapikey = req.query.apikey;
    let { url, texto } = req.query
@@ -126,48 +173,6 @@ function getRandom(nans) {
   res.type('jpg')
   res.send(await canvacord.changemymind(texto))
   break
-  case '/wasted':
-case '/wasted/':
-  if (!texto) return res.status(408).send(resposta.cdimg);
-  res.type('jpg');
-  res.send(await canvacord.wasted(texto));
-  break;
-   case '/drake':
-case '/drake/':
-  if (!texto) return res.status(408).send(resposta.cdimg);
-  res.type('jpg');
-  res.send(await canvacord.drake(texto.top, texto.bottom));
-  break;
-  case '/trump':
-case '/trump/':
-  if (!texto) return res.status(408).send(resposta.cdimg);
-  res.type('jpg');
-  res.send(await canvacord.trump(texto));
-  break;
-  case '/captcha':
-case '/captcha/':
-  if (!texto) return res.status(408).send(resposta.cdimg);
-  res.type('jpg');
-  res.send(await canvacord.captcha(texto));
-  break;
-   case '/trash':
-case '/trash/':
-  if (!texto) return res.status(408).send(resposta.cdimg);
-  res.type('jpg');
-  res.send(await canvacord.trash(texto));
-  break;
-   case '/affect':
-case '/affect/':
-  if (!texto) return res.status(408).send(resposta.cdimg);
-  res.type('jpg');
-  res.send(await canvacord.affect(texto));
-  break;
-  case '/wasted':
-case '/wasted/':
-  if (!texto) return res.status(408).send(resposta.cdimg);
-  res.type('jpg');
-  res.send(await canvacord.wasted(texto));
-  break;
       
  case '/clyde':
  case '/clyde/':
