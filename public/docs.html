@@ -44,7 +44,8 @@
     position: relative;
     width: 350px; /* Ajuste conforme necessário */
     padding: 100px;
-    background-color: whitesmoke;
+  
+    background: linear-gradient(to right,#D3D3D3, #00FFFF);
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     text-align: center;
@@ -53,13 +54,12 @@
 
 
 .close-btn {
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     position: absolute;
     top: 7px;
     right: 5px;
     cursor: pointer;
-    font-size: 20px;
-    color: #0000
+    font-size: 27px;
+    color: #000000;
 }
 
 .welcome-image {
@@ -67,13 +67,13 @@
     height: 150px;
     border-radius: 50%;
     margin-bottom: 25px;
-    box-shadow: 0px 0px 23px 5px black;
+    box-shadow: 0px 0px 23px 3px red;
 }
 
 .welcome-text {
     margin: 0;
     font-family: Arial, sans-serif;
-    color: #333;
+    color: #000000;
   }
 
   .footer-icon {
@@ -222,7 +222,7 @@ section2 {
   padding: 40px;
   text-align: center;
   background-color: black
-  border-radius: 10px;
+  border-radius: 50px;
 }
 
 .side-bar{
@@ -386,7 +386,8 @@ color: #000000;
 
 }
 .cabeca{
-color: #fffff,;
+   background: linear-gradient(to right,#1C1C1C, #DCDCDC);
+  color: #00FFFF;
   text-align: center;
   padding: 20px;
   box-shadow: 10px 10px 10px black;
@@ -694,7 +695,7 @@ text-align: center;
   .navbaro {
       width: 250px; /* Largura da barra lateral */
       height: 100%; /* Altura da barra lateral */
-      background-color: rgba(255, 255, 255, 0.1);
+      background: linear-gradient(to right,#1C1C1C, #696969);
       position: fixed;
       top: 0;
       left: -250px; /* Inicialmente oculta a barra lateral */
@@ -721,7 +722,7 @@ text-align: center;
   .line {
     width: 100%;
     height: 3px;
-    background-color: black;
+    background-color: #DCDCDC;
     transition: all 0.8s;
   }
 
@@ -749,7 +750,7 @@ text-align: center;
   .navo-link {
     text-decoration: none;
     font-size: 14px;
-    color: #eee;
+    color: #FFFAFA;
     font-weight: 300;
     letter-spacing: 1px;
     text-transform: uppercase;
@@ -762,7 +763,7 @@ text-align: center;
     content: "";
     width: 100%;
     height: 2px;
-    background-color: #2979ff;
+    background-color: #FF0000;
     position: absolute;
     left: 0;
     transform: scaleX(0);
@@ -793,14 +794,14 @@ text-align: center;
 
 </style>  
 <body>
-
-    <div class="fe">
-      <a href="perfil.html">
-    <img src="https://pedrozz-api.onrender.com/femeninotrava?apikey=pedrozz13" alt="Foto" id="imagem" style="cursor: pointer;">
-    </a>
-
-        </div>
-
+  <div class="fe">
+     <a href="perfil.html">
+       <img src="https://pedrozz-api.onrender.com/femeninotrava?apikey=pedrozz13">
+     </a>
+  </div>
+  <div class="cabeca">
+    <p class="fa fa-diamond" style="animation: bounce 2s infinite;">Pedrozz - Api</p>
+  </div>
         <div class="container">
         <div class="navbaro">
             <div class="hamburger-menu">
@@ -854,11 +855,6 @@ text-align: center;
             </ul>
         </div>
         </div> 
-
-
-<div class="cabeca">
-  <p class="fa fa-layer-group" style="animation: bounce 2s infinite;">       Pedrozz - Api</p>
-</div>
 
   <div class="center-image">
                         <a href="https://telegra.ph/file/2f9c1f632b7f7790f3423.jpg" alt="pedrozz: criador">
@@ -946,12 +942,34 @@ text-align: center;
         font-size: 16px;
         color: white;
     }
+    #calendario {
+        display: none;
+        position: absolute;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        padding: 10px;
+        z-index: 1;
+    }
+
+    #calendario.show {
+        display: block;
+    }
 
    </style>
-  <section>
+      <<section>
       <div class="card-title" id="horario"></div>
-      <div class="card-title" id="educado"></div>
+      <div class="card-title" id="educado">
+          <div id="calendario" onclick="mostrarCalendario()">
+              <div id="data"></div>
+              <div id="diaSemana"></div>
+              <div id="mes"></div>
+              <div id="ano"></div>
+          </div>
+      </div>
   </section>
+
+
+
   <div class="welcome-container">
   <div id="welcomeBox" class="welcome-box">
     <div class="close-btn" onclick="closeWelcomeBox()">X</div>
@@ -1010,11 +1028,12 @@ Um 'bot' – abreviatura de robô – é um programa de software que executa tar
 </div>
 
 
-  <section class="py-2">
-      <div class="col-12 text-muted text-center">
-          <a href="https://youtube.com/@Pedrozz_Mods?si=Ubv-FVOKM81KdcdR" target="_blank">2024 pedrozz_mods - Todos os direitos reservados</a>
-      </div>
-  </section>
+  <footer class="footer">
+     <div class="d-sm-flex justify-content-center justify-content-sm-between">
+     <p><span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright © 2024 Pedrozz Mods</span></p>
+     <p><span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center"> Meu Canal: <a href="https://youtube.com/@Pedrozzmods?si=jiSnHTInW9EVrgXB`" target="_blank">「 Clique 」</a> RUMO AOS 50 INSCRITOS</span></p>
+     </div>
+      </footer>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js">
 </script>
   <!---
@@ -1111,37 +1130,39 @@ function closeWelcomeBox() {
     });
       </script>
   <script>
+  function mostrarCalendario() {
+      var calendario = document.getElementById("calendario");
+      calendario.classList.toggle("show");
+  }
 
+  function atualizarHorario() {
+      var agora = new Date();
+      var hora = agora.getHours();
+      var minuto = agora.getMinutes();
+      var segundo = agora.getSeconds();
 
-      // Selecionando os elementos corretamente pelo ID
-      let ata1 = document.querySelector('#horario');
-      let ata2 = document.querySelector('#educado');
+      hora = hora < 10 ? "0" + hora : hora;
+      minuto = minuto < 10 ? "0" + minuto : minuto;
+      segundo = segundo < 10 ? "0" + segundo : segundo;
 
-      // Função para atualizar o horário e a mensagem
-      function atualizarHorario() {
-          var d = new Date();
-          const hora = d.getHours().toString().padStart(2, '0');
-          const minuto = d.getMinutes().toString().padStart(2, '0');
-           const segundo = d.getSeconds().toString().padStart(2, '0');
+      var horario = hora + ":" + minuto + ":" + segundo;
+      document.getElementById("horario").innerHTML = horario;
 
+      var diaSemana = agora.toLocaleDateString("pt-BR", { weekday: "long" });
+      var dia = agora.getDate();
+      var mes = agora.toLocaleDateString("pt-BR", { month: "long" });
+      var ano = agora.getFullYear();
 
-          if (d.getHours() < 12) {
-              ata2.innerHTML = "Bom Dia!";
-          } else if (d.getHours() < 18) {
-              ata2.innerHTML = "Boa Tarde!";
-          } else {
-              ata2.innerHTML = "Boa Noite!";
-          }
+      var data = diaSemana + ", " + dia + " de " + mes + " de " + ano;
+      document.getElementById("data").innerHTML = dia;
+      document.getElementById("diaSemana").innerHTML = diaSemana;
+      document.getElementById("mes").innerHTML = mes;
+      document.getElementById("ano").innerHTML = ano;
+  }
 
-          ata1.innerHTML = hora + ":" + minuto + ":" + segundo;
-      }
-
-      // Chamando a função inicialmente para evitar atrasos no início
-      atualizarHorario();
-
-      // Atualizando o horário a cada segundo
-      setInterval(atualizarHorario, 1000);
-  </script>
+  atualizarHorario();
+  setInterval(atualizarHorario, 1000);
+</script>
 
 
     <script src="script.js"></script>
