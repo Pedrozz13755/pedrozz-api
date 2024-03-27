@@ -16,20 +16,6 @@ const {
   ytPlayMp4,
   ytSearch
 } = require("./lib/youtube");
-var {
-  pShadow,
-  pRomantic,
-  pSmoke,
-  pBurnPapper,
-  pNaruto,
-  pLoveMsg,
-  pMsgGrass,
-  pGlitch,
-  pDoubleHeart,
-  pCoffeCup,
-  pLoveText,
-  pButterfly
-} = require("./lib/photooxy");
 
 var {
   ttdownloader,
@@ -210,7 +196,7 @@ if(!cdapikey) return res.json(resposta.semkey)
  }
  })
   
- router.get('/download/ytmp3', async(req, res, next) => {
+  router.get('/download/ytmp3', async(req, res, next) => {
  var cdapikey = req.query.apikey;
  link = req.query.link          
 if(!cdapikey) return res.json(resposta.semkey)
