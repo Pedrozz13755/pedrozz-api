@@ -109,39 +109,39 @@ function getRandom(nans) {
    }
    })
    
-router.get('/download', (req, res) => {
+router.get('/api/download', (req, res) => {
   const htmlPath = path.join(__dirname, './public/download.html');
   res.sendFile(htmlPath);
 });
-router.get('/ia', (req, res) => {
+router.get('/api/ia', (req, res) => {
   const htmlPath = path.join(__dirname, './public/ia.html');
   res.sendFile(htmlPath);
 });   
-router.get('/nsfw', (req, res) => {
+router.get('/api/nsfw', (req, res) => {
   const htmlPath = path.join(__dirname, './public/nsfw.html');
   res.sendFile(htmlPath);
 });   
-router.get('/animes', (req, res) => {
+router.get('/api/animes', (req, res) => {
   const htmlPath = path.join(__dirname, './public/animes.html');
   res.sendFile(htmlPath);
 });   
-router.get('/games', (req, res) => {
+router.get('/api/games', (req, res) => {
   const htmlPath = path.join(__dirname, './public/games.html');
   res.sendFile(htmlPath);
 });   
-router.get('/canvas', (req, res) => {
+router.get('/api/canvas', (req, res) => {
   const htmlPath = path.join(__dirname, './public/canvas.html');
   res.sendFile(htmlPath);
 });   
-router.get('/wallpapers', (req, res) => {
+router.get('/api/wallpapers', (req, res) => {
   const htmlPath = path.join(__dirname, './public/wallpapere.html');
   res.sendFile(htmlPath);
 });   
-router.get('/bots', (req, res) => {
+router.get('/api/bots', (req, res) => {
   const htmlPath = path.join(__dirname, './public/bots.html');
   res.sendFile(htmlPath);
 });   
-router.get('/sticks', (req, res) => {
+router.get('/api/sticks', (req, res) => {
   const htmlPath = path.join(__dirname, './public/sticker.html');
   res.sendFile(htmlPath);
 });
