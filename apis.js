@@ -109,42 +109,6 @@ function getRandom(nans) {
    }
    })
    
-router.get('/api/download', (req, res) => {
-  const htmlPath = path.join(__dirname, './public/download.html');
-  res.sendFile(htmlPath);
-});
-router.get('/api/ia', (req, res) => {
-  const htmlPath = path.join(__dirname, './public/ia.html');
-  res.sendFile(htmlPath);
-});   
-router.get('/api/nsfw', (req, res) => {
-  const htmlPath = path.join(__dirname, './public/nsfw.html');
-  res.sendFile(htmlPath);
-});   
-router.get('/api/animes', (req, res) => {
-  const htmlPath = path.join(__dirname, './public/animes.html');
-  res.sendFile(htmlPath);
-});   
-router.get('/api/games', (req, res) => {
-  const htmlPath = path.join(__dirname, './public/games.html');
-  res.sendFile(htmlPath);
-});   
-router.get('/api/canvas', (req, res) => {
-  const htmlPath = path.join(__dirname, './public/canvas.html');
-  res.sendFile(htmlPath);
-});   
-router.get('/api/wallpapers', (req, res) => {
-  const htmlPath = path.join(__dirname, './public/wallpapere.html');
-  res.sendFile(htmlPath);
-});   
-router.get('/api/bots', (req, res) => {
-  const htmlPath = path.join(__dirname, './public/bots.html');
-  res.sendFile(htmlPath);
-});   
-router.get('/api/sticks', (req, res) => {
-  const htmlPath = path.join(__dirname, './public/sticker.html');
-  res.sendFile(htmlPath);
-});
 router.get('/docs', (req, res) => {
   const htmlPath = path.join(__dirname, './public/docs.html');
   res.sendFile(htmlPath);
