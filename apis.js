@@ -392,7 +392,7 @@ if (!text) return res.json("falta o parâmetro text1");
   try {
     const text = req.query.text;
     res.type('gif');
-    const gifBuffer = await getBuffer(`https://aemt.me/attp?text=${text}`);
+    const gifBuffer = await getBuffer(`https://aemt.me/attp?text=${text1}`);
     res.send(gifBuffer);
   } catch (e) {
     res.send(resposta.error);
