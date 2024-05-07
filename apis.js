@@ -384,21 +384,21 @@ router.get('/ia/bingia', async(req, res, next) => {
 });
  
 router.all('/api/attp', async (req, res) => {
-const apikey = req.query.apikey;
- let check = await verificaKey(apikey)
- if (!check) return res.sendFile(semapikey)
- let limit = await isLimit(apikey);
- if (limit) return res.sendFile(semlimit)
-await limitAdd(apikey);
-await expfarm(apikey);
-   try {
-   res.type('gif')
-    var rnd = Math.floor(Math.random() * 25)
-   res.send(await getBuffer(`https://aemt.me/attp?text=${text}`))
-   } catch (e) {
-   res.send(resposta.error)
-   }
-   }) 
+var cdapikey = req.query.apikey;
+if (!cdapikey) return res.json(resposta.semkey);
+if (cdapikey !== key) return res.sendFile(keyinvalida);
+const text = req.query.text1;
+if (!text) return res.json("falta o parâmetro text1");
+  try {
+    const text = req.query.text;
+    res.type('gif');
+    const gifBuffer = await getBuffer(`https://aemt.me/attp?text=${text}`);
+    res.send(gifBuffer);
+  } catch (e) {
+    res.send(resposta.error);
+  }
+});
+
    
 router.all('/api/pinterest', async (req, res) => {
 var cdapikey = req.query.apikey;
