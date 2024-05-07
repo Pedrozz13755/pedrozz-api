@@ -1,4 +1,11 @@
-
+/*
+API by pedrozz_Mods
+Api feita com ❤️ e carinho por Pedrozz_Mods
+vão la no canal pra dar uma moral pls🥺
+Canal: pedrozz_Mods
+Instagram: pedrozz_13755
+Número: +556199317165
+*/
 api = process.cwd()
 
 var express = require('express');
@@ -28,7 +35,7 @@ var {
   igDownloader
 } = require("./lib/anjay");
 
-var criador = ['pedrozz'];
+var criador = ['Pedrozz_Mods'];
 var key = 'pedrozz13'
 
 resposta = {
@@ -67,7 +74,8 @@ resposta = {
     }
 }
 
-var keyinvalida = api + '/paginas/keysemresultado.html' // html key de invalida
+var keyinvalida = api + '/paginas/keysemresultado.html'
+
 
 async function getBuffer(url) {
   he = await fetch(url).then(c => c.buffer())
@@ -374,218 +382,37 @@ router.get('/ia/bingia', async(req, res, next) => {
     res.send(`Deu erro: ${error}`);
   }
 });
-
-router.get('/ia/txtimg', async(req, res, next) => {
-  var cdapikey = req.query.apikey;
-  try {
-    if (!cdapikey) return res.json(resposta.semkey);
-    if (cdapikey !== key) return res.sendFile(keyinvalida);
-
-    const text = req.query.text1;
-    if (!text) return res.json("Coloque seu texto para eu gerar tua imagem🥰      Explore sua criatividade com uma ia que gera imagem com seus texto🤖");
-
-    fetch("https://aemt.me/ai/text2img?text=" + text)
-      .then(response => {
-        // Verifica se a resposta é uma imagem (content-type: image/*)
-        if (response.headers.get('content-type').startsWith('image/')) {
-          // Retorna a imagem como buffer
-          return response.buffer();
-        } else {
-          throw new Error('A resposta não é uma imagem.');
-        }
-      })
-      .then(imageBuffer => {
-        // Converte o buffer da imagem para base64
-        const imageBase64 = imageBuffer.toString('base64');
-        // Envie a imagem como resposta
-        res.send(`<img src="data:image/jpeg;base64,${imageBase64}" />`);
-      })
-      .catch(error => {
-        console.log(error);
-        res.send(`Deu erro: ${error}`);
-      });
-  } catch (error) {
-    console.log(error);
-    res.send(`Deu erro: ${error}`);
-  }
-});
-
-router.get('/ia/dalle', async(req, res, next) => {
-  var cdapikey = req.query.apikey;
-  try {
-    if (!cdapikey) return res.json(resposta.semkey);
-    if (cdapikey !== key) return res.sendFile(keyinvalida);
-
-    const text = req.query.text1;
-    if (!text) return res.json("Coloque seu texto para eu gerar tua imagem🥰      Explore sua criatividade com uma ia que gera imagem com seus texto🤖");
-
-    fetch("https://aemt.me/dalle?text=" + text)
-      .then(response => {
-        // Verifica se a resposta é uma imagem (content-type: image/*)
-        if (response.headers.get('content-type').startsWith('image/')) {
-          // Retorna a imagem como buffer
-          return response.buffer();
-        } else {
-          throw new Error('A resposta não é uma imagem.');
-        }
-      })
-      .then(imageBuffer => {
-        // Converte o buffer da imagem para base64
-        const imageBase64 = imageBuffer.toString('base64');
-        // Envie a imagem como resposta
-        res.send(`<img src="data:image/jpeg;base64,${imageBase64}" />`);
-      })
-      .catch(error => {
-        console.log(error);
-        res.send(`Deu erro: ${error}`);
-      });
-  } catch (error) {
-    console.log(error);
-    res.send(`Deu erro: ${error}`);
-  }
-});
-
-router.get('/ia/txtimg2', async(req, res, next) => {
-  var cdapikey = req.query.apikey;
-  try {
-    if (!cdapikey) return res.json(resposta.semkey);
-    if (cdapikey !== key) return res.sendFile(keyinvalida);
-
-    const text = req.query.text1;
-    if (!text) return res.json("Coloque seu texto para eu gerar tua imagem🥰      Explore sua criatividade com uma ia que gera imagem com seus texto🤖");
-
-    fetch("https://aemt.me/v6/text2img?text=" + text)
-      .then(response => {
-        // Verifica se a resposta é uma imagem (content-type: image/*)
-        if (response.headers.get('content-type').startsWith('image/')) {
-          // Retorna a imagem como buffer
-          return response.buffer();
-        } else {
-          throw new Error('A resposta não é uma imagem.');
-        }
-      })
-      .then(imageBuffer => {
-        // Converte o buffer da imagem para base64
-        const imageBase64 = imageBuffer.toString('base64');
-        // Envie a imagem como resposta
-        res.send(`<img src="data:image/jpeg;base64,${imageBase64}" />`);
-      })
-      .catch(error => {
-        console.log(error);
-        res.send(`Deu erro: ${error}`);
-      });
-  } catch (error) {
-    console.log(error);
-    res.send(`Deu erro: ${error}`);
-  }
-});
-
-router.get('/api/ttp', async(req, res, next) => {
-  var cdapikey = req.query.apikey;
-  try {
-    if (!cdapikey) return res.json(resposta.semkey);
-    if (cdapikey !== key) return res.sendFile(keyinvalida);
-
-    const text = req.query.text1;
-    if (!text) return res.json("Coloque seu texto para eu gerar tua imagem🥰      Explore sua criatividade com uma ia que gera imagem com seus texto🤖");
-
-    fetch("https://aemt.me/ttp?text=" + text)
-      .then(response => {
-        // Verifica se a resposta é uma imagem (content-type: image/*)
-        if (response.headers.get('content-type').startsWith('image/')) {
-          // Retorna a imagem como buffer
-          return response.buffer();
-        } else {
-          throw new Error('A resposta não é uma imagem.');
-        }
-      })
-      .then(imageBuffer => {
-        // Converte o buffer da imagem para base64
-        const imageBase64 = imageBuffer.toString('base64');
-        // Envie a imagem como resposta
-        res.send(`<img src="data:image/jpeg;base64,${imageBase64}" />`);
-      })
-      .catch(error => {
-        console.log(error);
-        res.send(`Deu erro: ${error}`);
-      });
-  } catch (error) {
-    console.log(error);
-    res.send(`Deu erro: ${error}`);
-  }
-});
-
-
- router.get('/api/attp', async(req, res, next) => {
-  var cdapikey = req.query.apikey;
-  try {
-    if (!cdapikey) return res.json(resposta.semkey);
-    if (cdapikey !== key) return res.sendFile(keyinvalida);
-
-    const text = req.query.text1;
-    if (!text) return res.json("cade o texto");
-
-    fetch("https://aemt.me/attp?text=" + text)
-      .then(response => {
-        // Verifica se a resposta é um GIF (content-type: image/gif)
-        if (response.headers.get('content-type').startsWith('image/gif')) {
-          // Retorna o GIF como buffer
-          return response.buffer();
-        } else {
-          throw new Error('A resposta não é um GIF.');
-        }
-      })
-      .then(imageBuffer => {
-        // Converte o buffer do GIF para base64
-        const imageBase64 = imageBuffer.toString('base64');
-        // Envie o GIF como resposta
-        res.send(`<img src="data:image/gif;base64,${imageBase64}" />`);
-      })
-      .catch(error => {
-        console.log(error);
-        res.send(`Deu erro: ${error}`);
-      });
-  } catch (error) {
-    console.log(error);
-    res.send(`Deu erro: ${error}`);
-  }
-
- });
-
-  router.get('/api/pinterest', async(req, res, next) => {
-  var cdapikey = req.query.apikey;
-  try {
-    if (!cdapikey) return res.json(resposta.semkey);
-    if (cdapikey !== key) return res.sendFile(keyinvalida);
-
-    const text = req.query.text1;
-    if (!text) return res.json("cade o titulo da sua pesquisa");
-
-    fetch("https://aemt.me/pinimg?query=" + text)
-      .then(response => {
-        // Verifica se a resposta é uma imagem (content-type: image/*)
-        if (response.headers.get('content-type').startsWith('image/')) {
-          // Retorna a imagem como buffer
-          return response.buffer();
-        } else {
-          throw new Error('A resposta não é uma imagem.');
-        }
-      })
-      .then(imageBuffer => {
-        // Converte o buffer da imagem para base64
-        const imageBase64 = imageBuffer.toString('base64');
-        // Envie a imagem como resposta
-        res.send(`<img src="data:image/jpeg;base64,${imageBase64}" />`);
-      })
-      .catch(error => {
-        console.log(error);
-        res.send(`Deu erro: ${error}`);
-      });
-  } catch (error) {
-    console.log(error);
-    res.send(`Deu erro: ${error}`);
-  }
-}); 
+ 
+router.all('/api/attp', async (req, res) => {
+const apikey = req.query.apikey;
+ let check = await verificaKey(apikey)
+ if (!check) return res.sendFile(semapikey)
+ let limit = await isLimit(apikey);
+ if (limit) return res.sendFile(semlimit)
+await limitAdd(apikey);
+await expfarm(apikey);
+   try {
+   res.type('gif')
+    var rnd = Math.floor(Math.random() * 25)
+   res.send(await getBuffer(`https://aemt.me/attp?text=${text}`))
+   } catch (e) {
+   res.send(resposta.error)
+   }
+   }) 
+   
+router.all('/api/pinterest', async (req, res) => {
+var cdapikey = req.query.apikey;
+if (!cdapikey) return res.json(resposta.semkey);
+if (cdapikey !== key) return res.sendFile(keyinvalida);
+const text = req.query.text1;
+if (!text) return res.json("cade o titulo da sua pesquisa");
+   try {
+   res.type('png')
+   res.send(await getBuffer(`https://aemt.me/pinimg?query=${text}`))
+   } catch (e) {
+   res.send(resposta.error)
+   }
+   })   
 
 //////////////////(ia)//////////////////
 //////////////// +18 \\\\\\\\\\\\\\\\\\\\
