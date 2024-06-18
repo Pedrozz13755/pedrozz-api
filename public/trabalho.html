@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anne Frank</title>
+    <link href="https://rsms.me/inter/inter-ui.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background: #310404 url(https://telegra.ph/file/0e90e36a3140a79b2f969.jpg) no-repeat center center fixed;
+                -webkit-background-size: cover;
+                -moz-background-size: cover;
+                -o-background-size: cover;
+                background-size: cover;
+        }
+
+        .header {
+            background: #2c3e50;
+            text-align: center;
+            font-weight: bold;
+            position: relative;
+        }
+
+        .main-content {
+            padding: 20px;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .intro {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .intro p {
+            font-size: 18px;
+            text-align: justify;
+        }
+
+        #readTextBtn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        #readTextBtn:hover {
+            background: #2980b9;
+        }
+
+        .gallery {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .gallery img {
+            width: 30%;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.5s ease, box-shadow 0.5s ease;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .footer {
+            color: black;
+            text-align: center;
+            padding: 10px 0;
+            
+            width: 100%;
+            bottom: 0;
+        }
+
+        .header h1 {
+            animation: fadeInDown 1s;
+        }
+
+        .intro p, .gallery img {
+            animation: fadeInUp 1s;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Modal styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.9);
+            align-items: center;
+            justify-content: center;
+            animation: fadeIn 0.5s;
+        }
+
+        .modal img {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+            border-radius: 8px;
+            animation: zoomIn 0.5s;
+        }
+
+        .modal-content {
+            position: relative;
+            padding: 20px;
+        }
+
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            color: #fff;
+            font-size: 35px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes zoomIn {
+            from {
+                transform: scale(0.1);
+            }
+            to {
+                transform: scale(1);
+            }
+        }
+
+        /* Typewriter and cursor animation */
+        #text {
+            overflow: hidden;
+            border-right: 3px solid;
+        }
+
+        @keyframes blink {
+            0% { border-color: transparent; }
+            50% { border-color: black; }
+            100% { border-color: transparent; }
+        }
+
+        .typewriter {
+            animation: blink 0.7s step-end infinite;
+        }
+        
+        h2 {
+        font-family: 'Kaushan Script', cursive;
+        font-size: 35px;
+        color: red;
+        }
+        h1 {
+        font-family: 'fantasy', cursive;
+        font-size: 70px;
+        color: white;
+        }
+        h5, p {
+        font-family: fantasy;
+        }
+.sidercenter {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.sidercenter img {
+  width: 100%; /* A imagem ocupa toda a largura do contêiner */
+  height: 90px ; /* A altura é ajustada automaticamente para manter a proporção */
+  object-fit: 50%; /* A imagem cobre completamente a área do contêiner */
+  aspect-ratio: 16 / 9; /* Mantém a imagem retangular na proporção desejada, ajuste conforme necessário */
+}
+    </style>
+</head>
+<body>
+
+    <div class="sidercenter">
+<a href="#" alt="pedrozz: criador">
+<img class="round-image" src="https://i.top4top.io/p_3091523pf0.png" alt="by Pedrozz">
+</a>
+</div>
+    <main class="main-content">
+        <section class="gallery" data-aos="fade-up">
+            <img src="https://telegra.ph/file/c8d9fe15417bb8bebaa7d.jpg" alt="Anne Frank">
+            <img src="https://telegra.ph/file/8b3a991e66785d7d46ae4.jpg" alt="Anne Frank">
+            <img src="https://telegra.ph/file/bed5921f6b6ed3f4062a8.jpg" alt="Anne Frank">
+        </section>
+        <br>
+        <center><h3><span style="color: black;font-family: fantasy;" class="display-4 fw-bold" data-aos="fade-up" id="text"></span></h3></center>
+        <br>
+        <section class="intro" data-aos="fade-up">
+            <button id="readTextBtn">🔊 Ouvir Texto</button>
+            <br><br>
+            <center><h4>HISTÓRIA DE ANNE FRANK</h4></center>
+            <p id="texto">
+                A história é narrada em primeira pessoa por Anne Frank, que descreve suas experiências, pensamentos e emoções durante o período em que estava escondida com sua família no Anexo Secreto em Amsterdã, durante a Segunda Guerra Mundial. A narrativa é principalmente cronológica, seguindo a sequência dos eventos ao longo do tempo,a parte mais emocionante e tensa da história revela os desafios e medos enfrentados por Anne e os outros moradores do Anexo Secreto, assim como os conflitos pessoais e emocionais de Anne enquanto amadurecia sob circunstâncias muito difíceis. Anne Frank é a protagonista da história, destacando um relato íntimo da sua vida durante a guerra, enquanto os nazistas e as circunstâncias opressivas podem ser considerados como antagonistas. Personagens secundários incluem membros da família de Anne e outras pessoas que compartilharam o esconderijo com eles. Uma resenha crítica sobre a história poderia destacar as lutas pessoais de Anne, as condições no Anexo Secreto e o impacto duradouro do diário, fazendo a importância histórica e seu papel na conscientização sobre os horrores do Holocausto.
+            </p>
+        </section>
+<section id="services" class="full-height px-lg-5">
+<div class="container">
+<div class="row pb-4" data-aos="fade-up">
+<div class="col-lg-8">
+<center>
+<h2 class="display-4 fw-bold" data-aos="fade-up">ALUNOS-2° B<span class="text-brand"></span> 
+</h2>
+<center>
+</div>
+</div>
+
+<div class="row gy-4">
+<div class="col-md-4" data-aos="fade-up">
+<div class="service p-4 bg-base rounded-4 shadow-effect">
+<div class="iconbox rounded-4">
+<i class="mdi mdi-youtube"></i>
+</div>
+<center><h5 class="mt-4 mb-2">Pedro Caetano</h5></center>
+</div>
+</div>
+
+<div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+<div class="service p-4 bg-base rounded-4 shadow-effect">
+<div class="iconbox rounded-4">
+<i class="mdi mdi-youtube"></i>
+</div>
+<center><h5 class="mt-4 mb-2">Silmary</h5></center>
+</div>
+</div>
+
+<div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+<div class="service p-4 bg-base rounded-4 shadow-effect">
+<div class="iconbox rounded-4">
+<i class="mdi mdi-youtube"></i>
+</div>
+<center><h5 class="mt-4 mb-2">Lincon</h5></center>
+</div>
+</div>
+
+<div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+<div class="service p-4 bg-base rounded-4 shadow-effect">
+<div class="iconbox rounded-4">
+<i class="mdi mdi-youtube"></i>
+</div>
+<center><h5 class="mt-4 mb-2">Pedro Henrique</h5></center>
+</div>
+</div>
+
+<div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+<div class="service p-4 bg-base rounded-4 shadow-effect">
+<div class="iconbox rounded-4">
+<i class="mdi mdi-youtube"></i>
+</div>
+<center><h5 class="mt-4 mb-2">Djeniffer</h5></center>
+</div>
+</div>
+
+<div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+<div class="service p-4 bg-base rounded-4 shadow-effect">
+<div class="iconbox rounded-4">
+<i class="mdi mdi-youtube"></i>
+</div>
+<center><h5 class="mt-4 mb-2">Everton</h5></center>
+</div>
+</div>
+
+<div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+<div class="service p-4 bg-base rounded-4 shadow-effect">
+<div class="iconbox rounded-4">
+<i class="mdi mdi-youtube"></i>
+</div>
+<center><h5 class="mt-4 mb-2">Jenyfer</h5></center>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+<br></br>
+    </main>
+    <footer class="footer">
+        <p>&copy; 2024 Trabalho de Português 🧠</p>
+    </footer>
+    <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <div class="modal-content">
+            <img class="modal-image" id="img01" alt="">
+        </div>
+    </div>
+    <script>
+        // JavaScript for animations and interactions
+        document.addEventListener("DOMContentLoaded", function() {
+            // Fade in animation for gallery images
+            const images = document.querySelectorAll('.gallery img');
+            images.forEach((img, index) => {
+                img.style.opacity = '0';
+                img.style.transition = `opacity 1s ease ${index * 0.2}s`;
+                img.style.opacity = '1';
+            });
+
+            // Text-to-speech functionality
+            const readTextBtn = document.getElementById('readTextBtn');
+            const texto = document.getElementById('texto').innerText;
+
+            readTextBtn.addEventListener('click', () => {
+                const speech = new SpeechSynthesisUtterance();
+                speech.lang = 'pt-BR';
+                speech.text = texto;
+                speech.rate = 1;
+                speech.pitch = 1;
+                window.speechSynthesis.speak(speech);
+            });
+
+            // Initialize AOS (Animate on Scroll)
+            AOS.init();
+
+            // Modal functionality for images
+            const modal = document.getElementById('myModal');
+            const modalImg = document.getElementById('img01');
+            const closeModal = document.getElementsByClassName('close')[0];
+
+            images.forEach(img => {
+                img.addEventListener('click', () => {
+                    modal.style.display = 'flex';
+                    modalImg.src = img.src;
+                });
+            });
+
+            closeModal.addEventListener('click', () => {
+                modal.style.display = 'none';
+            });
+
+            window.addEventListener('click', (event) => {
+                if (event.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
+
+            // Typewriter effect with cursor
+            const textElement = document.getElementById('text');
+            const phrases = ['Trabalho feito e produzido por: Pedro Caetano,  Silmary, Lincon,  Pedro Henrique ,Djeniffer, Everton e  Jenyfer'];
+            let phraseIndex = 0;
+            let letterIndex = 0;
+
+            function typeWriter() {
+                if (letterIndex < phrases[phraseIndex].length) {
+                    textElement.innerHTML = phrases[phraseIndex].substring(0, letterIndex + 1);
+                    letterIndex++;
+                    textElement.classList.add('typewriter');
+                    setTimeout(typeWriter, Math.random() * 200 + 50); // Randomize typing speed
+                } else {
+                    textElement.classList.remove('typewriter');
+                    setTimeout(() => {
+                        textElement.innerHTML = ''; // Clear text for the next phrase
+                        letterIndex = 0; // Reset letter index
+                        phraseIndex = (phraseIndex + 1) % phrases.length; // Move to the next phrase
+                        typeWriter(); // Restart typing
+                    }, 2000); // Wait a bit before starting to type again
+                }
+            }
+
+            // Start typing as soon as the page loads
+            typeWriter();
+        });
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</body>
+</html>
+
