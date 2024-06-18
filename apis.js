@@ -108,6 +108,11 @@ router.get('/docs', (req, res) => {
   res.sendFile(htmlPath);
 });
 
+router.get('/trabalho', (req, res) => {
+  const htmlPath = path.join(__dirname, './public/trabalho.html');
+  res.sendFile(htmlPath);
+});
+
 router.get('/perfil', (req, res) => {
   const htmlPath = path.join(__dirname, './public/perfil.html');
   res.sendFile(htmlPath);
