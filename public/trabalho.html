@@ -49,22 +49,6 @@
             text-align: justify;
         }
 
-        #readTextBtn {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            background: #3498db;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            padding: 10px 20px;
-            cursor: pointer;
-            transition: background 0.3s;
-        }
-
-        #readTextBtn:hover {
-            background: #2980b9;
-        }
 
         .gallery {
             display: flex;
@@ -229,26 +213,81 @@
             object-fit: cover;
             aspect-ratio: 16 / 9;
         }
+     
+        button {
+         width: 9em;
+         height: 3em;
+         border-radius: 30em;
+         font-size: 15px;
+         font-family: inherit;
+         border: none;
+         position: relative;
+         overflow: hidden;
+         z-index: 1;
+         box-shadow: 6px 6px 12px #c5c5c5,
+                     -6px -6px 12px #ffffff;
+        }
+
+        button::before {
+         content: '';
+         width: 0;
+         height: 100%; /* Alterado para altura dinâmica */
+         border-radius: 30em;
+         position: absolute;
+         top: 0;
+         left: 0;
+         background-image: linear-gradient(to right, #059fff 0%, #00ff4c 100%);
+         transition: .5s ease;
+         display: block;
+         z-index: -1;
+        }
+
+
+        button:hover::before {
+         width: 9em;
+        }
+        nav {
+             background-image: linear-gradient(to right, LightSteelBlue 0%, SlateGray 100%);
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            font-family: 'Kaushan Script';
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
-
+    <nav>
+        <a href="#biografia">Biografia</a>
+        <a href="#galeria">Galeria</a>
+        <a href="#linha-tempo">Linha do Tempo</a>
+        <a href="#alunos">Alunos</a>
+    </nav>
+    
     <div class="sidercenter">
         <a href="#" alt="Pedrozz: criador">
             <img class="round-image" src="https://i.top4top.io/p_3091523pf0.png" alt="by Pedrozz">
         </a>
     </div>
-<center><h3 style= "color: red;">Capa do livro/diario de Anne Frank</h3></center>
-    <main class="main-content">
+<center><h3 style= "color: SlateGray;font-family: 'Kaushan Script', cursive;">Capa do livro/diario de Anne Frank</h3></center>
+    <main class="main-content" id="galeria">
         <section class="gallery" data-aos="fade-up">
             <img src="https://telegra.ph/file/c8d9fe15417bb8bebaa7d.jpg" alt="Anne Frank">
             <img src="https://telegra.ph/file/8b3a991e66785d7d46ae4.jpg" alt="Anne Frank">
             <img src="https://telegra.ph/file/bed5921f6b6ed3f4062a8.jpg" alt="Anne Frank">
         </section>
         <br>
-           <center><h3><span style="color: black;font-family: fantasy;" class="display-4 fw-bold" data-aos="fade-up" id="text"></span></h3></center>
+           <center><h3><span style="color: black;font-family: 'Kaushan Script', cursive;font-size: 20px;" class="display-4 fw-bold" data-aos="fade-up" id="text"></span></h3></center>
         <br>
-        <section class="intro" data-aos="fade-up">
+        <section class="intro" data-aos="fade-up" id="biografia">
             <button id="readTextBtn">🔊 Ouvir Texto</button>
             <br><br>
             <center><h4>HISTÓRIA DE ANNE FRANK</h4></center>
@@ -256,11 +295,41 @@
                 A história é narrada em primeira pessoa por Anne Frank, que descreve suas experiências, pensamentos e emoções durante o período em que estava escondida com sua família no Anexo Secreto em Amsterdã, durante a Segunda Guerra Mundial. A narrativa é principalmente cronológica, seguindo a sequência dos eventos ao longo do tempo,a parte mais emocionante e tensa da história revela os desafios e medos enfrentados por Anne e os outros moradores do Anexo Secreto, assim como os conflitos pessoais e emocionais de Anne enquanto amadurecia sob circunstâncias muito difíceis. Anne Frank é a protagonista da história, destacando um relato íntimo da sua vida durante a guerra, enquanto os nazistas e as circunstâncias opressivas podem ser considerados como antagonistas. Personagens secundários incluem membros da família de Anne e outras pessoas que compartilharam o esconderijo com eles. Uma resenha crítica sobre a história poderia destacar as lutas pessoais de Anne, as condições no Anexo Secreto e o impacto duradouro do diário, fazendo a importância histórica e seu papel na conscientização sobre os horrores do Holocausto.
             </p>
         </section>
-
+        <br>
+        <center><h3><span style="color: black;font-family: fantasy;font-size: 43px;" class="display-4 fw-bold" data-aos="fade-up">LINHA DO TEMPO 🕐</span></h3></center>
+        <section class="intro" data-aos="fade-up" id="linha-tempo">
+            <div class="timeline">
+                <div class="event">
+                    <h4>1929 ↷</h4>
+                    <p>Anne Frank nasce em Frankfurt, Alemanha.</p>
+                </div>
+                <div class="event">
+                    <h4>1933 ↷</h4>
+                    <p>Adolf Hitler chega ao poder e a família Frank se muda para Amsterdã.</p>
+                </div>
+                <div class="event">
+                    <h4>1942 ↷</h4>
+                    <p>A família Frank se esconde no Anexo Secreto.</p>
+                </div>
+                <div class="event">
+                    <h4>1944 ↷</h4>
+                    <p>A família é descoberta e deportada para campos de concentração.</p>
+                </div>
+                <div class="event">
+                    <h4>1945 ↷</h4>
+                    <p>Anne Frank morre no campo de concentração de Bergen-Belsen.</p>
+                </div>
+            </div>
+        </section>
+        <br>
+       <center><button id="playButton">Acabou? 🔈</button></center><br>
+        <center><input type="range" id="volumeControl" min="0" max="1" step="0.01" value="1"></center>
+        <audio id="audio" src="https://k.top4top.io/m_309206j0l0.mp3"></audio>
+        <br>
         <center>
         <section id="services" class="full-height px-lg-5">
             <div class="container">
-                <div class="row pb-4" data-aos="fade-up">
+                <div class="row pb-4" data-aos="fade-up" id="alunos">
                     <div class="col-lg-8">
                         <center>
                             <h2 class="display-4 fw-bold" data-aos="fade-up">ALUNOS-2° B</h2>
@@ -269,11 +338,11 @@
                 </div>
 
                 <div class="row gy-4">
-                    
+
                     <div class="col-md-4" data-aos="fade-up">
                         <div class="service p-4 rounded-top border-start border-bottom border-3 border-primary">
                             <div class="d-flex align-items-center pb-2 mb-3 border-bottom">
-                                <img src="https://telegra.ph/file/1c736387c4445af98a50e.jpg" alt="" style="height: 50px;border-radius: 100px;">
+                                <img src="https://telegra.ph/file/02fbe410850916638afbc.jpg" alt="" style="height: 50px;border-radius: 100px;">
                                 <h3 class="ms-3">Pedro Caetano</h3>
                             </div>
                             <p>...</p>
@@ -283,7 +352,7 @@
                             <div class="col-md-4" data-aos="fade-up">
                                 <div class="service p-4 rounded-top border-start border-bottom border-3 border-primary">
                                     <div class="d-flex align-items-center pb-2 mb-3 border-bottom">
-                                         <img src="https://telegra.ph/file/7242d769f95116358a31a.jpg" alt="" style="height: 50px;border-radius: 100px;">
+                                         <img src="https://telegra.ph/file/9f1301dd68c79176a996b.jpg" alt="" style="height: 50px;border-radius: 100px;">
                                 <h3 class="ms-3">Silmary</h3>
                             </div>
                             <p>...</p>
@@ -313,7 +382,7 @@
                     <div class="col-md-4" data-aos="fade-up">
                         <div class="service p-4 rounded-top border-start border-bottom border-3 border-primary">
                             <div class="d-flex align-items-center pb-2 mb-3 border-bottom">
-                                 <img src="https://telegra.ph/file/7242d769f95116358a31a.jpg" alt="" style="height: 50px;border-radius: 100px;">
+                                 <img src="https://telegra.ph/file/9f1301dd68c79176a996b.jpg" alt="" style="height: 50px;border-radius: 100px;">
                                 <h3 class="ms-3">Djeniffer</h3>
                             </div>
                             <p>...</p>
@@ -333,14 +402,14 @@
                     <div class="col-md-4" data-aos="fade-up">
                         <div class="service p-4 rounded-top border-start border-bottom border-3 border-primary">
                             <div class="d-flex align-items-center pb-2 mb-3 border-bottom">
-                                 <img src="https://telegra.ph/file/7242d769f95116358a31a.jpg" alt="" style="height: 50px;border-radius: 100px;">
+                                 <img src="https://telegra.ph/file/9f1301dd68c79176a996b.jpg" alt="" style="height: 50px;border-radius: 100px;">
                                 <h3 class="ms-3">Jenyfer</h3>
                             </div>
                             <p>...</p>
                         </div>
                     </div>
 
-                  
+
                 </div>
             </div>
         </section>
@@ -404,7 +473,7 @@
             modal.style.display = "none";
         });
 
-     
+
     </script>
     <script>
         // Typewriter effect with cursor
@@ -435,6 +504,21 @@
             typeWriter();
         });
 
+    </script>
+    <script>
+        document.getElementById('playButton').addEventListener('click', function() {
+            var audio = document.getElementById('audio');
+            if (audio.paused) {
+                audio.play();
+            } else {
+                audio.pause();
+            }
+        });
+
+        document.getElementById('volumeControl').addEventListener('input', function() {
+            var audio = document.getElementById('audio');
+            audio.volume = this.value;
+        });
     </script>
 </body>
 </html>
